@@ -39,13 +39,13 @@ margin_top = 380.0
 margin_right = 326.0
 margin_bottom = 530.0
 rect_min_size = Vector2( 0, 150 )
-custom_constants/separation = 10
+custom_constants/separation = 20
 alignment = 1
 
 [node name="StartButton" type="Button" parent="MarginContainer/MainContainer/ButtonsContainer"]
-margin_top = 35.0
+margin_top = 25.0
 margin_right = 326.0
-margin_bottom = 55.0
+margin_bottom = 45.0
 text = "Start"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/MainContainer/ButtonsContainer"]
@@ -55,9 +55,9 @@ margin_bottom = 85.0
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="MarginContainer/MainContainer/ButtonsContainer"]
-margin_top = 95.0
+margin_top = 105.0
 margin_right = 326.0
-margin_bottom = 115.0
+margin_bottom = 125.0
 text = "Quit"
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainContainer"]
