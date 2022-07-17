@@ -3,3 +3,13 @@
 [node name="GameScreen" type="PanelContainer"]
 margin_right = 360.0
 margin_bottom = 640.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 353.0
+margin_bottom = 633.0
+
+[node name="MainCointainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 346.0
+margin_bottom = 626.0
