@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Scenes/Text Scenes/LocationName.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Reused Scenes/LocationName.tscn" type="PackedScene" id=1]
 
 [node name="GameScreen" type="PanelContainer"]
 margin_right = 360.0
