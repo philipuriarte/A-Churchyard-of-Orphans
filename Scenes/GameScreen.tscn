@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Text Scenes/LocationName.tscn" type="PackedScene" id=1]
 
 [node name="GameScreen" type="PanelContainer"]
 margin_right = 360.0
@@ -13,3 +15,5 @@ margin_bottom = 633.0
 [node name="MainCointainer" type="VBoxContainer" parent="MarginContainer"]
 margin_right = 346.0
 margin_bottom = 626.0
+
+[node name="LocationName" parent="MarginContainer/MainCointainer" instance=ExtResource( 1 )]
