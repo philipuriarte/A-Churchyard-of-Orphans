@@ -78,7 +78,6 @@ margin_right = 42.0
 margin_bottom = 27.0
 text = "Music:"
 
-[node name="MusicButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Music&Sounds/Music"]
 [node name="MusicButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/Music"]
 margin_left = 46.0
 margin_right = 122.0
@@ -100,24 +99,24 @@ margin_left = 94.0
 margin_right = 170.0
 margin_bottom = 40.0
 
-[node name="Text" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
+[node name="TextContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 124.0
 margin_right = 276.0
 margin_bottom = 185.0
 custom_constants/separation = 10
 
-[node name="TextSize" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text"]
+[node name="Text" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer"]
 margin_right = 276.0
 margin_bottom = 20.0
 custom_constants/separation = 20
 
-[node name="TextLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text/TextSize"]
+[node name="TextLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer/Text"]
 margin_top = 3.0
 margin_right = 61.0
 margin_bottom = 17.0
 text = "Text Size:"
 
-[node name="TextOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text/TextSize"]
+[node name="TextOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer/Text"]
 margin_left = 81.0
 margin_right = 206.0
 margin_bottom = 20.0
@@ -126,7 +125,7 @@ text = "10"
 items = [ "10", null, false, 0, null, "11", null, false, 1, null, "12", null, false, 2, null, "13", null, false, 3, null, "14", null, false, 4, null ]
 selected = 0
 
-[node name="TextText" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text"]
+[node name="TextText" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer"]
 margin_top = 30.0
 margin_right = 276.0
 margin_bottom = 61.0
