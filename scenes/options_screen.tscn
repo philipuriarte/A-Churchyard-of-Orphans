@@ -14,3 +14,11 @@ margin_bottom = 633.0
 margin_right = 346.0
 margin_bottom = 626.0
 custom_constants/separation = 15
+
+[node name="OptionsLabel" type="Label" parent="MarginContainer/MainCointainer"]
+margin_right = 346.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+text = "Options"
+align = 1
+valign = 1
