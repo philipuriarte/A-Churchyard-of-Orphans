@@ -85,20 +85,20 @@ margin_left = 46.0
 margin_right = 122.0
 margin_bottom = 40.0
 
-[node name="Sounds" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer"]
+[node name="SFX" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer"]
 margin_top = 44.0
 margin_right = 226.0
 margin_bottom = 84.0
 
-[node name="SoundsLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/Sounds"]
+[node name="SFXLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/SFX"]
 margin_top = 13.0
-margin_right = 90.0
+margin_right = 42.0
 margin_bottom = 27.0
-text = "Sound effects:"
+text = "SFX:    "
 
-[node name="SoundsButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/Sounds"]
-margin_left = 94.0
-margin_right = 170.0
+[node name="SFXButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/SFX"]
+margin_left = 46.0
+margin_right = 122.0
 margin_bottom = 40.0
 
 [node name="TextContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
