@@ -63,55 +63,61 @@ text = "English"
 items = [ "English", null, false, 0, null, "Japanese", null, false, 1, null, "Tagalog", null, false, 2, null ]
 selected = 0
 
-[node name="Music&Sounds" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
+[node name="MusicContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 30.0
 margin_right = 276.0
 margin_bottom = 114.0
 
-[node name="Music" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Music&Sounds"]
+[node name="Music" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer"]
 margin_right = 276.0
 margin_bottom = 40.0
 
-[node name="MusicLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Music&Sounds/Music"]
+[node name="MusicLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/Music"]
 margin_top = 13.0
 margin_right = 42.0
 margin_bottom = 27.0
 text = "Music:"
 
 [node name="MusicButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Music&Sounds/Music"]
+[node name="MusicButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/Music"]
 margin_left = 46.0
 margin_right = 122.0
 margin_bottom = 40.0
 
-[node name="Sounds" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Music&Sounds"]
+[node name="Sounds" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer"]
 margin_top = 44.0
 margin_right = 276.0
 margin_bottom = 84.0
 
-[node name="SoundsLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Music&Sounds/Sounds"]
+[node name="SoundsLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/Sounds"]
 margin_top = 13.0
 margin_right = 90.0
 margin_bottom = 27.0
 text = "Sound effects:"
 
-[node name="SoundsButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Music&Sounds/Sounds"]
+[node name="SoundsButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/Sounds"]
 margin_left = 94.0
 margin_right = 170.0
 margin_bottom = 40.0
 
-[node name="Text" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
+[node name="Text" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 124.0
 margin_right = 276.0
-margin_bottom = 144.0
+margin_bottom = 185.0
+custom_constants/separation = 10
+
+[node name="TextSize" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text"]
+margin_right = 276.0
+margin_bottom = 20.0
 custom_constants/separation = 20
 
-[node name="TextLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text"]
+[node name="TextLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text/TextSize"]
 margin_top = 3.0
 margin_right = 61.0
 margin_bottom = 17.0
 text = "Text Size:"
 
-[node name="TextOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text"]
+[node name="TextOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text/TextSize"]
 margin_left = 81.0
 margin_right = 206.0
 margin_bottom = 20.0
@@ -119,6 +125,13 @@ rect_min_size = Vector2( 125, 0 )
 text = "10"
 items = [ "10", null, false, 0, null, "11", null, false, 1, null, "12", null, false, 2, null, "13", null, false, 3, null, "14", null, false, 4, null ]
 selected = 0
+
+[node name="TextText" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text"]
+margin_top = 30.0
+margin_right = 276.0
+margin_bottom = 61.0
+text = "Once upon a time there was a kingdom of peace and prosperity."
+autowrap = true
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
 margin_top = 592.0
