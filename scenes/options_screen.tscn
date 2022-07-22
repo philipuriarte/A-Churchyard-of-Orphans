@@ -70,11 +70,28 @@ margin_right = 144.0
 margin_bottom = 27.0
 text = "Music:"
 
-[node name="CheckButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsContainer/Music"]
+[node name="MusicButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsContainer/Music"]
 margin_left = 148.0
 margin_right = 224.0
 margin_bottom = 40.0
-toggle_mode = false
+
+[node name="Sounds" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsContainer"]
+margin_top = 68.0
+margin_right = 326.0
+margin_bottom = 108.0
+alignment = 1
+
+[node name="SoundsLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsContainer/Sounds"]
+margin_left = 78.0
+margin_top = 13.0
+margin_right = 168.0
+margin_bottom = 27.0
+text = "Sound effects:"
+
+[node name="SoundsButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsContainer/Sounds"]
+margin_left = 172.0
+margin_right = 248.0
+margin_bottom = 40.0
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
 margin_top = 592.0
