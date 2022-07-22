@@ -33,7 +33,7 @@ valign = 1
 [node name="OptionsMargin" type="MarginContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 115.0
 margin_right = 326.0
-margin_bottom = 497.0
+margin_bottom = 577.0
 size_flags_vertical = 3
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
@@ -41,7 +41,7 @@ custom_constants/margin_left = 50
 [node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin"]
 margin_left = 50.0
 margin_right = 276.0
-margin_bottom = 382.0
+margin_bottom = 462.0
 size_flags_vertical = 3
 custom_constants/separation = 10
 
@@ -136,19 +136,27 @@ custom_constants/line_spacing = 10
 text = "Once upon a time there was a kingdom of peace and prosperity."
 autowrap = true
 
-[node name="Credits" type="Button" parent="MarginContainer/MainCointainer"]
-margin_top = 512.0
-margin_right = 326.0
-margin_bottom = 537.0
+[node name="ExtrasContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
+margin_top = 212.0
+margin_right = 226.0
+margin_bottom = 462.0
+size_flags_vertical = 3
+custom_constants/separation = 15
+alignment = 1
+
+[node name="Credits" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
+margin_top = 92.0
+margin_right = 226.0
+margin_bottom = 117.0
 rect_min_size = Vector2( 0, 25 )
 text = "Credits"
 
-[node name="Back" type="Button" parent="MarginContainer/MainCointainer"]
-margin_top = 552.0
-margin_right = 326.0
-margin_bottom = 577.0
+[node name="Contact" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
+margin_top = 132.0
+margin_right = 226.0
+margin_bottom = 157.0
 rect_min_size = Vector2( 0, 25 )
-text = "Back"
+text = "Contact us"
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
 margin_top = 592.0
