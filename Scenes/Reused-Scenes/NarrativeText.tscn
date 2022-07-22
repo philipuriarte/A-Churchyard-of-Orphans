@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="NarrativeText" type="RichTextLabel"]
+margin_top = 54.0
+margin_right = 346.0
+margin_bottom = 626.0
+size_flags_vertical = 3
+text = "Text here"
