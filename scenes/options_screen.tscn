@@ -94,6 +94,27 @@ margin_left = 94.0
 margin_right = 170.0
 margin_bottom = 40.0
 
+[node name="Text" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
+margin_top = 112.0
+margin_right = 276.0
+margin_bottom = 132.0
+custom_constants/separation = 20
+
+[node name="TextLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text"]
+margin_top = 3.0
+margin_right = 61.0
+margin_bottom = 17.0
+text = "Text Size:"
+
+[node name="TextOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Text"]
+margin_left = 81.0
+margin_right = 206.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 125, 0 )
+text = "10"
+items = [ "10", null, false, 0, null, "11", null, false, 1, null, "12", null, false, 2, null, "13", null, false, 3, null, "14", null, false, 4, null ]
+selected = 0
+
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
 margin_top = 592.0
 margin_right = 326.0
