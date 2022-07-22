@@ -19,10 +19,23 @@ margin_right = 346.0
 margin_bottom = 626.0
 custom_constants/separation = 15
 
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainCointainer"]
+margin_right = 346.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="Label" type="Label" parent="MarginContainer/MainCointainer/HBoxContainer"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 32.0
+text = "Insert chracter portrait and name"
+
 [node name="LocationName" parent="MarginContainer/MainCointainer" instance=ExtResource( 1 )]
+margin_top = 65.0
+margin_bottom = 115.0
 
 [node name="NarrativeText" parent="MarginContainer/MainCointainer" instance=ExtResource( 2 )]
-margin_top = 65.0
+margin_top = 130.0
 margin_bottom = 461.0
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer"]
