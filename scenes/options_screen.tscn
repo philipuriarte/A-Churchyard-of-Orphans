@@ -9,14 +9,20 @@ margin_left = 7.0
 margin_top = 7.0
 margin_right = 353.0
 margin_bottom = 633.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
 
 [node name="MainCointainer" type="VBoxContainer" parent="MarginContainer"]
-margin_right = 346.0
-margin_bottom = 626.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 336.0
+margin_bottom = 616.0
 custom_constants/separation = 15
 
 [node name="OptionsLabel" type="Label" parent="MarginContainer/MainCointainer"]
-margin_right = 346.0
+margin_right = 326.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 0, 100 )
 text = "Options"
@@ -25,13 +31,13 @@ valign = 1
 
 [node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 115.0
-margin_right = 346.0
-margin_bottom = 597.0
+margin_right = 326.0
+margin_bottom = 577.0
 size_flags_vertical = 3
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
-margin_top = 612.0
-margin_right = 346.0
-margin_bottom = 626.0
+margin_top = 592.0
+margin_right = 326.0
+margin_bottom = 606.0
 text = "ver 0.0"
 align = 1
