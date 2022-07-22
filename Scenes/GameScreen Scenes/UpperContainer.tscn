@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="UpperContainer" type="HBoxContainer"]
+margin_right = 346.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="UpperText" type="Label" parent="."]
+margin_top = 18.0
+margin_right = 219.0
+margin_bottom = 32.0
+text = "Insert character portrait and name"
