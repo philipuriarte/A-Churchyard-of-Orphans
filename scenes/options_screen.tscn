@@ -103,7 +103,7 @@ margin_bottom = 40.0
 [node name="TextContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 124.0
 margin_right = 226.0
-margin_bottom = 185.0
+margin_bottom = 192.0
 custom_constants/separation = 10
 
 [node name="Text" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer"]
@@ -129,7 +129,8 @@ selected = 0
 [node name="TextText" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer"]
 margin_top = 30.0
 margin_right = 226.0
-margin_bottom = 61.0
+margin_bottom = 68.0
+custom_constants/line_spacing = 10
 text = "Once upon a time there was a kingdom of peace and prosperity."
 autowrap = true
 
