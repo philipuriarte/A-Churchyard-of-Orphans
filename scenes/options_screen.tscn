@@ -57,6 +57,25 @@ text = "English"
 items = [ "English", null, false, 0, null, "Japanese", null, false, 1, null, "Tagalog", null, false, 2, null ]
 selected = 0
 
+[node name="Music" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsContainer"]
+margin_top = 24.0
+margin_right = 326.0
+margin_bottom = 64.0
+alignment = 1
+
+[node name="MusicLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsContainer/Music"]
+margin_left = 102.0
+margin_top = 13.0
+margin_right = 144.0
+margin_bottom = 27.0
+text = "Music:"
+
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsContainer/Music"]
+margin_left = 148.0
+margin_right = 224.0
+margin_bottom = 40.0
+toggle_mode = false
+
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
 margin_top = 592.0
 margin_right = 326.0
