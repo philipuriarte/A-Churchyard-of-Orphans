@@ -62,3 +62,9 @@ margin_top = 576.0
 margin_right = 346.0
 margin_bottom = 626.0
 rect_min_size = Vector2( 0, 50 )
+
+[node name="BottomText" type="Label" parent="MarginContainer/MainCointainer/BottomContainer"]
+margin_top = 18.0
+margin_right = 118.0
+margin_bottom = 32.0
+text = "Insert bottom text"
