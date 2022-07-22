@@ -20,6 +20,7 @@ margin_top = 10.0
 margin_right = 336.0
 margin_bottom = 616.0
 custom_constants/separation = 15
+alignment = 1
 
 [node name="OptionsLabel" type="Label" parent="MarginContainer/MainCointainer"]
 margin_right = 326.0
@@ -32,7 +33,7 @@ valign = 1
 [node name="OptionsMargin" type="MarginContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 115.0
 margin_right = 326.0
-margin_bottom = 577.0
+margin_bottom = 537.0
 size_flags_vertical = 3
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
@@ -40,7 +41,7 @@ custom_constants/margin_left = 50
 [node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin"]
 margin_left = 50.0
 margin_right = 276.0
-margin_bottom = 462.0
+margin_bottom = 422.0
 size_flags_vertical = 3
 custom_constants/separation = 10
 
@@ -103,8 +104,8 @@ margin_bottom = 40.0
 [node name="TextContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 124.0
 margin_right = 226.0
-margin_bottom = 192.0
-custom_constants/separation = 10
+margin_bottom = 202.0
+custom_constants/separation = 20
 
 [node name="Text" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer"]
 margin_right = 226.0
@@ -126,13 +127,20 @@ text = "10"
 items = [ "10", null, false, 0, null, "11", null, false, 1, null, "12", null, false, 2, null, "13", null, false, 3, null, "14", null, false, 4, null ]
 selected = 0
 
-[node name="TextText" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer"]
-margin_top = 30.0
+[node name="TestText" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer"]
+margin_top = 40.0
 margin_right = 226.0
-margin_bottom = 68.0
+margin_bottom = 78.0
 custom_constants/line_spacing = 10
 text = "Once upon a time there was a kingdom of peace and prosperity."
 autowrap = true
+
+[node name="Credits" type="Button" parent="MarginContainer/MainCointainer"]
+margin_top = 552.0
+margin_right = 326.0
+margin_bottom = 577.0
+rect_min_size = Vector2( 0, 25 )
+text = "Credits"
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
 margin_top = 592.0
