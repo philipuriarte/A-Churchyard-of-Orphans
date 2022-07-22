@@ -22,3 +22,9 @@ rect_min_size = Vector2( 0, 100 )
 text = "Options"
 align = 1
 valign = 1
+
+[node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer"]
+margin_top = 115.0
+margin_right = 346.0
+margin_bottom = 626.0
+size_flags_vertical = 3
