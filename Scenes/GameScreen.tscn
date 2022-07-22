@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/GameScreen Scenes/UpperContainer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/GameScreen Scenes/MiddleContainer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/GameScreen Scenes/BottomContainer.tscn" type="PackedScene" id=3]
 
 [node name="GameScreen" type="PanelContainer"]
 margin_right = 360.0
@@ -22,14 +23,4 @@ custom_constants/separation = 15
 
 [node name="MiddleContainer" parent="MarginContainer/MainCointainer" instance=ExtResource( 2 )]
 
-[node name="BottomContainer" type="HBoxContainer" parent="MarginContainer/MainCointainer"]
-margin_top = 576.0
-margin_right = 346.0
-margin_bottom = 626.0
-rect_min_size = Vector2( 0, 50 )
-
-[node name="BottomText" type="Label" parent="MarginContainer/MainCointainer/BottomContainer"]
-margin_top = 18.0
-margin_right = 118.0
-margin_bottom = 32.0
-text = "Insert bottom text"
+[node name="BottomContainer" parent="MarginContainer/MainCointainer" instance=ExtResource( 3 )]
