@@ -110,7 +110,7 @@ custom_constants/separation = 20
 [node name="Text" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer"]
 margin_right = 226.0
 margin_bottom = 20.0
-custom_constants/separation = 20
+custom_constants/separation = 30
 
 [node name="TextLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer/Text"]
 margin_top = 3.0
@@ -119,10 +119,10 @@ margin_bottom = 17.0
 text = "Text Size:"
 
 [node name="TextOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer/Text"]
-margin_left = 81.0
-margin_right = 206.0
+margin_left = 91.0
+margin_right = 141.0
 margin_bottom = 20.0
-rect_min_size = Vector2( 125, 0 )
+rect_min_size = Vector2( 50, 0 )
 text = "10"
 items = [ "10", null, false, 0, null, "11", null, false, 1, null, "12", null, false, 2, null, "13", null, false, 3, null, "14", null, false, 4, null ]
 selected = 0
