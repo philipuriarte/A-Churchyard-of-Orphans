@@ -29,68 +29,69 @@ text = "Options"
 align = 1
 valign = 1
 
-[node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer"]
+[node name="OptionsMargin" type="MarginContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 115.0
 margin_right = 326.0
 margin_bottom = 577.0
 size_flags_vertical = 3
+custom_constants/margin_left = 50
 
-[node name="Languange" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsContainer"]
+[node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin"]
+margin_left = 50.0
 margin_right = 326.0
+margin_bottom = 462.0
+size_flags_vertical = 3
+
+[node name="Languange" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
+margin_right = 276.0
 margin_bottom = 20.0
 custom_constants/separation = 20
-alignment = 1
 
-[node name="LangLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsContainer/Languange"]
-margin_left = 55.0
+[node name="LangLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Languange"]
 margin_top = 3.0
-margin_right = 126.0
+margin_right = 71.0
 margin_bottom = 17.0
 text = "Languange:"
 
-[node name="LangOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsContainer/Languange"]
-margin_left = 146.0
-margin_right = 271.0
+[node name="LangOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Languange"]
+margin_left = 91.0
+margin_right = 216.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 125, 0 )
 text = "English"
 items = [ "English", null, false, 0, null, "Japanese", null, false, 1, null, "Tagalog", null, false, 2, null ]
 selected = 0
 
-[node name="Music" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsContainer"]
+[node name="Music" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 24.0
-margin_right = 326.0
+margin_right = 276.0
 margin_bottom = 64.0
-alignment = 1
 
-[node name="MusicLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsContainer/Music"]
-margin_left = 102.0
+[node name="MusicLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Music"]
 margin_top = 13.0
-margin_right = 144.0
+margin_right = 42.0
 margin_bottom = 27.0
 text = "Music:"
 
-[node name="MusicButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsContainer/Music"]
-margin_left = 148.0
-margin_right = 224.0
+[node name="MusicButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Music"]
+margin_left = 46.0
+margin_right = 122.0
 margin_bottom = 40.0
 
-[node name="Sounds" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsContainer"]
+[node name="Sounds" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 68.0
-margin_right = 326.0
+margin_right = 276.0
 margin_bottom = 108.0
-alignment = 1
 
-[node name="SoundsLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsContainer/Sounds"]
-margin_left = 78.0
+[node name="SoundsLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Sounds"]
 margin_top = 13.0
-margin_right = 168.0
+margin_right = 90.0
 margin_bottom = 27.0
 text = "Sound effects:"
 
-[node name="SoundsButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsContainer/Sounds"]
-margin_left = 172.0
-margin_right = 248.0
+[node name="SoundsButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Sounds"]
+margin_left = 94.0
+margin_right = 170.0
 margin_bottom = 40.0
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
