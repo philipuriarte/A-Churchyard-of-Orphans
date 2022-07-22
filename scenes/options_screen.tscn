@@ -35,6 +35,28 @@ margin_right = 326.0
 margin_bottom = 577.0
 size_flags_vertical = 3
 
+[node name="Languange" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsContainer"]
+margin_right = 326.0
+margin_bottom = 20.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="LangLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsContainer/Languange"]
+margin_left = 55.0
+margin_top = 3.0
+margin_right = 126.0
+margin_bottom = 17.0
+text = "Languange:"
+
+[node name="LangOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsContainer/Languange"]
+margin_left = 146.0
+margin_right = 271.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 125, 0 )
+text = "English"
+items = [ "English", null, false, 0, null, "Japanese", null, false, 1, null, "Tagalog", null, false, 2, null ]
+selected = 0
+
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
 margin_top = 592.0
 margin_right = 326.0
