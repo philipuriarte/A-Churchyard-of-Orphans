@@ -30,27 +30,30 @@ margin_right = 219.0
 margin_bottom = 32.0
 text = "Insert character portrait and name"
 
-[node name="LocationName" parent="MarginContainer/MainCointainer" instance=ExtResource( 1 )]
+[node name="MiddleContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 65.0
-margin_bottom = 115.0
-
-[node name="NarrativeText" parent="MarginContainer/MainCointainer" instance=ExtResource( 2 )]
-margin_top = 130.0
-margin_bottom = 396.0
-
-[node name="ChoicesContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer"]
-margin_top = 411.0
 margin_right = 346.0
 margin_bottom = 561.0
+size_flags_vertical = 3
+
+[node name="LocationName" parent="MarginContainer/MainCointainer/MiddleContainer" instance=ExtResource( 1 )]
+
+[node name="NarrativeText" parent="MarginContainer/MainCointainer/MiddleContainer" instance=ExtResource( 2 )]
+margin_bottom = 342.0
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/MiddleContainer"]
+margin_top = 346.0
+margin_right = 346.0
+margin_bottom = 496.0
 rect_min_size = Vector2( 0, 150 )
 custom_constants/separation = 10
 alignment = 1
 
-[node name="Choice" parent="MarginContainer/MainCointainer/ChoicesContainer" instance=ExtResource( 3 )]
+[node name="Choice" parent="MarginContainer/MainCointainer/MiddleContainer/ChoicesContainer" instance=ExtResource( 3 )]
 margin_top = 40.0
 margin_bottom = 70.0
 
-[node name="Choice2" parent="MarginContainer/MainCointainer/ChoicesContainer" instance=ExtResource( 3 )]
+[node name="Choice2" parent="MarginContainer/MainCointainer/MiddleContainer/ChoicesContainer" instance=ExtResource( 3 )]
 margin_top = 80.0
 margin_bottom = 110.0
 
