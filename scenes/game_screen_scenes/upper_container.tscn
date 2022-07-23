@@ -20,3 +20,5 @@ margin_left = 267.0
 margin_right = 346.0
 margin_bottom = 50.0
 text = "Go to Title"
+
+[connection signal="pressed" from="TitleButton" to="." method="_on_TitleButton_pressed"]
