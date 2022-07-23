@@ -146,18 +146,25 @@ custom_constants/separation = 15
 alignment = 1
 
 [node name="Credits" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
-margin_top = 92.0
+margin_top = 72.0
 margin_right = 226.0
-margin_bottom = 117.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 0, 25 )
 text = "Credits"
 
 [node name="Contact" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
-margin_top = 132.0
+margin_top = 112.0
 margin_right = 226.0
-margin_bottom = 157.0
+margin_bottom = 137.0
 rect_min_size = Vector2( 0, 25 )
 text = "Contact us"
+
+[node name="Back" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
+margin_top = 152.0
+margin_right = 226.0
+margin_bottom = 177.0
+rect_min_size = Vector2( 0, 25 )
+text = "Back"
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
 margin_top = 592.0
