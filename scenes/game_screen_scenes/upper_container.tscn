@@ -1,9 +1,12 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://logic/game_screen_logic/game_screen_upper.gd" type="Script" id=1]
 
 [node name="UpperContainer" type="HBoxContainer"]
 margin_right = 346.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 0, 50 )
+script = ExtResource( 1 )
 
 [node name="UpperText" type="Label" parent="."]
 margin_top = 18.0
