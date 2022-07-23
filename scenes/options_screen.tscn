@@ -145,14 +145,14 @@ size_flags_vertical = 3
 custom_constants/separation = 15
 alignment = 1
 
-[node name="Credits" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
+[node name="CreditsButton" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
 margin_top = 72.0
 margin_right = 226.0
 margin_bottom = 97.0
 rect_min_size = Vector2( 0, 25 )
 text = "Credits"
 
-[node name="Contact" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
+[node name="ContactButton" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
 margin_top = 112.0
 margin_right = 226.0
 margin_bottom = 137.0
@@ -166,7 +166,7 @@ margin_bottom = 577.0
 custom_constants/margin_right = 100
 custom_constants/margin_left = 100
 
-[node name="Back" type="Button" parent="MarginContainer/MainCointainer/ButtonMargin"]
+[node name="BackButton" type="Button" parent="MarginContainer/MainCointainer/ButtonMargin"]
 margin_left = 100.0
 margin_right = 226.0
 margin_bottom = 25.0
