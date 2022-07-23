@@ -33,7 +33,7 @@ valign = 1
 [node name="OptionsMargin" type="MarginContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 115.0
 margin_right = 326.0
-margin_bottom = 577.0
+margin_bottom = 537.0
 size_flags_vertical = 3
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
@@ -41,7 +41,7 @@ custom_constants/margin_left = 50
 [node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin"]
 margin_left = 50.0
 margin_right = 276.0
-margin_bottom = 462.0
+margin_bottom = 422.0
 size_flags_vertical = 3
 custom_constants/separation = 10
 
@@ -140,7 +140,7 @@ autowrap = true
 [node name="ExtrasContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 212.0
 margin_right = 226.0
-margin_bottom = 462.0
+margin_bottom = 422.0
 size_flags_vertical = 3
 custom_constants/separation = 15
 alignment = 1
@@ -159,10 +159,17 @@ margin_bottom = 137.0
 rect_min_size = Vector2( 0, 25 )
 text = "Contact us"
 
-[node name="Back" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
-margin_top = 152.0
+[node name="ButtonMargin" type="MarginContainer" parent="MarginContainer/MainCointainer"]
+margin_top = 552.0
+margin_right = 326.0
+margin_bottom = 577.0
+custom_constants/margin_right = 100
+custom_constants/margin_left = 100
+
+[node name="Back" type="Button" parent="MarginContainer/MainCointainer/ButtonMargin"]
+margin_left = 100.0
 margin_right = 226.0
-margin_bottom = 177.0
+margin_bottom = 25.0
 rect_min_size = Vector2( 0, 25 )
 text = "Back"
 
