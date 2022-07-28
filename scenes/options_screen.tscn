@@ -88,6 +88,7 @@ text = "Music:"
 margin_left = 82.0
 margin_right = 158.0
 margin_bottom = 40.0
+pressed = true
 
 [node name="SFX" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer"]
 margin_top = 44.0
@@ -105,6 +106,7 @@ text = "SFX:"
 margin_left = 81.0
 margin_right = 157.0
 margin_bottom = 40.0
+pressed = true
 
 [node name="TextContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 124.0
