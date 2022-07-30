@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/reused_scenes/narrative_text.tscn" type="PackedScene" id=1]
+[ext_resource path="res://logic/game_screen_logic/middle_container.gd" type="Script" id=2]
 [ext_resource path="res://scenes/reused_scenes/choice.tscn" type="PackedScene" id=3]
 
 [node name="MiddleContainer" type="VBoxContainer"]
@@ -8,6 +9,7 @@ margin_top = 65.0
 margin_right = 346.0
 margin_bottom = 561.0
 size_flags_vertical = 3
+script = ExtResource( 2 )
 
 [node name="NarrativeText" parent="." instance=ExtResource( 1 )]
 margin_top = 0.0
