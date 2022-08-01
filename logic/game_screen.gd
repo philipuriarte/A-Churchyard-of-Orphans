@@ -1,5 +1,14 @@
 extends PanelContainer
 
+# Variables that contain scenes to instance
+const NarrativeText = preload("res://scenes/reused_scenes/narrative_text.tscn")
+const Choice = preload("res://scenes/reused_scenes/choice.tscn")
+
+# Variables that contain nodes
+onready var content_con = $MarginContainer/MainCointainer/ContentContainer
+onready var choices_con = $MarginContainer/MainCointainer/ChoicesMargin/ChoicesContainer
+
+
 func _ready() -> void:
 	pass
 
