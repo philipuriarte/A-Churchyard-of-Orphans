@@ -7,6 +7,7 @@ const Choice = preload("res://scenes/reused_scenes/choice.tscn")
 # Variables that contain nodes
 onready var content_con = $MarginContainer/MainCointainer/ContentContainer
 onready var choices_con = $MarginContainer/MainCointainer/ChoicesMargin/ChoicesContainer
+onready var narr_text = $MarginContainer/MainCointainer/ContentContainer/NarrativeText
 
 
 func _ready() -> void:
