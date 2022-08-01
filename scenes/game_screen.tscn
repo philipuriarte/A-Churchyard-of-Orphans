@@ -63,6 +63,13 @@ margin_bottom = 50.0
 custom_constants/separation = 10
 alignment = 1
 
+[node name="ContinueButton" type="Button" parent="MarginContainer/MainCointainer/ChoicesMargin/ChoicesContainer"]
+margin_top = 10.0
+margin_right = 226.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 30 )
+text = "Continue"
+
 [node name="BottomContainer" type="HBoxContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 556.0
 margin_right = 326.0
