@@ -48,6 +48,11 @@ margin_right = 326.0
 margin_bottom = 476.0
 size_flags_vertical = 3
 
+[node name="NarrativeText" type="RichTextLabel" parent="MarginContainer/MainCointainer/ContentContainer"]
+margin_right = 326.0
+margin_bottom = 411.0
+size_flags_vertical = 3
+
 [node name="ChoicesMargin" type="MarginContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 491.0
 margin_right = 326.0
