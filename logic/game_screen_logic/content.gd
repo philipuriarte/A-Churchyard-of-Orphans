@@ -7,6 +7,7 @@ const NarrativeText = preload("res://scenes/reused_scenes/narrative_text.tscn")
 var choice_result := 0
 
 # Variables that contain nodes
+onready var narr_text = $NarrativeText
 onready var choices_con = $ChoicesMargin/ChoicesContainer
 onready var choice_1 = $ChoicesMargin/ChoicesContainer/Choice1
 onready var choice_2 = $ChoicesMargin/ChoicesContainer/Choice2
