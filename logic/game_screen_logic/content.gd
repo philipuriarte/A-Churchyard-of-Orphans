@@ -15,13 +15,13 @@ onready var choice_3 = $ChoicesMargin/ChoicesContainer/Choice3
 onready var choice_4 = $ChoicesMargin/ChoicesContainer/Choice4
 
 
-func _ready() -> void:
-	pass
+func set_narr_text(new_text: String):
+	narr_text.text = new_text
 
 
-# Sets visibility and text of choice buttons, deletes and instances NarrativeText
+# Sets visibility and text of choice buttons, sets text of NarrativeText
 func choice_output(result: int) -> void:
-	print("Choice = ", result)
+	set_narr_text("You chose choice #" + result as String)
 
 
 # Functions for checking if any of the Choice buttons were released
