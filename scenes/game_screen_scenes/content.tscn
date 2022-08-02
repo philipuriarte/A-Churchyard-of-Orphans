@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scenes/reused_scenes/narrative_text.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logic/game_screen_logic/content.gd" type="Script" id=3]
 
 [node name="ContentContainer" type="VBoxContainer"]
@@ -11,9 +10,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 3 )
 
-[node name="NarrativeText" parent="." instance=ExtResource( 1 )]
-margin_top = 0.0
+[node name="NarrativeText" type="RichTextLabel" parent="."]
+margin_right = 346.0
 margin_bottom = 342.0
+size_flags_vertical = 3
+text = "Insert text here"
 
 [node name="ChoicesMargin" type="MarginContainer" parent="."]
 margin_top = 346.0
