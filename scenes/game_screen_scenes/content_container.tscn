@@ -30,8 +30,28 @@ custom_constants/separation = 10
 alignment = 1
 
 [node name="Choice1" type="Button" parent="ChoicesMargin/ChoicesContainer"]
-margin_top = 60.0
 margin_right = 246.0
-margin_bottom = 90.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 0, 30 )
 text = "Choice1"
+
+[node name="Choice2" type="Button" parent="ChoicesMargin/ChoicesContainer"]
+margin_top = 40.0
+margin_right = 246.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 30 )
+text = "Choice2"
+
+[node name="Choice3" type="Button" parent="ChoicesMargin/ChoicesContainer"]
+margin_top = 80.0
+margin_right = 246.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 0, 30 )
+text = "Choice3"
+
+[node name="Choice4" type="Button" parent="ChoicesMargin/ChoicesContainer"]
+margin_top = 120.0
+margin_right = 246.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 30 )
+text = "Choice4"
