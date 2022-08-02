@@ -18,6 +18,7 @@ func choice_output(result: int) -> void:
 	print("Choice = ", result)
 
 
+# Functions for checking if any of the Choice buttons were released
 func _on_Choice1_button_up() -> void:
 	choice_result = 1
 	choice_output(choice_result)
