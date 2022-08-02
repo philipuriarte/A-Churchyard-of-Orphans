@@ -11,3 +11,19 @@ onready var choices_container = $ChoicesMargin/ChoicesContainer
 
 func _ready() -> void:
 	pass
+
+
+func _on_Choice1_button_up() -> void:
+	choice_result = 1
+
+
+func _on_Choice2_button_up() -> void:
+	choice_result = 2
+
+
+func _on_Choice3_button_up() -> void:
+	choice_result = 3
+
+
+func _on_Choice4_button_up() -> void:
+	choice_result = 4

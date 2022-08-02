@@ -55,3 +55,8 @@ margin_right = 246.0
 margin_bottom = 150.0
 rect_min_size = Vector2( 0, 30 )
 text = "Choice4"
+
+[connection signal="button_up" from="ChoicesMargin/ChoicesContainer/Choice1" to="." method="_on_Choice1_button_up"]
+[connection signal="button_up" from="ChoicesMargin/ChoicesContainer/Choice2" to="." method="_on_Choice2_button_up"]
+[connection signal="button_up" from="ChoicesMargin/ChoicesContainer/Choice3" to="." method="_on_Choice3_button_up"]
+[connection signal="button_up" from="ChoicesMargin/ChoicesContainer/Choice4" to="." method="_on_Choice4_button_up"]
