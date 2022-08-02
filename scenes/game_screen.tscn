@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://logic/game_screen.gd" type="Script" id=1]
+[ext_resource path="res://scenes/game_screen_scenes/content_container.tscn" type="PackedScene" id=2]
 
 [node name="GameScreen" type="PanelContainer"]
 margin_right = 360.0
@@ -42,10 +43,14 @@ margin_right = 326.0
 margin_bottom = 50.0
 text = "Go to Title"
 
-[node name="BottomContainer" type="HBoxContainer" parent="MarginContainer/MainCointainer"]
-margin_top = 65.0
+[node name="ContentContainer" parent="MarginContainer/MainCointainer" instance=ExtResource( 2 )]
 margin_right = 326.0
-margin_bottom = 115.0
+margin_bottom = 541.0
+
+[node name="BottomContainer" type="HBoxContainer" parent="MarginContainer/MainCointainer"]
+margin_top = 556.0
+margin_right = 326.0
+margin_bottom = 606.0
 rect_min_size = Vector2( 0, 50 )
 
 [connection signal="pressed" from="MarginContainer/MainCointainer/TopContainer/TitleButton" to="." method="_on_TitleButton_pressed"]
