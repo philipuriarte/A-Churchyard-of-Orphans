@@ -43,9 +43,16 @@ margin_right = 326.0
 margin_bottom = 50.0
 text = "Go to Title"
 
-[node name="ContentContainer" parent="MarginContainer/MainCointainer" instance=ExtResource( 2 )]
+[node name="ContentScroll" type="ScrollContainer" parent="MarginContainer/MainCointainer"]
+margin_top = 65.0
 margin_right = 326.0
 margin_bottom = 541.0
+size_flags_vertical = 3
+
+[node name="ContentContainer" parent="MarginContainer/MainCointainer/ContentScroll" instance=ExtResource( 2 )]
+margin_top = 0.0
+margin_right = 326.0
+margin_bottom = 476.0
 
 [node name="BottomContainer" type="HBoxContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 556.0
