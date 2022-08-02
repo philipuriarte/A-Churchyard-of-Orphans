@@ -8,12 +8,17 @@ var choice_result := 0
 
 # Variables that contain nodes
 onready var choices_container = $ChoicesMargin/ChoicesContainer
+onready var choice_1 = $ChoicesMargin/ChoicesContainer/Choice1
+onready var choice_2 = $ChoicesMargin/ChoicesContainer/Choice2
+onready var choice_3 = $ChoicesMargin/ChoicesContainer/Choice3
+onready var choice_4 = $ChoicesMargin/ChoicesContainer/Choice4
 
 
 func _ready() -> void:
 	pass
 
 
+# Sets visibility and text of choice buttons, deletes and instances NarrativeText
 func choice_output(result: int) -> void:
 	print("Choice = ", result)
 
