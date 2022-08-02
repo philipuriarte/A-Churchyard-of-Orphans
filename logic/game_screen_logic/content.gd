@@ -15,20 +15,24 @@ func _ready() -> void:
 
 
 func choice_output(result: int) -> void:
-	pass
+	print("Choice = ", result)
 
 
 func _on_Choice1_button_up() -> void:
 	choice_result = 1
+	choice_output(choice_result)
 
 
 func _on_Choice2_button_up() -> void:
 	choice_result = 2
+	choice_output(choice_result)
 
 
 func _on_Choice3_button_up() -> void:
 	choice_result = 3
+	choice_output(choice_result)
 
 
 func _on_Choice4_button_up() -> void:
 	choice_result = 4
+	choice_output(choice_result)
