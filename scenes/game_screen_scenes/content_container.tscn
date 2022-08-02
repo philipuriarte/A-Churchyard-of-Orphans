@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/reused_scenes/choice.tscn" type="PackedScene" id=2]
 [ext_resource path="res://logic/game_screen_logic/content_container.gd" type="Script" id=3]
 
-[node name="MiddleContainer" type="VBoxContainer"]
+[node name="ContentContainer" type="VBoxContainer"]
 margin_top = 65.0
 margin_right = 346.0
 margin_bottom = 561.0
