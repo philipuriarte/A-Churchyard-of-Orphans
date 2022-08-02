@@ -30,12 +30,19 @@ margin_bottom = 150.0
 custom_constants/separation = 10
 alignment = 1
 
-[node name="Choice" parent="ChoicesMargin/ChoicesContainer" instance=ExtResource( 2 )]
-margin_top = 40.0
+[node name="Choice1" type="Button" parent="ChoicesMargin/ChoicesContainer"]
+margin_top = 20.0
 margin_right = 246.0
-margin_bottom = 70.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 30 )
+text = "Choice1"
+
+[node name="Choice" parent="ChoicesMargin/ChoicesContainer" instance=ExtResource( 2 )]
+margin_top = 60.0
+margin_right = 246.0
+margin_bottom = 90.0
 
 [node name="Choice2" parent="ChoicesMargin/ChoicesContainer" instance=ExtResource( 2 )]
-margin_top = 80.0
+margin_top = 100.0
 margin_right = 246.0
-margin_bottom = 110.0
+margin_bottom = 130.0
