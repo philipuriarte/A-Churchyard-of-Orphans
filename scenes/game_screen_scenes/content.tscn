@@ -7,6 +7,7 @@
 margin_top = 65.0
 margin_right = 346.0
 margin_bottom = 561.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 3 )
 
