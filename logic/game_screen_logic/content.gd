@@ -56,14 +56,17 @@ func _on_Choice1_button_up() -> void:
 
 func _on_Choice2_button_up() -> void:
 	choice_index = 2
-	set_content(" ", choice_index)
+	output_key = content_dict[current_page]["choices"][choice_index]["output"]
+	set_content(output_key, choice_index)
 
 
 func _on_Choice3_button_up() -> void:
 	choice_index = 3
-	set_content(" ", choice_index)
+	output_key = content_dict[current_page]["choices"][choice_index]["output"]
+	set_content(output_key, choice_index)
 
 
 func _on_Choice4_button_up() -> void:
 	choice_index = 4
-	set_content(" ", choice_index)
+	output_key = content_dict[current_page]["choices"][choice_index]["output"]
+	set_content(output_key, choice_index)
