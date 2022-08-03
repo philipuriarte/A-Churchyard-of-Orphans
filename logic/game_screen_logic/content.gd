@@ -41,26 +41,26 @@ func set_choice_btn_text():
 
 
 # Sets visibility and text of choice buttons, sets text of NarrativeText
-func set_content(index: int) -> void:
-	set_narr_text("You chose choice #" + var2str(index))
+func set_content(key: String, index: int) -> void:
+	set_narr_text(content_dict[key]["narr_text"])
 
 
 # Functions for checking if any of the Choice buttons were released
 func _on_Choice1_button_up() -> void:
 	choice_index = 1
-	set_content(choice_index)
+	set_content(" ", choice_index)
 
 
 func _on_Choice2_button_up() -> void:
 	choice_index = 2
-	set_content(choice_index)
+	set_content(" ", choice_index)
 
 
 func _on_Choice3_button_up() -> void:
 	choice_index = 3
-	set_content(choice_index)
+	set_content(" ", choice_index)
 
 
 func _on_Choice4_button_up() -> void:
 	choice_index = 4
-	set_content(choice_index)
+	set_content(" ", choice_index)
