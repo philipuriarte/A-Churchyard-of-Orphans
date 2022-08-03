@@ -38,7 +38,7 @@ func set_narr_text(new_text: String):
 	narr_text.text = new_text
 
 
-func set_choice_btn_text(key: String):
+func set_choice_btn(key: String):
 	for choice in content_dict[key]["choices"]:
 		match choice:
 			1:
@@ -64,7 +64,7 @@ func set_choice_btn_text(key: String):
 # Sets visibility and text of choice buttons, sets text of NarrativeText
 func set_content(key: String, index: int) -> void:
 	set_narr_text(content_dict[key]["narr_text"])
-	set_choice_btn_text(key)
+	set_choice_btn(key)
 
 
 # Functions for checking if any of the Choice buttons were released
