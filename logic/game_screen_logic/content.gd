@@ -62,7 +62,7 @@ func set_choice_btn(key: String):
 
 
 # Sets visibility and text of choice buttons, sets text of NarrativeText
-func set_content(key: String, index: int) -> void:
+func set_content(key: String) -> void:
 	set_narr_text(content_dict[key]["narr_text"])
 	set_choice_btn(key)
 
@@ -71,22 +71,22 @@ func set_content(key: String, index: int) -> void:
 func _on_Choice1_button_up() -> void:
 	choice_index = 1
 	output_key = content_dict[current_page]["choices"][choice_index]["output"]
-	set_content(output_key, choice_index)
+	set_content(output_key)
 
 
 func _on_Choice2_button_up() -> void:
 	choice_index = 2
 	output_key = content_dict[current_page]["choices"][choice_index]["output"]
-	set_content(output_key, choice_index)
+	set_content(output_key)
 
 
 func _on_Choice3_button_up() -> void:
 	choice_index = 3
 	output_key = content_dict[current_page]["choices"][choice_index]["output"]
-	set_content(output_key, choice_index)
+	set_content(output_key)
 
 
 func _on_Choice4_button_up() -> void:
 	choice_index = 4
 	output_key = content_dict[current_page]["choices"][choice_index]["output"]
-	set_content(output_key, choice_index)
+	set_content(output_key)
