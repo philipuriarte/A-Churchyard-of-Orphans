@@ -29,7 +29,7 @@ onready var choice_4 = $ChoicesMargin/ChoicesContainer/Choice4
 
 
 func _ready() -> void:
-	set_narr_text(content_dict["prologue"]["text"])
+	set_narr_text(content_dict["prologue"]["narr_text"])
 
 
 func set_narr_text(new_text: String):
