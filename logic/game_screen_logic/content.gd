@@ -42,7 +42,7 @@ func set_choice_btn_text():
 
 # Sets visibility and text of choice buttons, sets text of NarrativeText
 func choice_output(index: int) -> void:
-	set_narr_text("You chose choice #" + index as String)
+	set_narr_text("You chose choice #" + var2str(index))
 
 
 # Functions for checking if any of the Choice buttons were released
