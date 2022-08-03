@@ -16,8 +16,12 @@ var content_dict : Dictionary = {
 	"intro": {
 		"narr_text": "You wake up to the sudden knock to your room.",
 		"choices": {
-			1: "Open the door",
-			2: "Ask who it is"
+			1: {
+				"text": "Open the door"
+			},
+			2: {
+				"text": "Ask who it is"
+			}
 		}
 	}
 }
