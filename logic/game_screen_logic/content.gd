@@ -5,7 +5,7 @@ var current_page = "prologue"
 var content_dict : Dictionary = {
 	"prologue": {
 		"narr_text": "You are the son/daughter of Lord *insert name* of *insert place*",
-		"choices_text": {
+		"choices": {
 			1: {
 				"text": "Continue",
 				"output": "intro"
@@ -14,7 +14,7 @@ var content_dict : Dictionary = {
 	},
 	"intro": {
 		"narr_text": "You wake up to the sudden knock to your room.",
-		"choices_text": {
+		"choices": {
 			1: "Open the door",
 			2: "Ask who it is"
 		}
