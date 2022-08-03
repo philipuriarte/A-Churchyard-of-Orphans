@@ -42,19 +42,19 @@ func set_choice_btn(key: String):
 	for choice in content_dict[key]["choices"]:
 		match choice:
 			1:
-				choice_1.text = content_dict[key]["choices"][choice]
+				choice_1.text = content_dict[key]["choices"][choice]["text"]
 				choice_1.visible = true
 				continue
 			2:
-				choice_2.text = content_dict[key]["choices"][choice]
+				choice_2.text = content_dict[key]["choices"][choice]["text"]
 				choice_2.visible = true
 				continue
 			3:
-				choice_3.text = content_dict[key]["choices"][choice]
+				choice_3.text = content_dict[key]["choices"][choice]["text"]
 				choice_3.visible = true
 				continue
 			4:
-				choice_4.text = content_dict[key]["choices"][choice]
+				choice_4.text = content_dict[key]["choices"][choice]["text"]
 				choice_4.visible = true
 				continue
 			_:
