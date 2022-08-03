@@ -9,7 +9,11 @@ var content_dict : Dictionary = {
 		}
 	},
 	"intro": {
-		"text": 'You wake up to the sudden knock to your room. "Sir *insert name*! Sir *insert name*"'
+		"text": "You wake up to the sudden knock to your room.",
+		"choices_text": {
+			1: "Open the door",
+			2: "Ask who it is"
+		}
 	}
 }
 
