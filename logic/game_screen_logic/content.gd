@@ -5,7 +5,10 @@ var content_dict : Dictionary = {
 	"prologue": {
 		"text": "You are the son/daughter of Lord *insert name* of *insert place*",
 		"choices_text": {
-			1: "Continue"
+			1: {
+				"text": "Continue",
+				"output": "intro"
+			}
 		}
 	},
 	"intro": {
