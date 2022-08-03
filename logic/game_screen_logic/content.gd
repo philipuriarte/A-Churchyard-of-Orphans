@@ -1,11 +1,11 @@
 extends VBoxContainer
 
 var choice_index := 0
-var current_page = "prologue"
-var output_key : String = " "
+var current_page := "prologue"
+var output_key := " "
 
 # Dictionary that contains all the text content of the game
-var content_dict : Dictionary = {
+var content_dict := {
 	"prologue": {
 		"narr_text": "You are the son/daughter of Lord *insert name* of *insert place*",
 		"choices": {
