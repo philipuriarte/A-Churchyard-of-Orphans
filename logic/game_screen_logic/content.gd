@@ -1,6 +1,7 @@
 extends VBoxContainer
 
 var choice_index := 0
+var current_page = "prologue"
 var content_dict : Dictionary = {
 	"prologue": {
 		"narr_text": "You are the son/daughter of Lord *insert name* of *insert place*",
