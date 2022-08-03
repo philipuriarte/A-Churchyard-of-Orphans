@@ -14,6 +14,7 @@ script = ExtResource( 3 )
 margin_right = 346.0
 margin_bottom = 312.0
 size_flags_vertical = 3
+custom_constants/line_separation = 10
 text = "Insert text here"
 fit_content_height = true
 scroll_active = false
