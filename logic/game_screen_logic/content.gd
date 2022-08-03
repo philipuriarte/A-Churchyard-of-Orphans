@@ -5,7 +5,7 @@ var content_dict : Dictionary = {
 	"prologue": {
 		"text": "You are the son/daughter of Lord *insert name* of *insert place*",
 		"choices_text": {
-			"choice_1": "Continue"
+			1: "Continue"
 		}
 	},
 	"intro": {
