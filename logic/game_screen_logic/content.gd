@@ -3,7 +3,7 @@ extends VBoxContainer
 var choice_index := 0
 var content_dict : Dictionary = {
 	"prologue": {
-		"text": "You are the son/daughter of Lord *insert name* of *insert place*",
+		"narr_text": "You are the son/daughter of Lord *insert name* of *insert place*",
 		"choices_text": {
 			1: {
 				"text": "Continue",
@@ -12,7 +12,7 @@ var content_dict : Dictionary = {
 		}
 	},
 	"intro": {
-		"text": "You wake up to the sudden knock to your room.",
+		"narr_text": "You wake up to the sudden knock to your room.",
 		"choices_text": {
 			1: "Open the door",
 			2: "Ask who it is"
