@@ -3,6 +3,8 @@ extends VBoxContainer
 var choice_index := 0
 var current_page = "prologue"
 var output_key : String = " "
+
+# Dictionary that contains all the text content of the game
 var content_dict : Dictionary = {
 	"prologue": {
 		"narr_text": "You are the son/daughter of Lord *insert name* of *insert place*",
@@ -71,10 +73,12 @@ func _ready() -> void:
 	set_content("prologue")
 
 
+# Sets text of NarrativeText
 func set_narr_text(new_text: String):
 	narr_text.text = new_text
 
 
+# Sets visibility and text of Choice buttons
 func set_choice_btn(key: String):
 	for choice in content_dict[key]["choices"]:
 		match choice:
@@ -96,7 +100,7 @@ func set_choice_btn(key: String):
 				continue
 
 
-# Sets visibility and text of choice buttons, sets text of NarrativeText
+# Updates the content of ContentContainer and value of current_page
 func set_content(key: String) -> void:
 	current_page = key
 	set_narr_text(content_dict[key]["narr_text"])
