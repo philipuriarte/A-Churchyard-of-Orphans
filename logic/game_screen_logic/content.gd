@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-var choice_result := 0
+var choice_index := 0
 
 # Variables that contain nodes
 onready var narr_text = $NarrativeText
@@ -25,20 +25,20 @@ func choice_output(result: int) -> void:
 
 # Functions for checking if any of the Choice buttons were released
 func _on_Choice1_button_up() -> void:
-	choice_result = 1
-	choice_output(choice_result)
+	choice_index = 1
+	choice_output(choice_index)
 
 
 func _on_Choice2_button_up() -> void:
-	choice_result = 2
-	choice_output(choice_result)
+	choice_index = 2
+	choice_output(choice_index)
 
 
 func _on_Choice3_button_up() -> void:
-	choice_result = 3
-	choice_output(choice_result)
+	choice_index = 3
+	choice_output(choice_index)
 
 
 func _on_Choice4_button_up() -> void:
-	choice_result = 4
-	choice_output(choice_result)
+	choice_index = 4
+	choice_output(choice_index)
