@@ -3,7 +3,10 @@ extends VBoxContainer
 var choice_index := 0
 var content_dict : Dictionary = {
 	"prologue": {
-		"text": "You are the son/daughter of Lord *insert name* of *insert place*"
+		"text": "You are the son/daughter of Lord *insert name* of *insert place*",
+		"choices_text": {
+			"choice_1": "Continue"
+		}
 	},
 	"intro": {
 		"text": 'You wake up to the sudden knock to your room. "Sir *insert name*! Sir *insert name*"'
