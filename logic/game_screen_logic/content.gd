@@ -18,6 +18,10 @@ onready var choice_3 = $ChoicesMargin/ChoicesContainer/Choice3
 onready var choice_4 = $ChoicesMargin/ChoicesContainer/Choice4
 
 
+func _ready() -> void:
+	set_narr_text(content_dict["prologue"]["text"])
+
+
 func set_narr_text(new_text: String):
 	narr_text.text = new_text
 
