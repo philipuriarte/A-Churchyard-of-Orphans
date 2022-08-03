@@ -63,6 +63,7 @@ func set_choice_btn(key: String):
 
 # Sets visibility and text of choice buttons, sets text of NarrativeText
 func set_content(key: String) -> void:
+	current_page = key
 	set_narr_text(content_dict[key]["narr_text"])
 	set_choice_btn(key)
 
