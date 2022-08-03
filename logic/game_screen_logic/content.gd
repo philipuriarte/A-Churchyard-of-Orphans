@@ -61,8 +61,6 @@ func set_choice_btn(key: String):
 				choice_4.text = content_dict[key]["choices"][choice]["text"]
 				choice_4.visible = true
 				continue
-			_:
-				break
 
 
 # Sets visibility and text of choice buttons, sets text of NarrativeText
