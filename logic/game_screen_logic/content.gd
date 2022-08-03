@@ -1,6 +1,14 @@
 extends VBoxContainer
 
 var choice_index := 0
+var content_dict : Dictionary = {
+	"prologue": {
+		"text": "You are the son/daughter of Lord *insert name* of *insert place*"
+	},
+	"intro": {
+		"text": 'You wake up to the sudden knock to your room. "Sir *insert name*! Sir *insert name*"'
+	}
+}
 
 # Variables that contain nodes
 onready var narr_text = $NarrativeText
