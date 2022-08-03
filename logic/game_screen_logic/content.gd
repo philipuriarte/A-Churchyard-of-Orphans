@@ -38,13 +38,33 @@ func set_narr_text(new_text: String):
 	narr_text.text = new_text
 
 
-func set_choice_btn_text():
-	choice_1.text = "Continue"
+func set_choice_btn_text(key: String):
+	for choice in content_dict[key]["choices"]:
+		match choice:
+			1:
+				choice_1.text = content_dict[key]["choices"][choice]
+				choice_1.visible = true
+				continue
+			2:
+				choice_2.text = content_dict[key]["choices"][choice]
+				choice_2.visible = true
+				continue
+			3:
+				choice_3.text = content_dict[key]["choices"][choice]
+				choice_3.visible = true
+				continue
+			4:
+				choice_4.text = content_dict[key]["choices"][choice]
+				choice_4.visible = true
+				continue
+			_:
+				break
 
 
 # Sets visibility and text of choice buttons, sets text of NarrativeText
 func set_content(key: String, index: int) -> void:
 	set_narr_text(content_dict[key]["narr_text"])
+	set_choice_btn_text(key)
 
 
 # Functions for checking if any of the Choice buttons were released
