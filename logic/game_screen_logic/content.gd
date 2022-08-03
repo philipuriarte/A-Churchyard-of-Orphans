@@ -48,6 +48,12 @@ var content_dict : Dictionary = {
 			},
 			2: {
 				"text": "Test2"
+			},
+			3: {
+				"text": "Test3"
+			},
+			4: {
+				"text": "Test4"
 			}
 		}
 	}
