@@ -2,6 +2,7 @@ extends VBoxContainer
 
 var choice_index := 0
 var current_page = "prologue"
+var output_key : String = " "
 var content_dict : Dictionary = {
 	"prologue": {
 		"narr_text": "You are the son/daughter of Lord *insert name* of *insert place*",
@@ -49,7 +50,8 @@ func set_content(key: String, index: int) -> void:
 # Functions for checking if any of the Choice buttons were released
 func _on_Choice1_button_up() -> void:
 	choice_index = 1
-	set_content(" ", choice_index)
+	output_key = content_dict[current_page]["choices"][choice_index]["output"]
+	set_content(output_key, choice_index)
 
 
 func _on_Choice2_button_up() -> void:
