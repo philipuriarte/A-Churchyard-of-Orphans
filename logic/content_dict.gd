@@ -38,7 +38,7 @@ var content_dict := {
 				"text": "Ask who's attacking the castle"
 			},
 			3: {
-				"text": "Take the long sword you keep in your room"
+				"text": "Bring a long sword with you"
 			}
 		}
 	},
@@ -47,10 +47,10 @@ var content_dict := {
 		"narr_text": "You ask who is it. But you're replied with another knock.",
 		"choices": {
 			1: {
-				"text": "Ask again"
+				"text": "Open the door carefully"
 			},
 			2: {
-				"text": "Open the door and prepare to defend yourself"
+				"text": "Ask again"
 			},
 		}
 	}
