@@ -79,7 +79,7 @@ func _ready() -> void:
 # Functions for checking if any of the Choice buttons were released
 func _on_Choice1_button_up() -> void:
 	choice_index = 1
-	output_key = content_dict[current_page]["choices"][choice_index]["output"]
+	output_key = cd.get_content_dict()[current_page]["choices"][choice_index]["output"]
 	set_content(output_key)
 
 
