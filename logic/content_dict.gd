@@ -29,7 +29,7 @@ var content_dict := {
 	},
 	
 	"open_door": {
-		"narr_text": 'You open the door and find a male servant making a hush gesture. He whispers, "M\'lord" the castle is under attack. I was tasked by Master *insert name* to guide you out.',
+		"narr_text": "You open the door and find a male servant making a hush gesture. He whispers, \"M'lord the castle is under attack. I was tasked by Master *insert name* to guide you out.\"",
 		"choices": {
 			1: {
 				"text": "Follow the servant quietly"
