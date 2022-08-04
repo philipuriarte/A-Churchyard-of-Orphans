@@ -15,7 +15,7 @@ var content_dict := {
 	},
 	
 	"intro": {
-		"narr_text": "You wake up to the sudden knock to your room.",
+		"narr_text": "You wake up to a sudden knock to your room. It's the middle of the night so you wonder who would wake you at this time...",
 		"choices": {
 			1: {
 				"text": "Open the door",
@@ -29,35 +29,29 @@ var content_dict := {
 	},
 	
 	"open_door": {
-		"narr_text": "You open the door and find a servant.",
+		"narr_text": 'You open the door and find a male servant making a hush gesture. He whispers, "M\'lord" the castle is under attack. I was tasked by Master *insert name* to guide you out.',
 		"choices": {
 			1: {
-				"text": "Test1"
+				"text": "Follow the servant quietly"
 			},
 			2: {
-				"text": "Test2"
+				"text": "Ask who's attacking the castle"
 			},
 			3: {
-				"text": "Test3"
+				"text": "Take the long sword you keep in your room"
 			}
 		}
 	},
 	
 	"ask_who": {
-		"narr_text": "You ask who is it. A servant replies to you",
+		"narr_text": "You ask who is it. But you're replied with another knock.",
 		"choices": {
 			1: {
-				"text": "Test1"
+				"text": "Ask again"
 			},
 			2: {
-				"text": "Test2"
+				"text": "Open the door and prepare to defend yourself"
 			},
-			3: {
-				"text": "Test3"
-			},
-			4: {
-				"text": "Test4"
-			}
 		}
 	}
 	
