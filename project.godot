@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "ContentDict",
+"language": "GDScript",
+"path": "res://logic/content_dict.gd"
+} ]
+_global_script_class_icons={
+"ContentDict": ""
+}
+
 [application]
 
 config/name="Text-Game-Prototype"
