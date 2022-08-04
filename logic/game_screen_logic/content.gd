@@ -73,6 +73,38 @@ func _ready() -> void:
 	set_content("prologue")
 
 
+# Functions for checking if any of the Choice buttons were released
+func _on_Choice1_button_up() -> void:
+	choice_index = 1
+	output_key = content_dict[current_page]["choices"][choice_index]["output"]
+	set_content(output_key)
+
+
+func _on_Choice2_button_up() -> void:
+	choice_index = 2
+	output_key = content_dict[current_page]["choices"][choice_index]["output"]
+	set_content(output_key)
+
+
+func _on_Choice3_button_up() -> void:
+	choice_index = 3
+	output_key = content_dict[current_page]["choices"][choice_index]["output"]
+	set_content(output_key)
+
+
+func _on_Choice4_button_up() -> void:
+	choice_index = 4
+	output_key = content_dict[current_page]["choices"][choice_index]["output"]
+	set_content(output_key)
+
+
+# Updates the content of ContentContainer and value of current_page
+func set_content(key: String) -> void:
+	current_page = key
+	set_narr_text(content_dict[key]["narr_text"])
+	set_choice_btn(key)
+
+
 # Sets text of NarrativeText
 func set_narr_text(new_text: String):
 	narr_text.text = new_text
@@ -99,34 +131,3 @@ func set_choice_btn(key: String):
 				choice_4.visible = true
 				continue
 
-
-# Updates the content of ContentContainer and value of current_page
-func set_content(key: String) -> void:
-	current_page = key
-	set_narr_text(content_dict[key]["narr_text"])
-	set_choice_btn(key)
-
-
-# Functions for checking if any of the Choice buttons were released
-func _on_Choice1_button_up() -> void:
-	choice_index = 1
-	output_key = content_dict[current_page]["choices"][choice_index]["output"]
-	set_content(output_key)
-
-
-func _on_Choice2_button_up() -> void:
-	choice_index = 2
-	output_key = content_dict[current_page]["choices"][choice_index]["output"]
-	set_content(output_key)
-
-
-func _on_Choice3_button_up() -> void:
-	choice_index = 3
-	output_key = content_dict[current_page]["choices"][choice_index]["output"]
-	set_content(output_key)
-
-
-func _on_Choice4_button_up() -> void:
-	choice_index = 4
-	output_key = content_dict[current_page]["choices"][choice_index]["output"]
-	set_content(output_key)
