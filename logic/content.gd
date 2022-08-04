@@ -41,6 +41,7 @@ func set_content(key: String) -> void:
 # Sets text of NarrativeText
 func set_narr_text(new_text: String):
 	narr_text.bbcode_text = new_text
+	# alternatively narr_text.bbcode_text += new_text + "\n\n" to only append text
 
 
 # Sets visibility and text of Choice buttons
