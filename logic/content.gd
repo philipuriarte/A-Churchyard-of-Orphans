@@ -18,6 +18,14 @@ onready var choice_4 = $ChoicesMargin/ChoicesContainer/Choice4
 
 func _ready() -> void:
 	set_content("prologue")
+	choice_1.connect("pressed", self,"_on_Choice_btn_pressed", [1])
+
+
+func _on_Choice_btn_pressed(index: int):
+	print("button pressed")
+	if content_dict[current_page]["choices"][index].has("output"):
+		output_key = content_dict[current_page]["choices"][index]["output"]
+		set_content(output_key)
 
 
 # Functions for checking if any of the Choice buttons were released
