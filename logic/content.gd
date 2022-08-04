@@ -6,6 +6,7 @@ var choice_index := 0
 var current_page := "prologue"
 var output_key := " "
 var cd = ContentDict.new()
+var content_dict = cd.get_cd()
 
 # Variables that contain nodes
 onready var narr_text = $NarrativeText
@@ -22,7 +23,7 @@ func _ready() -> void:
 # Functions for checking if any of the Choice buttons were released
 func _on_Choice1_button_up() -> void:
 	choice_index = 1
-	output_key = cd.get_content_dict()[current_page]["choices"][choice_index]["output"]
+	output_key = content_dict[current_page]["choices"][choice_index]["output"]
 	set_content(output_key)
 
 
