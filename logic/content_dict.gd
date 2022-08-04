@@ -13,6 +13,7 @@ var content_dict := {
 			}
 		}
 	},
+	
 	"intro": {
 		"narr_text": "You wake up to the sudden knock to your room.",
 		"choices": {
@@ -26,6 +27,7 @@ var content_dict := {
 			}
 		}
 	},
+	
 	"open_door": {
 		"narr_text": "You open the door and find a servant.",
 		"choices": {
@@ -40,6 +42,7 @@ var content_dict := {
 			}
 		}
 	},
+	
 	"ask_who": {
 		"narr_text": "You ask who is it. A servant replies to you",
 		"choices": {
@@ -57,6 +60,7 @@ var content_dict := {
 			}
 		}
 	}
+	
 }
 
 
