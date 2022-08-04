@@ -15,6 +15,7 @@ margin_right = 346.0
 margin_bottom = 342.0
 size_flags_vertical = 3
 custom_constants/line_separation = 10
+bbcode_text = "Insert text here"
 text = "Insert text here"
 fit_content_height = true
 scroll_active = false
