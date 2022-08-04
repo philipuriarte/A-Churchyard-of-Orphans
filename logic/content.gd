@@ -31,27 +31,6 @@ func _on_Choice_btn_pressed(index: int):
 		set_content(output_key)
 
 
-func _on_Choice2_button_up() -> void:
-	choice_index = 2
-	if content_dict[current_page]["choices"][choice_index].has("output"):
-		output_key = content_dict[current_page]["choices"][choice_index]["output"]
-		set_content(output_key)
-
-
-func _on_Choice3_button_up() -> void:
-	choice_index = 3
-	if content_dict[current_page]["choices"][choice_index].has("output"):
-		output_key = content_dict[current_page]["choices"][choice_index]["output"]
-		set_content(output_key)
-
-
-func _on_Choice4_button_up() -> void:
-	choice_index = 4
-	if content_dict[current_page]["choices"][choice_index].has("output"):
-		output_key = content_dict[current_page]["choices"][choice_index]["output"]
-		set_content(output_key)
-
-
 # Updates the content of ContentContainer and value of current_page
 func set_content(key: String) -> void:
 	current_page = key
