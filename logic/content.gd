@@ -18,7 +18,7 @@ onready var choice_4 = $ChoicesMargin/ChoicesContainer/Choice4
 
 # Sets starting content "prologue" and connects signals to Choice buttons
 func _ready() -> void:
-	set_content("prologue")
+	set_content("000_prologue")
 	choice_1.connect("pressed", self,"_on_Choice_btn_pressed", [1])
 	choice_2.connect("pressed", self,"_on_Choice_btn_pressed", [2])
 	choice_3.connect("pressed", self,"_on_Choice_btn_pressed", [3])
