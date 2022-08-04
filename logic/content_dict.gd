@@ -58,3 +58,7 @@ var content_dict := {
 		}
 	}
 }
+
+
+func get_content_dict():
+	return content_dict
