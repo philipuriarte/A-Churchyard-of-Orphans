@@ -29,6 +29,10 @@ config/icon="res://assets/icon.png"
 window/size/width=360
 window/size/height=640
 
+[editor]
+
+scene_naming=2
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
