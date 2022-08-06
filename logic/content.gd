@@ -5,7 +5,6 @@ const ContentData = preload("res://logic/content_data.gd")
 var content_dict = ContentData.new().get_content_dict()
 var choice_index := 0
 var current_page := "prologue"
-var output_key := " "
 
 # Variables that contain nodes
 onready var narr_text = $NarrativeText
@@ -26,6 +25,7 @@ func _ready() -> void:
 
 # Functions for checking if any of the Choice buttons were released
 func _on_Choice_btn_pressed(index: int):
+	var output_key: String
 	if content_dict[current_page]["choices"][index].has("output"):
 		output_key = content_dict[current_page]["choices"][index]["output"]
 		set_content(output_key)
