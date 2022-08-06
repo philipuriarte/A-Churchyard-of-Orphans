@@ -2,11 +2,11 @@ extends VBoxContainer
 
 const ContentDict = preload("res://logic/content_dict.gd")
 
+var cd = ContentDict.new()
+var content_dict = cd.get_cd()
 var choice_index := 0
 var current_page := "prologue"
 var output_key := " "
-var cd = ContentDict.new()
-var content_dict = cd.get_cd()
 
 # Variables that contain nodes
 onready var narr_text = $NarrativeText
@@ -23,6 +23,7 @@ func _ready() -> void:
 	choice_2.connect("pressed", self,"_on_Choice_btn_pressed", [2])
 	choice_3.connect("pressed", self,"_on_Choice_btn_pressed", [3])
 	choice_4.connect("pressed", self,"_on_Choice_btn_pressed", [4])
+
 
 # Functions for checking if any of the Choice buttons were released
 func _on_Choice_btn_pressed(index: int):
