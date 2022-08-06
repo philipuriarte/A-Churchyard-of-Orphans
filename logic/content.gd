@@ -46,6 +46,10 @@ func set_narr_text(new_text: String):
 
 # Sets visibility and text of Choice buttons
 func set_choice_btn(key: String):
+	choice_1.visible = false
+	choice_2.visible = false
+	choice_3.visible = false
+	choice_4.visible = false
 	for choice in content_dict[key]["choices"]:
 		match choice:
 			1:
