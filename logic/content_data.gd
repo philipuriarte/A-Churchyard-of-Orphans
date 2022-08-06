@@ -1,4 +1,4 @@
-class_name ContentDict
+class_name ContentData
 
 # Dictionary that contains all the text content of the game
 var content_dict := {

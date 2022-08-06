@@ -10,12 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Reference",
-"class": "ContentDict",
+"class": "ContentData",
 "language": "GDScript",
-"path": "res://logic/content_dict.gd"
+"path": "res://logic/content_data.gd"
 } ]
 _global_script_class_icons={
-"ContentDict": ""
+"ContentData": ""
 }
 
 [application]
