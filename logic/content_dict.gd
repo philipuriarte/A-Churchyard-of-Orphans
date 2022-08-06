@@ -1,5 +1,3 @@
-extends Node
-
 class_name ContentDict
 
 # Dictionary that contains all the text content of the game
