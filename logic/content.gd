@@ -3,7 +3,6 @@ extends VBoxContainer
 const ContentData = preload("res://logic/content_data.gd")
 
 var content_dict = ContentData.new().get_content_dict()
-var choice_index := 0
 var current_page := "prologue"
 
 # Variables that contain nodes
