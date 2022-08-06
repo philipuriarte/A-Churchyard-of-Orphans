@@ -2,8 +2,7 @@ extends VBoxContainer
 
 const ContentDict = preload("res://logic/content_dict.gd")
 
-var cd = ContentDict.new()
-var content_dict = cd.get_cd()
+var content_dict = ContentDict.new().get_cd()
 var choice_index := 0
 var current_page := "prologue"
 var output_key := " "
