@@ -30,7 +30,7 @@ func _on_Choice_btn_pressed(index: int):
 		set_content(output_key)
 
 
-# Updates the content of ContentContainer and value of current_page
+# Updates the nodes in ContentContainer and value of current_page
 func set_content(key: String) -> void:
 	current_page = key
 	set_narr_text(content_dict[key]["narr_text"])
