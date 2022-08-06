@@ -1,6 +1,7 @@
 class_name ContentData
 
 # Dictionary that contains all the text content of the game
+# Current text is only for the sole purpose of prototyping and is not indicative of the content in the final game
 var content_dict := {
 	"000_prologue": {
 		"narr_text": "You are the son/daughter of Lord *insert name* of *insert place*",
