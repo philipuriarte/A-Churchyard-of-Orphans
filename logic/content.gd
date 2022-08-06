@@ -23,10 +23,10 @@ func _ready() -> void:
 
 
 # Functions for checking if any of the Choice buttons were released
-func _on_Choice_btn_pressed(index: int):
+func _on_Choice_btn_pressed(choice_index: int):
 	var output_key: String
-	if content_dict[current_page]["choices"][index].has("output"):
-		output_key = content_dict[current_page]["choices"][index]["output"]
+	if content_dict[current_page]["choices"][choice_index].has("output"):
+		output_key = content_dict[current_page]["choices"][choice_index]["output"]
 		set_content(output_key)
 
 
