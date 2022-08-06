@@ -57,5 +57,5 @@ var content_dict := {
 
 
 # Returns the valuee of content_dict
-func get_cd():
+func get_content_dict():
 	return content_dict
