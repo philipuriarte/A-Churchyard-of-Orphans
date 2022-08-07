@@ -7,6 +7,7 @@ var current_page : String
 
 # Variables that contain nodes
 onready var narr_text = $"%NarrativeText"
+onready var choices_con = $"%ChoicesContainer"
 onready var choice_1 = $"%Choice1"
 onready var choice_2 = $"%Choice2"
 onready var choice_3 = $"%Choice3"
@@ -48,7 +49,7 @@ func set_narr_text(new_text: String):
 
 # Sets visibility and text of Choice buttons
 func set_choice_btn(output_key: String):
-	for choice_i in $ChoicesMargin/ChoicesContainer.get_children():
+	for choice_i in choices_con.get_children():
 		choice_i.visible = false
 	
 	for choice in content_dict[output_key]["choices"]:
