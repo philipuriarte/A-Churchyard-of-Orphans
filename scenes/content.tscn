@@ -33,6 +33,7 @@ custom_constants/margin_left = 50
 custom_constants/margin_bottom = 10
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="ChoicesMargin"]
+unique_name_in_owner = true
 margin_left = 50.0
 margin_top = 20.0
 margin_right = 296.0
