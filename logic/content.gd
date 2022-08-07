@@ -6,11 +6,11 @@ var content_dict = ContentData.new().get_content_dict()
 var current_page : String
 
 # Variables that contain nodes
-onready var narr_text = $NarrativeText
-onready var choice_1 = $ChoicesMargin/ChoicesContainer/Choice1
-onready var choice_2 = $ChoicesMargin/ChoicesContainer/Choice2
-onready var choice_3 = $ChoicesMargin/ChoicesContainer/Choice3
-onready var choice_4 = $ChoicesMargin/ChoicesContainer/Choice4
+onready var narr_text = $"%NarrativeText"
+onready var choice_1 = $"%Choice1"
+onready var choice_2 = $"%Choice2"
+onready var choice_3 = $"%Choice3"
+onready var choice_4 = $"%Choice4"
 
 
 # Sets starting content "prologue" and connects signals to Choice buttons
