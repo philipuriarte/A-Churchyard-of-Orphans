@@ -29,6 +29,7 @@ config/icon="res://assets/icon.png"
 
 window/size/width=360
 window/size/height=640
+window/size/resizable=false
 
 [editor]
 
