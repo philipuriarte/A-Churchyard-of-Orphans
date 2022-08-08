@@ -50,6 +50,7 @@ func set_narr_text(new_text: String):
 # Sets visibility and text of Choice buttons
 func set_choice_btn(output_key: String):
 	for choice_i in choices_con.get_children():
+		choice_i.text = ""
 		choice_i.visible = false
 	
 	for choice in content_dict[output_key]["choices"]:
