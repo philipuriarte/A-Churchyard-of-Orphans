@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "ContentData",
+"language": "GDScript",
+"path": "res://logic/content_data.gd"
+} ]
+_global_script_class_icons={
+"ContentData": ""
+}
+
 [application]
 
 config/name="Text-Game-Prototype"
@@ -19,6 +29,10 @@ config/icon="res://assets/icon.png"
 window/size/width=360
 window/size/height=640
 
+[editor]
+
+scene_naming=2
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
@@ -29,4 +43,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"
