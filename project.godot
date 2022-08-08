@@ -31,6 +31,7 @@ window/size/width=360
 window/size/height=640
 window/size/resizable=false
 window/energy_saving/keep_screen_on=false
+window/handheld/orientation="portrait"
 
 [editor]
 
