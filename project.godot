@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Text-Game-Prototype"
+config/name="Godot-Text-Game-Prototype"
 config/description="A prototype for a text based game using the Godot engine."
 run/main_scene="res://scenes/main.tscn"
 config/icon="res://assets/icon.png"
