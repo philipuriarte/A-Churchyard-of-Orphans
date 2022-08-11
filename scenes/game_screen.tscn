@@ -42,7 +42,7 @@ margin_right = 326.0
 margin_bottom = 40.0
 text = "Go to Title"
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/MainCointainer"]
+[node name="TopSeparator" type="HSeparator" parent="MarginContainer/MainCointainer"]
 margin_top = 60.0
 margin_right = 326.0
 margin_bottom = 64.0
@@ -58,7 +58,7 @@ margin_top = 0.0
 margin_right = 326.0
 margin_bottom = 438.0
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/MainCointainer"]
+[node name="BottomSeparator" type="HSeparator" parent="MarginContainer/MainCointainer"]
 margin_top = 542.0
 margin_right = 326.0
 margin_bottom = 546.0
