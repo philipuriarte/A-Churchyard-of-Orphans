@@ -35,7 +35,6 @@ margin_top = 13.0
 margin_right = 243.0
 margin_bottom = 27.0
 size_flags_horizontal = 3
-text = "Insert time and day here"
 
 [node name="TitleButton" type="Button" parent="MarginContainer/MainCointainer/TopContainer"]
 margin_left = 247.0
