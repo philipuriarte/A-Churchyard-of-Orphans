@@ -1,6 +1,6 @@
 extends PanelContainer
 
-onready var popup_menu: PopupPanel = $"%PopupMenu"
+onready var popup_menu: Popup = $"%PopupMenu"
 
 
 # Will open and close the PopupMenu node

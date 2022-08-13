@@ -1,4 +1,4 @@
-extends PopupPanel
+extends Popup
 
 
 # Changes scene to title_screen
