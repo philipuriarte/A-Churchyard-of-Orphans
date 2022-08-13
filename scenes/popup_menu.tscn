@@ -18,14 +18,14 @@ margin_right = 70.0
 margin_bottom = 95.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/margin_right = 5
-custom_constants/margin_top = 5
-custom_constants/margin_left = 5
-custom_constants/margin_bottom = 5
+custom_constants/margin_right = 10
+custom_constants/margin_top = 30
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 30
 
 [node name="MenuContainer" type="VBoxContainer" parent="MenuMargin"]
-margin_left = 5.0
-margin_top = 5.0
-margin_right = 135.0
-margin_bottom = 185.0
+margin_left = 10.0
+margin_top = 30.0
+margin_right = 130.0
+margin_bottom = 160.0
 custom_constants/separation = 10
