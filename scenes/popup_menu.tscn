@@ -35,3 +35,24 @@ margin_right = 120.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 0, 25 )
 text = "Go to Title"
+
+[node name="SaveButton" type="Button" parent="MenuMargin/MenuContainer"]
+margin_top = 35.0
+margin_right = 120.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 25 )
+text = "Save Game"
+
+[node name="LoadButton" type="Button" parent="MenuMargin/MenuContainer"]
+margin_top = 70.0
+margin_right = 120.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 0, 25 )
+text = "Load Game"
+
+[node name="QuitButton" type="Button" parent="MenuMargin/MenuContainer"]
+margin_top = 105.0
+margin_right = 120.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 0, 25 )
+text = "Quit"
