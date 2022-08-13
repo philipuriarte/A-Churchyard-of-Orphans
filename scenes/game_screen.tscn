@@ -18,7 +18,7 @@ margin_top = 17.0
 margin_right = 343.0
 margin_bottom = 623.0
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MainMargin" type="MarginContainer" parent="."]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 353.0
@@ -28,25 +28,25 @@ custom_constants/margin_top = 10
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 10
 
-[node name="MainCointainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="MainCointainer" type="VBoxContainer" parent="MainMargin"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 336.0
 margin_bottom = 616.0
 custom_constants/separation = 20
 
-[node name="TopContainer" type="HBoxContainer" parent="MarginContainer/MainCointainer"]
+[node name="TopContainer" type="HBoxContainer" parent="MainMargin/MainCointainer"]
 margin_right = 326.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 
-[node name="TopText" type="Label" parent="MarginContainer/MainCointainer/TopContainer"]
+[node name="TopText" type="Label" parent="MainMargin/MainCointainer/TopContainer"]
 margin_top = 13.0
 margin_right = 262.0
 margin_bottom = 27.0
 size_flags_horizontal = 3
 
-[node name="MenuButton" type="Button" parent="MarginContainer/MainCointainer/TopContainer"]
+[node name="MenuButton" type="Button" parent="MainMargin/MainCointainer/TopContainer"]
 margin_left = 266.0
 margin_right = 326.0
 margin_bottom = 40.0
@@ -54,31 +54,31 @@ rect_min_size = Vector2( 60, 0 )
 focus_mode = 0
 text = "Menu"
 
-[node name="TopSeparator" type="HSeparator" parent="MarginContainer/MainCointainer"]
+[node name="TopSeparator" type="HSeparator" parent="MainMargin/MainCointainer"]
 margin_top = 60.0
 margin_right = 326.0
 margin_bottom = 64.0
 
-[node name="ContentScroll" type="ScrollContainer" parent="MarginContainer/MainCointainer"]
+[node name="ContentScroll" type="ScrollContainer" parent="MainMargin/MainCointainer"]
 margin_top = 84.0
 margin_right = 326.0
 margin_bottom = 522.0
 size_flags_vertical = 3
 
-[node name="ContentContainer" parent="MarginContainer/MainCointainer/ContentScroll" instance=ExtResource( 2 )]
+[node name="ContentContainer" parent="MainMargin/MainCointainer/ContentScroll" instance=ExtResource( 2 )]
 margin_top = 0.0
 margin_right = 326.0
 margin_bottom = 438.0
 
-[node name="BottomSeparator" type="HSeparator" parent="MarginContainer/MainCointainer"]
+[node name="BottomSeparator" type="HSeparator" parent="MainMargin/MainCointainer"]
 margin_top = 542.0
 margin_right = 326.0
 margin_bottom = 546.0
 
-[node name="BottomContainer" type="HBoxContainer" parent="MarginContainer/MainCointainer"]
+[node name="BottomContainer" type="HBoxContainer" parent="MainMargin/MainCointainer"]
 margin_top = 566.0
 margin_right = 326.0
 margin_bottom = 606.0
 rect_min_size = Vector2( 0, 40 )
 
-[connection signal="pressed" from="MarginContainer/MainCointainer/TopContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="MainMargin/MainCointainer/TopContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
