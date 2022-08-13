@@ -60,31 +60,31 @@ margin_bottom = 54.0
 [node name="ContentScroll" type="ScrollContainer" parent="MainMargin/MainCointainer"]
 margin_top = 74.0
 margin_right = 326.0
-margin_bottom = 522.0
+margin_bottom = 527.0
 size_flags_vertical = 3
 
 [node name="ContentContainer" parent="MainMargin/MainCointainer/ContentScroll" instance=ExtResource( 2 )]
 margin_top = 0.0
 margin_right = 326.0
-margin_bottom = 448.0
+margin_bottom = 453.0
 
 [node name="BottomSeparator" type="HSeparator" parent="MainMargin/MainCointainer"]
-margin_top = 542.0
+margin_top = 547.0
 margin_right = 326.0
-margin_bottom = 546.0
+margin_bottom = 551.0
 
 [node name="BottomContainer" type="HBoxContainer" parent="MainMargin/MainCointainer"]
-margin_top = 566.0
+margin_top = 571.0
 margin_right = 326.0
 margin_bottom = 606.0
-rect_min_size = Vector2( 0, 40 )
+rect_min_size = Vector2( 0, 35 )
 custom_constants/separation = 10
 alignment = 1
 
 [node name="CharacterButton" type="Button" parent="MainMargin/MainCointainer/BottomContainer"]
 margin_left = 3.0
 margin_right = 103.0
-margin_bottom = 40.0
+margin_bottom = 35.0
 rect_min_size = Vector2( 100, 0 )
 focus_mode = 0
 text = "Character"
@@ -92,7 +92,7 @@ text = "Character"
 [node name="InventoryButton" type="Button" parent="MainMargin/MainCointainer/BottomContainer"]
 margin_left = 113.0
 margin_right = 213.0
-margin_bottom = 40.0
+margin_bottom = 35.0
 rect_min_size = Vector2( 100, 0 )
 focus_mode = 0
 text = "Inventory"
@@ -100,7 +100,7 @@ text = "Inventory"
 [node name="JournalButton" type="Button" parent="MainMargin/MainCointainer/BottomContainer"]
 margin_left = 223.0
 margin_right = 323.0
-margin_bottom = 40.0
+margin_bottom = 35.0
 rect_min_size = Vector2( 100, 0 )
 focus_mode = 0
 text = "Journal"
