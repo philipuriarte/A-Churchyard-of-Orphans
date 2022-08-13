@@ -36,7 +36,7 @@ margin_right = 243.0
 margin_bottom = 27.0
 size_flags_horizontal = 3
 
-[node name="TitleButton" type="Button" parent="MarginContainer/MainCointainer/TopContainer"]
+[node name="MenuButton" type="Button" parent="MarginContainer/MainCointainer/TopContainer"]
 margin_left = 247.0
 margin_right = 326.0
 margin_bottom = 40.0
