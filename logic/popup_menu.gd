@@ -14,6 +14,5 @@ func _on_ContinueButton_pressed() -> void:
 
 # Closes the Popup Menu if press/click event occurs outside MenuScreen
 func _on_PopupMenu_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT:
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 			hide()
