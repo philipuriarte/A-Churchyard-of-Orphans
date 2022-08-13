@@ -22,3 +22,10 @@ custom_constants/margin_right = 5
 custom_constants/margin_top = 5
 custom_constants/margin_left = 5
 custom_constants/margin_bottom = 5
+
+[node name="MenuContainer" type="VBoxContainer" parent="MenuMargin"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 135.0
+margin_bottom = 185.0
+custom_constants/separation = 10
