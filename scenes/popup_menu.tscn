@@ -58,3 +58,5 @@ margin_right = 120.0
 margin_bottom = 130.0
 rect_min_size = Vector2( 0, 25 )
 text = "Quit"
+
+[connection signal="pressed" from="MenuMargin/MenuContainer/TitleButton" to="." method="_on_TitleButton_pressed"]
