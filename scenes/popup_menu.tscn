@@ -29,3 +29,9 @@ margin_top = 30.0
 margin_right = 130.0
 margin_bottom = 160.0
 custom_constants/separation = 10
+
+[node name="TitleButton" type="Button" parent="MenuMargin/MenuContainer"]
+margin_right = 120.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+text = "Go to Title"
