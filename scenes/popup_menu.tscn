@@ -9,7 +9,7 @@ bg_color = Color( 0, 0, 0, 0.27451 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_min_size = Vector2( 360, 640 )
-mouse_filter = 2
+mouse_filter = 1
 script = ExtResource( 1 )
 
 [node name="Overlay" type="PanelContainer" parent="."]
@@ -78,5 +78,6 @@ rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 text = "Continue"
 
+[connection signal="gui_input" from="." to="." method="_on_PopupMenu_gui_input"]
 [connection signal="pressed" from="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer/TitleButton" to="." method="_on_TitleButton_pressed"]
 [connection signal="pressed" from="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]
