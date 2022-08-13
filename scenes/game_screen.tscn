@@ -45,7 +45,7 @@ rect_min_size = Vector2( 60, 0 )
 text = "Menu"
 
 [node name="PopupMenu" parent="MarginContainer/MainCointainer/TopContainer/MenuButton" instance=ExtResource( 3 )]
-visible = false
+unique_name_in_owner = true
 margin_left = -52.0
 margin_top = 0.0
 margin_right = 60.0
