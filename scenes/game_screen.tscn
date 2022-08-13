@@ -82,6 +82,7 @@ custom_constants/separation = 10
 alignment = 1
 
 [node name="CharacterButton" type="Button" parent="MainMargin/MainCointainer/BottomContainer"]
+visible = false
 margin_left = 3.0
 margin_right = 103.0
 margin_bottom = 35.0
@@ -90,16 +91,18 @@ focus_mode = 0
 text = "Character"
 
 [node name="InventoryButton" type="Button" parent="MainMargin/MainCointainer/BottomContainer"]
-margin_left = 113.0
-margin_right = 213.0
+visible = false
+margin_left = 58.0
+margin_right = 158.0
 margin_bottom = 35.0
 rect_min_size = Vector2( 100, 0 )
 focus_mode = 0
 text = "Inventory"
 
 [node name="JournalButton" type="Button" parent="MainMargin/MainCointainer/BottomContainer"]
-margin_left = 223.0
-margin_right = 323.0
+visible = false
+margin_left = 113.0
+margin_right = 213.0
 margin_bottom = 35.0
 rect_min_size = Vector2( 100, 0 )
 focus_mode = 0
