@@ -60,3 +60,4 @@ rect_min_size = Vector2( 0, 25 )
 text = "Quit"
 
 [connection signal="pressed" from="MenuMargin/MenuContainer/TitleButton" to="." method="_on_TitleButton_pressed"]
+[connection signal="pressed" from="MenuMargin/MenuContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
