@@ -78,5 +78,6 @@ margin_top = 566.0
 margin_right = 326.0
 margin_bottom = 606.0
 rect_min_size = Vector2( 0, 40 )
+custom_constants/separation = 10
 
 [connection signal="pressed" from="MainMargin/MainCointainer/TopContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
