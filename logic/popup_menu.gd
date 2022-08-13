@@ -7,6 +7,13 @@ func _on_TitleButton_pressed() -> void:
 	get_tree().change_scene("res://scenes/title_screen.tscn")
 
 
-# Close the Popup Menu
+# Closes the Popup Menu
 func _on_ContinueButton_pressed() -> void:
 	hide()
+
+
+# Closes the Popup Menu if press/click event occurs outside MenuScreen
+func _on_PopupMenu_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT:
+			hide()
