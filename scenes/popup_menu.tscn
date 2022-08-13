@@ -76,3 +76,5 @@ margin_bottom = 150.0
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 text = "Continue"
+
+[connection signal="pressed" from="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer/TitleButton" to="." method="_on_TitleButton_pressed"]

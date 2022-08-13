@@ -48,7 +48,6 @@ text = "Menu"
 
 [node name="PopupMenu" parent="MarginContainer/MainCointainer/TopContainer/MenuButton" instance=ExtResource( 3 )]
 unique_name_in_owner = true
-visible = false
 
 [node name="TopSeparator" type="HSeparator" parent="MarginContainer/MainCointainer"]
 margin_top = 60.0
