@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="PopupMenu" type="PopupPanel"]
+visible = true
+margin_left = 110.0
+margin_top = 240.0
+margin_right = 260.0
+margin_bottom = 440.0
