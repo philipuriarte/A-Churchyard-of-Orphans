@@ -78,3 +78,4 @@ focus_mode = 0
 text = "Continue"
 
 [connection signal="pressed" from="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer/TitleButton" to="." method="_on_TitleButton_pressed"]
+[connection signal="pressed" from="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]
