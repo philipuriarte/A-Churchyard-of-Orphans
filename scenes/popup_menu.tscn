@@ -1,67 +1,80 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://logic/popup_menu.gd" type="Script" id=1]
 
-[node name="PopupMenu" type="PopupPanel"]
-margin_left = 110.0
-margin_top = 240.0
-margin_right = 310.0
-margin_bottom = 440.0
-script = ExtResource( 1 )
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.27451 )
 
-[node name="MenuMargin" type="MarginContainer" parent="."]
+[node name="PopupMenu" type="PopupPanel"]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -96.0
-margin_top = -105.0
-margin_right = 96.0
-margin_bottom = 105.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+margin_left = -180.0
+margin_top = -320.0
+margin_right = 180.0
+margin_bottom = 320.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="MenuScreen" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -112.0
+margin_right = 100.0
+margin_bottom = 112.0
+
+[node name="MenuMargin" type="MarginContainer" parent="MenuScreen"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 193.0
+margin_bottom = 217.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 30
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 30
 
-[node name="MenuContainer" type="VBoxContainer" parent="MenuMargin"]
+[node name="MenuContainer" type="VBoxContainer" parent="MenuScreen/MenuMargin"]
 margin_left = 10.0
 margin_top = 30.0
-margin_right = 182.0
+margin_right = 176.0
 margin_bottom = 180.0
 custom_constants/separation = 10
 
-[node name="TitleButton" type="Button" parent="MenuMargin/MenuContainer"]
-margin_right = 120.0
-margin_bottom = 25.0
+[node name="TitleButton" type="Button" parent="MenuScreen/MenuMargin/MenuContainer"]
+margin_right = 166.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 text = "Go to Title"
 
-[node name="SaveButton" type="Button" parent="MenuMargin/MenuContainer"]
-margin_top = 35.0
-margin_right = 120.0
-margin_bottom = 60.0
+[node name="SaveButton" type="Button" parent="MenuScreen/MenuMargin/MenuContainer"]
+margin_top = 40.0
+margin_right = 166.0
+margin_bottom = 70.0
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 text = "Save Game"
 
-[node name="LoadButton" type="Button" parent="MenuMargin/MenuContainer"]
-margin_top = 70.0
-margin_right = 120.0
-margin_bottom = 95.0
+[node name="LoadButton" type="Button" parent="MenuScreen/MenuMargin/MenuContainer"]
+margin_top = 80.0
+margin_right = 166.0
+margin_bottom = 110.0
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 text = "Load Game"
 
-[node name="QuitButton" type="Button" parent="MenuMargin/MenuContainer"]
-margin_top = 105.0
-margin_right = 120.0
-margin_bottom = 130.0
+[node name="QuitButton" type="Button" parent="MenuScreen/MenuMargin/MenuContainer"]
+margin_top = 120.0
+margin_right = 166.0
+margin_bottom = 150.0
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 text = "Quit"
 
-[connection signal="pressed" from="MenuMargin/MenuContainer/TitleButton" to="." method="_on_TitleButton_pressed"]
-[connection signal="pressed" from="MenuMargin/MenuContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="MenuScreen/MenuMargin/MenuContainer/TitleButton" to="." method="_on_TitleButton_pressed"]
+[connection signal="pressed" from="MenuScreen/MenuMargin/MenuContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
