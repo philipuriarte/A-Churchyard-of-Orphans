@@ -13,10 +13,8 @@ script = ExtResource( 1 )
 unique_name_in_owner = true
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 17.0
-margin_top = 17.0
-margin_right = 343.0
-margin_bottom = 623.0
+margin_right = 360.0
+margin_bottom = 640.0
 
 [node name="MainMargin" type="MarginContainer" parent="."]
 margin_left = 7.0
