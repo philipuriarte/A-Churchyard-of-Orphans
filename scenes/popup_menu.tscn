@@ -69,7 +69,7 @@ rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 text = "Load Game"
 
-[node name="QuitButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
+[node name="ContinueButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
 margin_top = 120.0
 margin_right = 166.0
 margin_bottom = 150.0
