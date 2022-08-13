@@ -75,4 +75,4 @@ margin_right = 166.0
 margin_bottom = 150.0
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
-text = "Quit"
+text = "Continue"
