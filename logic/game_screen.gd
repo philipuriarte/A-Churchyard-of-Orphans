@@ -1,6 +1,8 @@
 extends PanelContainer
 
+onready var popup_menu: Popup = $"%PopupMenu"
 
-func _on_TitleButton_pressed() -> void:
-# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/title_screen.tscn")
+
+# Will open the PopupMenu node
+func _on_MenuButton_pressed() -> void:
+	popup_menu.popup_centered()
