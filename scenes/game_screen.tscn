@@ -43,7 +43,6 @@ margin_right = 326.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 60, 0 )
 focus_mode = 0
-toggle_mode = true
 text = "Menu"
 
 [node name="PopupMenu" parent="MarginContainer/MainCointainer/TopContainer/MenuButton" instance=ExtResource( 3 )]
@@ -76,4 +75,4 @@ margin_right = 326.0
 margin_bottom = 606.0
 rect_min_size = Vector2( 0, 40 )
 
-[connection signal="toggled" from="MarginContainer/MainCointainer/TopContainer/MenuButton" to="." method="_on_MenuButton_toggled"]
+[connection signal="pressed" from="MarginContainer/MainCointainer/TopContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
