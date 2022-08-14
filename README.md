@@ -26,3 +26,6 @@ A prototype for a text-based mobile game using the Godot 3.5 engine. Still a wor
 ## Links
 * Project/task list: [https://github.com/PhilipU21/Text-Game-Prototype-Tasks](https://github.com/users/PhilipU21/projects/1/views/1)
 * Godot engine: https://godotengine.org/
+
+## Other notes
+* The number of commits are high due to my initial misunderstanding of how often we should make commits. At first I made a commit after every new slight change, but now I only make a commit after a task is done.
