@@ -1,5 +1,163 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="CreationScreen" type="PanelContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="MainMargin" type="MarginContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 353.0
+margin_bottom = 633.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 100
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 100
+
+[node name="MainContainer" type="VBoxContainer" parent="MainMargin"]
+margin_left = 20.0
+margin_top = 100.0
+margin_right = 326.0
+margin_bottom = 526.0
+custom_constants/separation = 10
+
+[node name="CreationLabel" type="Label" parent="MainMargin/MainContainer"]
+margin_right = 306.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+text = "Character Creation"
+align = 1
+valign = 1
+
+[node name="CreationContainer" type="VBoxContainer" parent="MainMargin/MainContainer"]
+margin_top = 110.0
+margin_right = 306.0
+margin_bottom = 386.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 30
+
+[node name="FirstName" type="HBoxContainer" parent="MainMargin/MainContainer/CreationContainer"]
+margin_right = 306.0
+margin_bottom = 24.0
+custom_constants/separation = 10
+
+[node name="FNameLabel" type="Label" parent="MainMargin/MainContainer/CreationContainer/FirstName"]
+margin_top = 5.0
+margin_right = 90.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 90, 0 )
+text = "First name:"
+
+[node name="FNameInput" type="LineEdit" parent="MainMargin/MainContainer/CreationContainer/FirstName"]
+margin_left = 100.0
+margin_right = 250.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 150, 0 )
+custom_styles/focus = SubResource( 1 )
+max_length = 50
+placeholder_text = "first name"
+caret_blink = true
+
+[node name="RandomButton" type="Button" parent="MainMargin/MainContainer/CreationContainer/FirstName"]
+margin_left = 260.0
+margin_right = 284.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 0 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "R"
+
+[node name="HouseName" type="HBoxContainer" parent="MainMargin/MainContainer/CreationContainer"]
+margin_top = 54.0
+margin_right = 306.0
+margin_bottom = 78.0
+custom_constants/separation = 10
+
+[node name="HNameLabel" type="Label" parent="MainMargin/MainContainer/CreationContainer/HouseName"]
+margin_top = 5.0
+margin_right = 90.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 90, 0 )
+text = "House name:"
+
+[node name="HNameInput" type="LineEdit" parent="MainMargin/MainContainer/CreationContainer/HouseName"]
+margin_left = 100.0
+margin_right = 250.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 150, 0 )
+custom_styles/focus = SubResource( 1 )
+max_length = 50
+placeholder_text = "house name"
+caret_blink = true
+
+[node name="RandomButton" type="Button" parent="MainMargin/MainContainer/CreationContainer/HouseName"]
+margin_left = 260.0
+margin_right = 284.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 0 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "R"
+
+[node name="Sex" type="HBoxContainer" parent="MainMargin/MainContainer/CreationContainer"]
+margin_top = 108.0
+margin_right = 306.0
+margin_bottom = 128.0
+custom_constants/separation = 10
+
+[node name="SexLabel" type="Label" parent="MainMargin/MainContainer/CreationContainer/Sex"]
+margin_top = 3.0
+margin_right = 90.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 90, 0 )
+text = "Sex:"
+
+[node name="SexOptions" type="OptionButton" parent="MainMargin/MainContainer/CreationContainer/Sex"]
+margin_left = 100.0
+margin_right = 200.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 100, 0 )
+enabled_focus_mode = 0
+text = "Male"
+items = [ "Male", null, false, 0, null, "Female", null, false, 1, null ]
+selected = 0
+
+[node name="Class" type="HBoxContainer" parent="MainMargin/MainContainer/CreationContainer"]
+margin_top = 158.0
+margin_right = 306.0
+margin_bottom = 178.0
+custom_constants/separation = 10
+
+[node name="ClassLabel" type="Label" parent="MainMargin/MainContainer/CreationContainer/Class"]
+margin_top = 3.0
+margin_right = 90.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 90, 0 )
+text = "Class:"
+
+[node name="ClassOptions" type="OptionButton" parent="MainMargin/MainContainer/CreationContainer/Class"]
+margin_left = 100.0
+margin_right = 200.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 100, 0 )
+enabled_focus_mode = 0
+text = "Knight"
+items = [ "Knight", null, false, 1, null, "Wanderer", null, false, 2, null, "Hunter", null, false, 3, null, "Sorcerer", null, false, 3, null ]
+selected = 0
+
+[node name="ButtonMargin" type="MarginContainer" parent="MainMargin/MainContainer"]
+margin_top = 396.0
+margin_right = 306.0
+margin_bottom = 426.0
+custom_constants/margin_right = 30
+custom_constants/margin_left = 30
+
+[node name="CreateButton" type="Button" parent="MainMargin/MainContainer/ButtonMargin"]
+margin_left = 30.0
+margin_right = 276.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+text = "Create Character"
