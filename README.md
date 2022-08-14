@@ -21,6 +21,8 @@ A prototype for a text-based mobile game using the Godot 3.5 engine. Still a wor
 * [Path of Adventure](https://play.google.com/store/apps/details?id=com.keeweed.pathofadventure&hl=en_US&gl=US)
 * [Life in Adventure](https://play.google.com/store/apps/details?id=com.StudioWheel.Bard&hl=en_US&gl=US)
 * [Grim Quest](https://play.google.com/store/apps/details?id=com.grimdev.grimquest&hl=en_US&gl=US)
+
+**Others**
 * [Eldrum: Untold](https://play.google.com/store/apps/details?id=com.gotterdammerung.untold&hl=en_US&gl=US)
 
 ## Links
