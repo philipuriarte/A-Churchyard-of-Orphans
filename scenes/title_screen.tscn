@@ -59,6 +59,7 @@ margin_top = 43.0
 margin_right = 246.0
 margin_bottom = 73.0
 rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
 enabled_focus_mode = 0
 text = "Continue"
 
@@ -67,6 +68,7 @@ margin_top = 88.0
 margin_right = 246.0
 margin_bottom = 118.0
 rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
 enabled_focus_mode = 0
 text = "New Game"
 
@@ -75,6 +77,7 @@ margin_top = 133.0
 margin_right = 246.0
 margin_bottom = 163.0
 rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
 enabled_focus_mode = 0
 text = "Options"
 
@@ -83,6 +86,7 @@ margin_top = 178.0
 margin_right = 246.0
 margin_bottom = 208.0
 rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
 enabled_focus_mode = 0
 text = "Extras"
 
