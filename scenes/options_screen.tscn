@@ -32,9 +32,9 @@ mouse_filter = 2
 
 [node name="CreditsScreen" type="PanelContainer" parent="PopupCredits/CreditsScreenContainer"]
 margin_left = 55.0
-margin_top = 145.0
+margin_top = 120.0
 margin_right = 305.0
-margin_bottom = 545.0
+margin_bottom = 520.0
 rect_min_size = Vector2( 250, 400 )
 
 [node name="CreditsMargin" type="MarginContainer" parent="PopupCredits/CreditsScreenContainer/CreditsScreen"]
@@ -125,7 +125,7 @@ valign = 1
 [node name="OptionsMargin" type="MarginContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 115.0
 margin_right = 326.0
-margin_bottom = 537.0
+margin_bottom = 526.0
 size_flags_vertical = 3
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
@@ -133,7 +133,7 @@ custom_constants/margin_left = 50
 [node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin"]
 margin_left = 50.0
 margin_right = 276.0
-margin_bottom = 422.0
+margin_bottom = 411.0
 size_flags_vertical = 3
 custom_constants/separation = 10
 
@@ -242,33 +242,33 @@ autowrap = true
 [node name="ExtrasContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 212.0
 margin_right = 226.0
-margin_bottom = 422.0
+margin_bottom = 411.0
 size_flags_vertical = 3
 custom_constants/separation = 15
 alignment = 1
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
-margin_top = 72.0
+margin_top = 67.0
 margin_right = 226.0
-margin_bottom = 97.0
+margin_bottom = 92.0
 rect_min_size = Vector2( 0, 25 )
 focus_mode = 0
 enabled_focus_mode = 0
 text = "Credits"
 
 [node name="ContactButton" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
-margin_top = 112.0
+margin_top = 107.0
 margin_right = 226.0
-margin_bottom = 137.0
+margin_bottom = 132.0
 rect_min_size = Vector2( 0, 25 )
 focus_mode = 0
 enabled_focus_mode = 0
 text = "Contact us"
 
 [node name="ButtonMargin" type="MarginContainer" parent="MarginContainer/MainCointainer"]
-margin_top = 552.0
+margin_top = 541.0
 margin_right = 326.0
-margin_bottom = 577.0
+margin_bottom = 566.0
 custom_constants/margin_right = 100
 custom_constants/margin_left = 100
 
@@ -282,11 +282,13 @@ enabled_focus_mode = 0
 text = "Back"
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
-margin_top = 592.0
+margin_top = 581.0
 margin_right = 326.0
 margin_bottom = 606.0
+rect_min_size = Vector2( 0, 25 )
 text = "ver 0.1"
 align = 1
+valign = 2
 
 [connection signal="gui_input" from="PopupCredits" to="." method="_on_PopupCredits_gui_input"]
 [connection signal="pressed" from="PopupCredits/CreditsScreenContainer/CreditsScreen/CreditsMargin/CreditsContainer/CloseButton" to="." method="_on_CloseButton_pressed"]
