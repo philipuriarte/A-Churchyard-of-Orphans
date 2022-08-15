@@ -40,21 +40,22 @@ func _on_Choice_btn_pressed(choice_index: int) -> void:
 
 
 # Update nodes in ContentContainer and current_page
-func set_content(output_key: String) -> void:
-	current_page = output_key
-	
-	set_title()
+func set_content(output_key: String) -> void:	
+	set_title(output_key)
 	set_narr_text(content_dict[output_key]["narr_text"])
 	set_choice_btn(output_key)
+	
+	current_page = output_key
 
 
 # Set visibiliy and text of TitleLabel
-func set_title() -> void:
+func set_title(output_key: String) -> void:
 	title_label.text = ""
 	title_label.visible = false
 	
-	if content_dict[current_page].has("title"):
-		title_label.text = content_dict[current_page]["title"]
+	if content_dict[output_key].has("title"):
+		title_label.text = content_dict[output_key]["title"]
+		title_label.visible = true
 
 
 # Set text of NarrativeText
