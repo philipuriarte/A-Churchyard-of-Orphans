@@ -4,6 +4,7 @@ class_name ContentData
 # Current text is only for the sole purpose of prototyping and is not indicative of the content in the final game
 var content_dict := {
 	"000_prologue": {
+		"title": "Prologue",
 		"narr_text": "You are the son/daughter of Lord *insert name* of *insert place*",
 		"choices": {
 			1: {
@@ -14,6 +15,7 @@ var content_dict := {
 	},
 	
 	"001_intro": {
+		"title": "Chapter 1: On the Run",
 		"narr_text": "You wake up to a sudden knock to your room. It's the middle of the night so you wonder who would wake you at this time...",
 		"choices": {
 			1: {
