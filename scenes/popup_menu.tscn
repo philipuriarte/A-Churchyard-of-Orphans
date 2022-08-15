@@ -59,31 +59,23 @@ margin_top = 35.0
 margin_right = 166.0
 margin_bottom = 65.0
 rect_min_size = Vector2( 0, 30 )
-focus_mode = 0
-text = "Go to Title"
+enabled_focus_mode = 0
+text = "Go to title"
 
-[node name="SaveButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
+[node name="HelpButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
 margin_top = 75.0
 margin_right = 166.0
 margin_bottom = 105.0
 rect_min_size = Vector2( 0, 30 )
-focus_mode = 0
-text = "Save Game"
-
-[node name="LoadButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
-margin_top = 115.0
-margin_right = 166.0
-margin_bottom = 145.0
-rect_min_size = Vector2( 0, 30 )
-focus_mode = 0
-text = "Load Game"
+enabled_focus_mode = 0
+text = "Help"
 
 [node name="ContinueButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
 margin_top = 155.0
 margin_right = 166.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 0, 30 )
-focus_mode = 0
+enabled_focus_mode = 0
 text = "Continue"
 
 [connection signal="gui_input" from="." to="." method="_on_PopupMenu_gui_input"]
