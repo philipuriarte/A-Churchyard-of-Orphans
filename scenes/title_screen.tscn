@@ -86,7 +86,7 @@ text = "Quit"
 margin_top = 592.0
 margin_right = 326.0
 margin_bottom = 606.0
-text = "ver 0.0"
+text = "ver 0.1"
 align = 1
 
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/NewButton" to="." method="_on_NewButton_pressed"]
