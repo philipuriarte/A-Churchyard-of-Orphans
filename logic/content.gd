@@ -15,8 +15,9 @@ onready var choice_3 : Button = $"%Choice3"
 onready var choice_4 : Button = $"%Choice4"
 
 
-# Sets starting content "prologue" and connects signals to Choice buttons
+# Set starting content to "prologue" and connect signals to Choice buttons
 func _ready() -> void:
+	# Should be updated with saved current_page once save system is up
 	set_content("000_prologue")
 	
 # warning-ignore:return_value_discarded
@@ -29,7 +30,7 @@ func _ready() -> void:
 	choice_4.connect("pressed", self,"_on_Choice_btn_pressed", [4])
 
 
-# Functions for checking if any of the Choice buttons were released
+# Check if any of the Choice buttons were released
 func _on_Choice_btn_pressed(choice_index: int) -> void:
 	var output_key: String
 	
@@ -38,7 +39,7 @@ func _on_Choice_btn_pressed(choice_index: int) -> void:
 		set_content(output_key)
 
 
-# Updates the nodes in ContentContainer and value of current_page
+# Update nodes in ContentContainer and current_page
 func set_content(output_key: String) -> void:
 	current_page = output_key
 	
@@ -56,13 +57,12 @@ func set_title() -> void:
 		title_label.text = content_dict[current_page]["title"]
 
 
-# Sets text of NarrativeText
-# Alternatively narr_text.bbcode_text += new_text + "\n\n" to only append text
+# Set text of NarrativeText
 func set_narr_text(new_text: String) -> void:
 	narr_text.bbcode_text = new_text
 
 
-# Sets visibility and text of Choice buttons
+# Set visibility and text of Choice buttons
 func set_choice_btn(output_key: String) -> void:
 	for choice_i in choices_con.get_children():
 		choice_i.text = ""
