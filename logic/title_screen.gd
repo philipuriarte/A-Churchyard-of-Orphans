@@ -21,8 +21,6 @@ func _on_OptionsButton_pressed() -> void:
 	get_tree().change_scene("res://scenes/options_screen.tscn")
 
 
-# Closes the game
-func _on_QuitButton_pressed() -> void:
-	get_tree().quit()
-
-
+# Should change scene to extras_scene (to be created)
+func _on_ExtrasButton_pressed() -> void:
+	pass

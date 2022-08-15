@@ -78,13 +78,13 @@ rect_min_size = Vector2( 0, 30 )
 enabled_focus_mode = 0
 text = "Options"
 
-[node name="QuitButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
+[node name="ExtrasButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
 margin_top = 178.0
 margin_right = 246.0
 margin_bottom = 208.0
 rect_min_size = Vector2( 0, 30 )
 enabled_focus_mode = 0
-text = "Quit"
+text = "Extras"
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainContainer"]
 margin_top = 592.0
@@ -95,4 +95,4 @@ align = 1
 
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/NewButton" to="." method="_on_NewButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
-[connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/ExtrasButton" to="." method="_on_ExtrasButton_pressed"]
