@@ -16,7 +16,6 @@ visible = false
 margin_right = 346.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
-text = "TITLE"
 align = 1
 
 [node name="NarrativeText" type="RichTextLabel" parent="."]
@@ -60,7 +59,6 @@ grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Choice1"
 
 [node name="Choice2" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
@@ -73,7 +71,6 @@ grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Choice2"
 
 [node name="Choice3" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
@@ -86,7 +83,6 @@ grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Choice3"
 
 [node name="Choice4" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
@@ -99,4 +95,3 @@ grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Choice4"
