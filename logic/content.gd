@@ -19,9 +19,13 @@ onready var choice_4 : Button = $"%Choice4"
 func _ready() -> void:
 	set_content("000_prologue")
 	
+# warning-ignore:return_value_discarded
 	choice_1.connect("pressed", self,"_on_Choice_btn_pressed", [1])
+# warning-ignore:return_value_discarded
 	choice_2.connect("pressed", self,"_on_Choice_btn_pressed", [2])
+# warning-ignore:return_value_discarded
 	choice_3.connect("pressed", self,"_on_Choice_btn_pressed", [3])
+# warning-ignore:return_value_discarded
 	choice_4.connect("pressed", self,"_on_Choice_btn_pressed", [4])
 
 
