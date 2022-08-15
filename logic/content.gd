@@ -6,6 +6,7 @@ var content_dict : Dictionary = ContentData.new().get_content_dict()
 var current_page : String
 
 # Variables that contain nodes
+onready var title_label: Label = $"%TitleLabel"
 onready var narr_text : RichTextLabel = $"%NarrativeText"
 onready var choices_con : VBoxContainer = $"%ChoicesContainer"
 onready var choice_1 : Button = $"%Choice1"
