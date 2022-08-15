@@ -54,6 +54,10 @@ rect_min_size = Vector2( 0, 25 )
 text = "Menu"
 align = 1
 
+[node name="MenuSeparator" type="HSeparator" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
+margin_right = 40.0
+margin_bottom = 4.0
+
 [node name="TitleButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
 margin_top = 35.0
 margin_right = 166.0

@@ -61,6 +61,10 @@ rect_min_size = Vector2( 0, 25 )
 text = "Credits"
 align = 1
 
+[node name="CreditsSeparator" type="HSeparator" parent="PopupCredits/CreditsScreenContainer/CreditsScreen/CreditsMargin/CreditsContainer"]
+margin_right = 40.0
+margin_bottom = 4.0
+
 [node name="CreditsText" type="RichTextLabel" parent="PopupCredits/CreditsScreenContainer/CreditsScreen/CreditsMargin/CreditsContainer"]
 margin_right = 40.0
 margin_bottom = 40.0
