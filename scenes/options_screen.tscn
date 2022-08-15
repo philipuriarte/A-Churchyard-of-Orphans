@@ -64,6 +64,8 @@ margin_left = 91.0
 margin_right = 216.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 125, 0 )
+focus_mode = 0
+enabled_focus_mode = 0
 text = "English"
 items = [ "English", null, false, 0, null, "Japanese", null, false, 1, null, "Tagalog", null, false, 2, null ]
 selected = 0
@@ -88,7 +90,9 @@ text = "Music:"
 margin_left = 82.0
 margin_right = 158.0
 margin_bottom = 40.0
+focus_mode = 0
 pressed = true
+enabled_focus_mode = 0
 
 [node name="SFX" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer"]
 margin_top = 44.0
@@ -106,7 +110,9 @@ text = "SFX:"
 margin_left = 81.0
 margin_right = 157.0
 margin_bottom = 40.0
+focus_mode = 0
 pressed = true
+enabled_focus_mode = 0
 
 [node name="TextContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
 margin_top = 124.0
@@ -130,6 +136,8 @@ margin_left = 91.0
 margin_right = 141.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 50, 0 )
+focus_mode = 0
+enabled_focus_mode = 0
 text = "10"
 items = [ "10", null, false, 0, null, "11", null, false, 1, null, "12", null, false, 2, null, "13", null, false, 3, null, "14", null, false, 4, null ]
 selected = 0
@@ -155,6 +163,8 @@ margin_top = 72.0
 margin_right = 226.0
 margin_bottom = 97.0
 rect_min_size = Vector2( 0, 25 )
+focus_mode = 0
+enabled_focus_mode = 0
 text = "Credits"
 
 [node name="ContactButton" type="Button" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/ExtrasContainer"]
@@ -162,6 +172,8 @@ margin_top = 112.0
 margin_right = 226.0
 margin_bottom = 137.0
 rect_min_size = Vector2( 0, 25 )
+focus_mode = 0
+enabled_focus_mode = 0
 text = "Contact us"
 
 [node name="ButtonMargin" type="MarginContainer" parent="MarginContainer/MainCointainer"]
@@ -176,6 +188,8 @@ margin_left = 100.0
 margin_right = 226.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 0, 25 )
+focus_mode = 0
+enabled_focus_mode = 0
 text = "Back"
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainCointainer"]
