@@ -67,7 +67,7 @@ rect_min_size = Vector2( 125, 0 )
 focus_mode = 0
 enabled_focus_mode = 0
 text = "English"
-items = [ "English", null, false, 0, null, "Japanese", null, false, 1, null, "Tagalog", null, false, 2, null ]
+items = [ "English", null, false, 0, null ]
 selected = 0
 
 [node name="MusicContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer"]
