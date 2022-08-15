@@ -1,5 +1,13 @@
 extends PanelContainer
 
+onready var continue_btn: Button = $"%ContinueButton"
+
+
+# Should set visiblity of Continue button if there is save file or not
+func _ready() -> void:
+	continue_btn.visible = false
+
+
 # Changes scene to game_screen
 # Should start new game instead of only changing scene to game_screen
 func _on_NewButton_pressed() -> void:

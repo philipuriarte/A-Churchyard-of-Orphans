@@ -54,6 +54,7 @@ custom_constants/separation = 15
 alignment = 1
 
 [node name="ContinueButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
+unique_name_in_owner = true
 margin_top = 43.0
 margin_right = 246.0
 margin_bottom = 73.0
