@@ -1,6 +1,6 @@
 extends PanelContainer
 
-# # Variables that contain nodes
+# Variables that contain nodes
 onready var popup_menu: Popup = $"%PopupMenu"
 onready var top_text: Label = $"%TopText"
 

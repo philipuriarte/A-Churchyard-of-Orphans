@@ -8,7 +8,7 @@ var current_page: String
 # Variables that contain nodes
 onready var title_label: Label = $"%TitleLabel"
 onready var narr_text: RichTextLabel = $"%NarrativeText"
-onready var choices_con : VBoxContainer = $"%ChoicesContainer"
+onready var choices_con: VBoxContainer = $"%ChoicesContainer"
 onready var choice_1: Button = $"%Choice1"
 onready var choice_2: Button = $"%Choice2"
 onready var choice_3: Button = $"%Choice3"
