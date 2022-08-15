@@ -53,12 +53,12 @@ rect_min_size = Vector2( 0, 150 )
 custom_constants/separation = 20
 alignment = 1
 
-[node name="StartButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
+[node name="NewButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
 margin_top = 26.0
 margin_right = 246.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 0, 30 )
-text = "Start"
+text = "New Game"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
 margin_top = 76.0
@@ -81,6 +81,6 @@ margin_bottom = 606.0
 text = "ver 0.0"
 align = 1
 
-[connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/NewButton" to="." method="_on_NewButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
