@@ -1,10 +1,11 @@
 extends PanelContainer
 
+# # Variables that contain nodes
 onready var popup_menu: Popup = $"%PopupMenu"
 onready var top_text: Label = $"%TopText"
 
 
-# Will open the PopupMenu node
+# Open the PopupMenu node
 func _on_MenuButton_pressed() -> void:
 	popup_menu.popup_centered()
 
