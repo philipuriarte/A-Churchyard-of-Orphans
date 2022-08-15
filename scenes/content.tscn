@@ -10,6 +10,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 3 )
 
+[node name="TitleLabel" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+margin_right = 346.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+align = 1
+
 [node name="NarrativeText" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
 margin_right = 346.0
@@ -50,7 +58,7 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
-text = "Choice1"
+enabled_focus_mode = 0
 
 [node name="Choice2" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
@@ -62,7 +70,7 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
-text = "Choice2"
+enabled_focus_mode = 0
 
 [node name="Choice3" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
@@ -74,7 +82,7 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
-text = "Choice3"
+enabled_focus_mode = 0
 
 [node name="Choice4" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
@@ -86,4 +94,4 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
-text = "Choice4"
+enabled_focus_mode = 0

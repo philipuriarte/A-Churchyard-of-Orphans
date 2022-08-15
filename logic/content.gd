@@ -2,30 +2,36 @@ extends VBoxContainer
 
 const ContentData = preload("res://logic/content_data.gd")
 
-var content_dict = ContentData.new().get_content_dict()
-var current_page : String
+var content_dict: Dictionary = ContentData.new().get_content_dict()
+var current_page: String
 
 # Variables that contain nodes
-onready var narr_text = $"%NarrativeText"
-onready var choices_con = $"%ChoicesContainer"
-onready var choice_1 = $"%Choice1"
-onready var choice_2 = $"%Choice2"
-onready var choice_3 = $"%Choice3"
-onready var choice_4 = $"%Choice4"
+onready var title_label: Label = $"%TitleLabel"
+onready var narr_text: RichTextLabel = $"%NarrativeText"
+onready var choices_con: VBoxContainer = $"%ChoicesContainer"
+onready var choice_1: Button = $"%Choice1"
+onready var choice_2: Button = $"%Choice2"
+onready var choice_3: Button = $"%Choice3"
+onready var choice_4: Button = $"%Choice4"
 
 
-# Sets starting content "prologue" and connects signals to Choice buttons
+# Set starting content to "prologue" and connect signals to Choice buttons
 func _ready() -> void:
+	# Should be updated with saved current_page once save system is up
 	set_content("000_prologue")
 	
+# warning-ignore:return_value_discarded
 	choice_1.connect("pressed", self,"_on_Choice_btn_pressed", [1])
+# warning-ignore:return_value_discarded
 	choice_2.connect("pressed", self,"_on_Choice_btn_pressed", [2])
+# warning-ignore:return_value_discarded
 	choice_3.connect("pressed", self,"_on_Choice_btn_pressed", [3])
+# warning-ignore:return_value_discarded
 	choice_4.connect("pressed", self,"_on_Choice_btn_pressed", [4])
 
 
-# Functions for checking if any of the Choice buttons were released
-func _on_Choice_btn_pressed(choice_index: int):
+# Check if any of the Choice buttons were released
+func _on_Choice_btn_pressed(choice_index: int) -> void:
 	var output_key: String
 	
 	if content_dict[current_page]["choices"][choice_index].has("output"):
@@ -33,25 +39,37 @@ func _on_Choice_btn_pressed(choice_index: int):
 		set_content(output_key)
 
 
-# Updates the nodes in ContentContainer and value of current_page
-func set_content(output_key: String) -> void:
-	current_page = output_key
-	
+# Update nodes in ContentContainer and current_page
+func set_content(output_key: String) -> void:	
+	set_title(output_key)
 	set_narr_text(content_dict[output_key]["narr_text"])
 	set_choice_btn(output_key)
+	
+	current_page = output_key
 
 
-# Sets text of NarrativeText
-# Alternatively narr_text.bbcode_text += new_text + "\n\n" to only append text
-func set_narr_text(new_text: String):
+# Set visibiliy and text of TitleLabel
+func set_title(output_key: String) -> void:
+	if title_label.visible:
+		title_label.text = ""
+		title_label.visible = false
+	
+	if content_dict[output_key].has("title"):
+		title_label.text = content_dict[output_key]["title"]
+		title_label.visible = true
+
+
+# Set text of NarrativeText
+func set_narr_text(new_text: String) -> void:
 	narr_text.bbcode_text = new_text
 
 
-# Sets visibility and text of Choice buttons
-func set_choice_btn(output_key: String):
+# Set visibility and text of Choice buttons
+func set_choice_btn(output_key: String) -> void:
 	for choice_i in choices_con.get_children():
-		choice_i.text = ""
-		choice_i.visible = false
+		if choice_i.visible:
+			choice_i.text = ""
+			choice_i.visible = false
 	
 	for choice in content_dict[output_key]["choices"]:
 		match choice:

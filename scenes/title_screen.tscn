@@ -25,12 +25,12 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = 336.0
 margin_bottom = 616.0
-custom_constants/separation = 30
+custom_constants/separation = 20
 
-[node name="Title" type="Label" parent="MarginContainer/MainContainer"]
+[node name="TitleLabel" type="Label" parent="MarginContainer/MainContainer"]
 margin_right = 326.0
-margin_bottom = 350.0
-rect_min_size = Vector2( 0, 350 )
+margin_bottom = 300.0
+rect_min_size = Vector2( 0, 300 )
 size_flags_vertical = 1
 text = "Text Game Prototype"
 align = 1
@@ -38,9 +38,9 @@ valign = 1
 autowrap = true
 
 [node name="ButtonsMargin" type="MarginContainer" parent="MarginContainer/MainContainer"]
-margin_top = 380.0
+margin_top = 320.0
 margin_right = 326.0
-margin_bottom = 562.0
+margin_bottom = 572.0
 size_flags_vertical = 3
 custom_constants/margin_right = 40
 custom_constants/margin_left = 40
@@ -48,39 +48,55 @@ custom_constants/margin_left = 40
 [node name="ButtonsContainer" type="VBoxContainer" parent="MarginContainer/MainContainer/ButtonsMargin"]
 margin_left = 40.0
 margin_right = 286.0
-margin_bottom = 182.0
+margin_bottom = 252.0
 rect_min_size = Vector2( 0, 150 )
-custom_constants/separation = 20
+custom_constants/separation = 15
 alignment = 1
 
-[node name="StartButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
-margin_top = 26.0
+[node name="ContinueButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
+unique_name_in_owner = true
+margin_top = 43.0
 margin_right = 246.0
-margin_bottom = 56.0
+margin_bottom = 73.0
 rect_min_size = Vector2( 0, 30 )
-text = "Start"
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Continue"
+
+[node name="NewButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
+margin_top = 88.0
+margin_right = 246.0
+margin_bottom = 118.0
+rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "New Game"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
-margin_top = 76.0
+margin_top = 133.0
 margin_right = 246.0
-margin_bottom = 106.0
+margin_bottom = 163.0
 rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+enabled_focus_mode = 0
 text = "Options"
 
-[node name="QuitButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
-margin_top = 126.0
+[node name="ExtrasButton" type="Button" parent="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer"]
+margin_top = 178.0
 margin_right = 246.0
-margin_bottom = 156.0
+margin_bottom = 208.0
 rect_min_size = Vector2( 0, 30 )
-text = "Quit"
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Extras"
 
 [node name="BottomText" type="Label" parent="MarginContainer/MainContainer"]
 margin_top = 592.0
 margin_right = 326.0
 margin_bottom = 606.0
-text = "ver 0.0"
+text = "ver 0.1"
 align = 1
 
-[connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/NewButton" to="." method="_on_NewButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
-[connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/ExtrasButton" to="." method="_on_ExtrasButton_pressed"]
