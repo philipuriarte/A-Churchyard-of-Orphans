@@ -2,17 +2,17 @@ extends VBoxContainer
 
 const ContentData = preload("res://logic/content_data.gd")
 
-var content_dict : Dictionary = ContentData.new().get_content_dict()
-var current_page : String
+var content_dict: Dictionary = ContentData.new().get_content_dict()
+var current_page: String
 
 # Variables that contain nodes
 onready var title_label: Label = $"%TitleLabel"
-onready var narr_text : RichTextLabel = $"%NarrativeText"
+onready var narr_text: RichTextLabel = $"%NarrativeText"
 onready var choices_con : VBoxContainer = $"%ChoicesContainer"
-onready var choice_1 : Button = $"%Choice1"
-onready var choice_2 : Button = $"%Choice2"
-onready var choice_3 : Button = $"%Choice3"
-onready var choice_4 : Button = $"%Choice4"
+onready var choice_1: Button = $"%Choice1"
+onready var choice_2: Button = $"%Choice2"
+onready var choice_3: Button = $"%Choice3"
+onready var choice_4: Button = $"%Choice4"
 
 
 # Set starting content to "prologue" and connect signals to Choice buttons
