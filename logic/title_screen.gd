@@ -1,6 +1,7 @@
 extends PanelContainer
 
 # Changes scene to game_screen
+# Should start new game instead of only changing scene to game_screen
 func _on_NewButton_pressed() -> void:
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/game_screen.tscn")
