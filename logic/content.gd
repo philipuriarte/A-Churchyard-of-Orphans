@@ -50,8 +50,9 @@ func set_content(output_key: String) -> void:
 
 # Set visibiliy and text of TitleLabel
 func set_title(output_key: String) -> void:
-	title_label.text = ""
-	title_label.visible = false
+	if title_label.visible:
+		title_label.text = ""
+		title_label.visible = false
 	
 	if content_dict[output_key].has("title"):
 		title_label.text = content_dict[output_key]["title"]
@@ -66,8 +67,9 @@ func set_narr_text(new_text: String) -> void:
 # Set visibility and text of Choice buttons
 func set_choice_btn(output_key: String) -> void:
 	for choice_i in choices_con.get_children():
-		choice_i.text = ""
-		choice_i.visible = false
+		if choice_i.visible:
+			choice_i.text = ""
+			choice_i.visible = false
 	
 	for choice in content_dict[output_key]["choices"]:
 		match choice:
