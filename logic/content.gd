@@ -42,8 +42,18 @@ func _on_Choice_btn_pressed(choice_index: int) -> void:
 func set_content(output_key: String) -> void:
 	current_page = output_key
 	
+	set_title()
 	set_narr_text(content_dict[output_key]["narr_text"])
 	set_choice_btn(output_key)
+
+
+# Set visibiliy and text of TitleLabel
+func set_title() -> void:
+	title_label.text = ""
+	title_label.visible = false
+	
+	if content_dict[current_page].has("title"):
+		title_label.text = content_dict[current_page]["title"]
 
 
 # Sets text of NarrativeText
