@@ -35,16 +35,16 @@ margin_top = 346.0
 margin_right = 346.0
 margin_bottom = 496.0
 rect_min_size = Vector2( 0, 150 )
-custom_constants/margin_right = 50
+custom_constants/margin_right = 30
 custom_constants/margin_top = 20
-custom_constants/margin_left = 50
+custom_constants/margin_left = 30
 custom_constants/margin_bottom = 10
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="ChoicesMargin"]
 unique_name_in_owner = true
-margin_left = 50.0
+margin_left = 30.0
 margin_top = 20.0
-margin_right = 296.0
+margin_right = 316.0
 margin_bottom = 140.0
 custom_constants/separation = 10
 alignment = 1
