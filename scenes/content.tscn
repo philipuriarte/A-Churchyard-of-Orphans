@@ -12,16 +12,17 @@ script = ExtResource( 3 )
 
 [node name="TitleLabel" type="Label" parent="."]
 unique_name_in_owner = true
-visible = false
 margin_right = 346.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
+text = "Title"
 align = 1
 
 [node name="NarrativeText" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
+margin_top = 44.0
 margin_right = 346.0
-margin_bottom = 342.0
+margin_bottom = 312.0
 size_flags_vertical = 3
 custom_constants/line_separation = 10
 bbcode_enabled = true
@@ -31,7 +32,7 @@ fit_content_height = true
 scroll_active = false
 
 [node name="ChoicesMargin" type="MarginContainer" parent="."]
-margin_top = 346.0
+margin_top = 316.0
 margin_right = 346.0
 margin_bottom = 496.0
 rect_min_size = Vector2( 0, 150 )
@@ -45,53 +46,53 @@ unique_name_in_owner = true
 margin_left = 30.0
 margin_top = 20.0
 margin_right = 316.0
-margin_bottom = 140.0
+margin_bottom = 170.0
 custom_constants/separation = 10
 alignment = 1
 
 [node name="Choice1" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
-visible = false
-margin_right = 246.0
+margin_right = 286.0
 margin_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 enabled_focus_mode = 0
+text = "Choice1"
 
 [node name="Choice2" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
-visible = false
-margin_top = 5.0
-margin_right = 246.0
-margin_bottom = 35.0
+margin_top = 40.0
+margin_right = 286.0
+margin_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 enabled_focus_mode = 0
+text = "Choice2"
 
 [node name="Choice3" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
-visible = false
-margin_top = 25.0
-margin_right = 246.0
-margin_bottom = 55.0
+margin_top = 80.0
+margin_right = 286.0
+margin_bottom = 110.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 enabled_focus_mode = 0
+text = "Choice3"
 
 [node name="Choice4" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
-visible = false
-margin_top = 45.0
-margin_right = 246.0
-margin_bottom = 75.0
+margin_top = 120.0
+margin_right = 286.0
+margin_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 enabled_focus_mode = 0
+text = "Choice4"
