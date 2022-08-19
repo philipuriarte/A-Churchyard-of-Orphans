@@ -36,23 +36,23 @@ margin_top = 316.0
 margin_right = 346.0
 margin_bottom = 496.0
 rect_min_size = Vector2( 0, 150 )
-custom_constants/margin_right = 30
+custom_constants/margin_right = 20
 custom_constants/margin_top = 20
-custom_constants/margin_left = 30
+custom_constants/margin_left = 20
 custom_constants/margin_bottom = 10
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="ChoicesMargin"]
 unique_name_in_owner = true
-margin_left = 30.0
+margin_left = 20.0
 margin_top = 20.0
-margin_right = 316.0
+margin_right = 326.0
 margin_bottom = 170.0
 custom_constants/separation = 10
 alignment = 1
 
 [node name="Choice1" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
-margin_right = 286.0
+margin_right = 306.0
 margin_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -64,7 +64,7 @@ text = "Choice1"
 [node name="Choice2" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
 margin_top = 40.0
-margin_right = 286.0
+margin_right = 306.0
 margin_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -76,7 +76,7 @@ text = "Choice2"
 [node name="Choice3" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
 margin_top = 80.0
-margin_right = 286.0
+margin_right = 306.0
 margin_bottom = 110.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -88,7 +88,7 @@ text = "Choice3"
 [node name="Choice4" type="Button" parent="ChoicesMargin/ChoicesContainer"]
 unique_name_in_owner = true
 margin_top = 120.0
-margin_right = 286.0
+margin_right = 306.0
 margin_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
