@@ -7,27 +7,23 @@
 </p>
 
 ## About
-A prototype for a text-based mobile game using the Godot 3.5 engine. Still a work in progress.
+A prototype for a short story text-based mobile game using the Godot 3.5 engine. Still a work in progress.
 
+## Inspired from text-based games like:
 
-## Inspired from other text-based games like:
-
-**Story driven**
-* [The War for the West](https://play.google.com/store/apps/details?id=org.hostedgames.warforwest&hl=en_US&gl=US)
+**Game Design & Mechanics**
+* Choice of Games
+  * [Creatures Such as We](https://play.google.com/store/apps/details?id=com.choiceofgames.creaturessuchaswe&hl=en_US&gl=US)
+  * [Pendragon Rising](https://play.google.com/store/apps/details?id=com.choiceofgames.pendragonrising&hl=en_US&gl=US)
+* Hosted Games
+  * [The War for the West](https://play.google.com/store/apps/details?id=org.hostedgames.warforwest&hl=en_US&gl=US)
+  * [The Great Tournament](https://play.google.com/store/apps/details?id=org.hostedgames.greattournament&hl=en&gl=US)
+  * [Sabres of Infinity](https://play.google.com/store/apps/details?id=org.hostedgames.sabresofinfinity)
 * [Magium](https://play.google.com/store/apps/details?id=com.magiumgames.magium&hl=en_US&gl=US)
-* [Game of the Gods](https://play.google.com/store/apps/details?id=com.warquest&hl=en_US&gl=US)
-
-**Rougelike/Rougelite**
-* [Path of Adventure](https://play.google.com/store/apps/details?id=com.keeweed.pathofadventure&hl=en_US&gl=US)
-* [Life in Adventure](https://play.google.com/store/apps/details?id=com.StudioWheel.Bard&hl=en_US&gl=US)
-* [Grim Quest](https://play.google.com/store/apps/details?id=com.grimdev.grimquest&hl=en_US&gl=US)
 
 **Others**
-* [Eldrum: Untold](https://play.google.com/store/apps/details?id=com.gotterdammerung.untold&hl=en_US&gl=US)
+* User Interface: [Eldrum: Untold](https://play.google.com/store/apps/details?id=com.gotterdammerung.untold&hl=en_US&gl=US)
 
 ## Links
-* Project/task list: [https://github.com/PhilipU21/Text-Game-Prototype-Tasks](https://github.com/users/PhilipU21/projects/1/views/1)
+* Project management: [https://github.com/PhilipU21/Text-Game-Prototype-Tasks](https://github.com/users/PhilipU21/projects/1/views/1)
 * Godot engine: https://godotengine.org/
-
-## Other notes
-* The number of commits are high due to my initial misunderstanding of how often we should make commits. At first I made a commit after every new slight change, but now I only make a commit after a task is done.
