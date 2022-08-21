@@ -31,7 +31,7 @@ func _on_Choice_btn_pressed(choice_index: int) -> void:
 
 
 # Update nodes in ContentContainer and current_page
-func set_content(output_key: String) -> void:	
+func set_content(output_key: String) -> void:
 	set_title(output_key)
 	set_narr_text(content_dict[output_key]["narr_text"])
 	set_choice_btn(output_key)
