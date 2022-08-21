@@ -33,6 +33,7 @@ custom_constants/margin_left = 15
 custom_constants/margin_bottom = 8
 
 [node name="ChoiceText" type="Label" parent="ButtonMargin"]
+unique_name_in_owner = true
 margin_left = 15.0
 margin_top = 8.0
 margin_right = 265.0
