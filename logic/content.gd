@@ -9,6 +9,10 @@ var current_page: String
 onready var title_label: Label = $"%TitleLabel"
 onready var narr_text: RichTextLabel = $"%NarrativeText"
 onready var choices_con: VBoxContainer = $"%ChoicesContainer"
+onready var choice_1: PanelContainer = $"%Choice1"
+onready var choice_2: PanelContainer = $"%Choice2"
+onready var choice_3: PanelContainer = $"%Choice3"
+onready var choice_4: PanelContainer = $"%Choice4"
 
 
 # Set starting content to "prologue" and connect signals to Choice buttons
@@ -30,7 +34,7 @@ func _on_Choice_btn_pressed(choice_index: int) -> void:
 func set_content(output_key: String) -> void:	
 	set_title(output_key)
 	set_narr_text(content_dict[output_key]["narr_text"])
-	#set_choice_btn(output_key)
+	set_choice_btn(output_key)
 	
 	current_page = output_key
 
@@ -50,7 +54,7 @@ func set_title(output_key: String) -> void:
 func set_narr_text(new_text: String) -> void:
 	narr_text.bbcode_text = new_text
 
-"""
+
 # Set visibility and text of Choice buttons
 func set_choice_btn(output_key: String) -> void:
 	for choice_i in choices_con.get_children():
@@ -72,5 +76,4 @@ func set_choice_btn(output_key: String) -> void:
 			4:
 				choice_4.text = content_dict[output_key]["choices"][choice]["text"]
 				choice_4.visible = true
-"""
 
