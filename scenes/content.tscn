@@ -72,6 +72,7 @@ margin_left = 0.0
 margin_top = 40.0
 margin_right = 306.0
 margin_bottom = 70.0
+choice_index = 2
 
 [node name="Choice3" parent="ChoicesMargin/ChoicesContainer" instance=ExtResource( 1 )]
 unique_name_in_owner = true
@@ -83,6 +84,7 @@ margin_left = 0.0
 margin_top = 80.0
 margin_right = 306.0
 margin_bottom = 110.0
+choice_index = 3
 
 [node name="Choice4" parent="ChoicesMargin/ChoicesContainer" instance=ExtResource( 1 )]
 unique_name_in_owner = true
@@ -94,3 +96,4 @@ margin_left = 0.0
 margin_top = 120.0
 margin_right = 306.0
 margin_bottom = 150.0
+choice_index = 4
