@@ -1,6 +1,6 @@
 extends PanelContainer
 
-export var choice_index: int = 0
+export(int, 1, 4) var choice_index: int = 1
 
 
 # Return the value of choice_index
