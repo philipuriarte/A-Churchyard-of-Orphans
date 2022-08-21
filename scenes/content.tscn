@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
+[ext_resource path="res://scenes/choice_button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logic/content.gd" type="Script" id=3]
 
 [node name="ContentContainer" type="VBoxContainer"]
@@ -22,7 +23,7 @@ align = 1
 unique_name_in_owner = true
 margin_top = 44.0
 margin_right = 346.0
-margin_bottom = 342.0
+margin_bottom = 312.0
 size_flags_vertical = 3
 custom_constants/line_separation = 10
 bbcode_enabled = true
@@ -32,7 +33,7 @@ fit_content_height = true
 scroll_active = false
 
 [node name="ChoicesMargin" type="MarginContainer" parent="."]
-margin_top = 346.0
+margin_top = 316.0
 margin_right = 346.0
 margin_bottom = 496.0
 rect_min_size = Vector2( 0, 150 )
@@ -46,6 +47,50 @@ unique_name_in_owner = true
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 326.0
-margin_bottom = 140.0
+margin_bottom = 170.0
 custom_constants/separation = 10
 alignment = 1
+
+[node name="Choice1" parent="ChoicesMargin/ChoicesContainer" instance=ExtResource( 1 )]
+unique_name_in_owner = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 306.0
+margin_bottom = 30.0
+
+[node name="Choice2" parent="ChoicesMargin/ChoicesContainer" instance=ExtResource( 1 )]
+unique_name_in_owner = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 40.0
+margin_right = 306.0
+margin_bottom = 70.0
+
+[node name="Choice3" parent="ChoicesMargin/ChoicesContainer" instance=ExtResource( 1 )]
+unique_name_in_owner = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 80.0
+margin_right = 306.0
+margin_bottom = 110.0
+
+[node name="Choice4" parent="ChoicesMargin/ChoicesContainer" instance=ExtResource( 1 )]
+unique_name_in_owner = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 120.0
+margin_right = 306.0
+margin_bottom = 150.0
