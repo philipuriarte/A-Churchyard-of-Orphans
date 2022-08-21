@@ -59,21 +59,21 @@ func set_narr_text(new_text: String) -> void:
 func set_choice_btn(output_key: String) -> void:
 	for choice_i in choices_con.get_children():
 		if choice_i.visible:
-			choice_i.text = ""
+			choice_i.set_text("")
 			choice_i.visible = false
 	
 	for choice in content_dict[output_key]["choices"]:
 		match choice:
 			1:
-				choice_1.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_1.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_1.visible = true
 			2:
-				choice_2.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_2.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_2.visible = true
 			3:
-				choice_3.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_3.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_3.visible = true
 			4:
-				choice_4.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_4.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_4.visible = true
 
