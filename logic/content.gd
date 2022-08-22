@@ -30,7 +30,7 @@ func _ready() -> void:
 	choice_4.connect("choice_btn_pressed", self, "process_choice")
 
 
-# Check if any of the Choice buttons were released
+# Process input (Choice button press)
 func process_choice(choice_index: int) -> void:
 	var output_key: String
 	
