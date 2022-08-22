@@ -9,10 +9,10 @@ var current_page: String
 onready var title_label: Label = $"%TitleLabel"
 onready var narr_text: RichTextLabel = $"%NarrativeText"
 onready var choices_con: VBoxContainer = $"%ChoicesContainer"
-onready var choice_1: Button = $"%Choice1"
-onready var choice_2: Button = $"%Choice2"
-onready var choice_3: Button = $"%Choice3"
-onready var choice_4: Button = $"%Choice4"
+onready var choice_1: PanelContainer = $"%Choice1"
+onready var choice_2: PanelContainer = $"%Choice2"
+onready var choice_3: PanelContainer = $"%Choice3"
+onready var choice_4: PanelContainer = $"%Choice4"
 
 
 # Set starting content to "prologue" and connect signals to Choice buttons
@@ -20,18 +20,18 @@ func _ready() -> void:
 	# Should be updated with saved current_page once save system is up
 	set_content("000_prologue")
 	
-# warning-ignore:return_value_discarded
-	choice_1.connect("pressed", self,"_on_Choice_btn_pressed", [1])
-# warning-ignore:return_value_discarded
-	choice_2.connect("pressed", self,"_on_Choice_btn_pressed", [2])
-# warning-ignore:return_value_discarded
-	choice_3.connect("pressed", self,"_on_Choice_btn_pressed", [3])
-# warning-ignore:return_value_discarded
-	choice_4.connect("pressed", self,"_on_Choice_btn_pressed", [4])
+	# warning-ignore:return_value_discarded
+	choice_1.connect("choice_btn_pressed", self, "process_choice")
+	# warning-ignore:return_value_discarded
+	choice_2.connect("choice_btn_pressed", self, "process_choice")
+	# warning-ignore:return_value_discarded
+	choice_3.connect("choice_btn_pressed", self, "process_choice")
+	# warning-ignore:return_value_discarded
+	choice_4.connect("choice_btn_pressed", self, "process_choice")
 
 
-# Check if any of the Choice buttons were released
-func _on_Choice_btn_pressed(choice_index: int) -> void:
+# Process input (Choice button press)
+func process_choice(choice_index: int) -> void:
 	var output_key: String
 	
 	if content_dict[current_page]["choices"][choice_index].has("output"):
@@ -40,7 +40,7 @@ func _on_Choice_btn_pressed(choice_index: int) -> void:
 
 
 # Update nodes in ContentContainer and current_page
-func set_content(output_key: String) -> void:	
+func set_content(output_key: String) -> void:
 	set_title(output_key)
 	set_narr_text(content_dict[output_key]["narr_text"])
 	set_choice_btn(output_key)
@@ -68,21 +68,20 @@ func set_narr_text(new_text: String) -> void:
 func set_choice_btn(output_key: String) -> void:
 	for choice_i in choices_con.get_children():
 		if choice_i.visible:
-			choice_i.text = ""
+			choice_i.set_text("")
 			choice_i.visible = false
 	
 	for choice in content_dict[output_key]["choices"]:
 		match choice:
 			1:
-				choice_1.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_1.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_1.visible = true
 			2:
-				choice_2.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_2.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_2.visible = true
 			3:
-				choice_3.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_3.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_3.visible = true
 			4:
-				choice_4.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_4.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_4.visible = true
-
