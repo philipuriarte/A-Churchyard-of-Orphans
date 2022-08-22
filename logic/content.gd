@@ -20,13 +20,13 @@ func _ready() -> void:
 	# Should be updated with saved current_page once save system is up
 	set_content("000_prologue")
 	
-# warning-ignore:return_value_discarded
+	# warning-ignore:return_value_discarded
 	choice_1.connect("choice_btn_pressed", self, "process_choice")
-# warning-ignore:return_value_discarded
+	# warning-ignore:return_value_discarded
 	choice_2.connect("choice_btn_pressed", self, "process_choice")
-# warning-ignore:return_value_discarded
+	# warning-ignore:return_value_discarded
 	choice_3.connect("choice_btn_pressed", self, "process_choice")
-# warning-ignore:return_value_discarded
+	# warning-ignore:return_value_discarded
 	choice_4.connect("choice_btn_pressed", self, "process_choice")
 
 
