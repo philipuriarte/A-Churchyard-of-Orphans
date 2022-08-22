@@ -7,7 +7,7 @@
 </p>
 
 ## About
-A prototype for a short story text-based mobile game using the Godot 3.5 engine. Still a work in progress.
+A prototype for a short story-driven text-based game using the Godot 3.5 engine. Still a work in progress.
 
 ## Inspired from text-based games like:
 
