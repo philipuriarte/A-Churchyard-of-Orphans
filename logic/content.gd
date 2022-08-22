@@ -19,10 +19,19 @@ onready var choice_4: PanelContainer = $"%Choice4"
 func _ready() -> void:
 	# Should be updated with saved current_page once save system is up
 	set_content("000_prologue")
+	
+# warning-ignore:return_value_discarded
+	choice_1.connect("choice_btn_pressed", self, "process_choice")
+# warning-ignore:return_value_discarded
+	choice_2.connect("choice_btn_pressed", self, "process_choice")
+# warning-ignore:return_value_discarded
+	choice_3.connect("choice_btn_pressed", self, "process_choice")
+# warning-ignore:return_value_discarded
+	choice_4.connect("choice_btn_pressed", self, "process_choice")
 
 
 # Check if any of the Choice buttons were released
-func _on_Choice_btn_pressed(choice_index: int) -> void:
+func process_choice(choice_index: int) -> void:
 	var output_key: String
 	
 	if content_dict[current_page]["choices"][choice_index].has("output"):
@@ -76,4 +85,3 @@ func set_choice_btn(output_key: String) -> void:
 			4:
 				choice_4.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_4.visible = true
-
