@@ -148,15 +148,16 @@ custom_constants/separation = 20
 
 [node name="LangLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Languange"]
 margin_top = 3.0
-margin_right = 71.0
+margin_right = 84.0
 margin_bottom = 17.0
+rect_min_size = Vector2( 84, 0 )
 text = "Languange:"
 
 [node name="LangOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/Languange"]
-margin_left = 91.0
-margin_right = 216.0
+margin_left = 104.0
+margin_right = 204.0
 margin_bottom = 20.0
-rect_min_size = Vector2( 125, 0 )
+rect_min_size = Vector2( 100, 0 )
 focus_mode = 0
 enabled_focus_mode = 0
 text = "English"
@@ -171,17 +172,17 @@ margin_bottom = 114.0
 [node name="Music" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer"]
 margin_right = 226.0
 margin_bottom = 40.0
-custom_constants/separation = 40
 
 [node name="MusicLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/Music"]
 margin_top = 13.0
-margin_right = 42.0
+margin_right = 90.0
 margin_bottom = 27.0
+rect_min_size = Vector2( 90, 0 )
 text = "Music:"
 
 [node name="MusicButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/Music"]
-margin_left = 82.0
-margin_right = 158.0
+margin_left = 94.0
+margin_right = 170.0
 margin_bottom = 40.0
 focus_mode = 0
 pressed = true
@@ -191,17 +192,17 @@ enabled_focus_mode = 0
 margin_top = 44.0
 margin_right = 226.0
 margin_bottom = 84.0
-custom_constants/separation = 55
 
 [node name="SFXLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/SFX"]
 margin_top = 13.0
-margin_right = 26.0
+margin_right = 90.0
 margin_bottom = 27.0
+rect_min_size = Vector2( 90, 0 )
 text = "SFX:"
 
 [node name="SFXButton" type="CheckButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/MusicContainer/SFX"]
-margin_left = 81.0
-margin_right = 157.0
+margin_left = 94.0
+margin_right = 170.0
 margin_bottom = 40.0
 focus_mode = 0
 pressed = true
@@ -216,17 +217,17 @@ custom_constants/separation = 20
 [node name="TextSize" type="HBoxContainer" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer"]
 margin_right = 226.0
 margin_bottom = 20.0
-custom_constants/separation = 30
 
 [node name="SizeLabel" type="Label" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer/TextSize"]
 margin_top = 3.0
-margin_right = 61.0
+margin_right = 100.0
 margin_bottom = 17.0
+rect_min_size = Vector2( 100, 0 )
 text = "Text Size:"
 
 [node name="SizeOptions" type="OptionButton" parent="MarginContainer/MainCointainer/OptionsMargin/OptionsContainer/TextContainer/TextSize"]
-margin_left = 91.0
-margin_right = 141.0
+margin_left = 104.0
+margin_right = 154.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 50, 0 )
 focus_mode = 0
