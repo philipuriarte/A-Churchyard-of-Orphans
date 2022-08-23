@@ -1,11 +1,42 @@
 extends PanelContainer
 
 onready var popup_credits: Popup = $"%PopupCredits"
+onready var test_text: Label = $"%TestText"
 
 
 # Should set options to saved options
 func _ready() -> void:
 	pass
+
+
+# Set font size
+func _on_SizeOptions_item_selected(index: int) -> void:
+	match index:
+		0:
+			print("User chose 10")
+		1:
+			print("User chose 11")
+		2:
+			print("User chose 12")
+		3:
+			print("User chose 13")
+		4:
+			print("User chose 14")
+
+
+# Set line spacing of text
+func _on_LineOptions_item_selected(index: int) -> void:
+	match index:
+		0:
+			print("User chose 10")
+		1:
+			print("User chose 12")
+		2:
+			print("User chose 14")
+		3:
+			print("User chose 16")
+		4:
+			print("User chose 18")
 
 
 # Open PopupCredits
