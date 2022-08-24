@@ -21,17 +21,21 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot-Text-Game-Prototype"
-config/description="A prototype for a text based game using the Godot engine."
+config/description="A prototype for a short story-driven text-based game using the Godot 3.5 engine."
 run/main_scene="res://scenes/main.tscn"
-config/icon="res://assets/icon.png"
+config/icon="res://assets/graveyard.png"
 
 [display]
 
 window/size/width=360
 window/size/height=640
 window/size/resizable=false
+window/size/test_width=360
+window/size/test_height=640
 window/energy_saving/keep_screen_on=false
 window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [editor]
 
