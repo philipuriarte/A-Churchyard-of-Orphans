@@ -97,6 +97,7 @@ margin_bottom = 606.0
 text = "ver 0.1"
 align = 1
 
+[connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/NewButton" to="." method="_on_NewButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/ExtrasButton" to="." method="_on_ExtrasButton_pressed"]
