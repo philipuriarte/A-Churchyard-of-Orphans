@@ -1,7 +1,6 @@
 extends PanelContainer
 
-signal continue_game
-signal new_game
+const NEW_SAVE = preload("res://resources/new_savegame.tres")
 
 var save: SaveGame
 
@@ -17,7 +16,6 @@ func _ready() -> void:
 
 # Emit continue_game signal and change scene to game_screen
 func _on_ContinueButton_pressed() -> void:
-	emit_signal("continue_game")
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/game_screen.tscn")
 
@@ -27,14 +25,14 @@ func _on_NewButton_pressed() -> void:
 	if SaveGame.save_exists():
 		popup_confirm.popup_centered()
 	else:
-		emit_signal("new_game")
+		NEW_SAVE.write_savegame()
 		# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://scenes/game_screen.tscn")
 
 
 # Emit new_save signal and change scene to game_screen
 func _on_YesButton_pressed() -> void:
-	emit_signal("new_game")
+	NEW_SAVE.write_savegame()
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/game_screen.tscn")
 
