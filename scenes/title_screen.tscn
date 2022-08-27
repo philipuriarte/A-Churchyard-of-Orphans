@@ -21,6 +21,7 @@ rect_min_size = Vector2( 360, 640 )
 [node name="Overlay" type="PanelContainer" parent="PopupConfirm"]
 margin_right = 360.0
 margin_bottom = 640.0
+mouse_filter = 1
 custom_styles/panel = SubResource( 1 )
 
 [node name="ConfirmScreenContainer" type="CenterContainer" parent="PopupConfirm"]
@@ -179,6 +180,9 @@ margin_bottom = 606.0
 text = "ver 0.1"
 align = 1
 
+[connection signal="gui_input" from="PopupConfirm/Overlay" to="." method="_on_Overlay_gui_input"]
+[connection signal="pressed" from="PopupConfirm/ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer/ButtonContainer/YesButton" to="." method="_on_YesButton_pressed"]
+[connection signal="pressed" from="PopupConfirm/ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer/ButtonContainer/NoButton" to="." method="_on_NoButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/NewButton" to="." method="_on_NewButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]

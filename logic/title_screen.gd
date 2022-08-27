@@ -22,7 +22,7 @@ func _on_ContinueButton_pressed() -> void:
 	get_tree().change_scene("res://scenes/game_screen.tscn")
 
 
-# Emit new_save signal and change scene to game_screen if save doesn't exist
+# Check if save exists, true: open PopupConfirm, false: emit new_save signal and change scene to game_screen
 func _on_NewButton_pressed() -> void:
 	if SaveGame.save_exists():
 		popup_confirm.popup_centered()
@@ -30,6 +30,24 @@ func _on_NewButton_pressed() -> void:
 		emit_signal("new_game")
 		# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://scenes/game_screen.tscn")
+
+
+# Emit new_save signal and change scene to game_screen
+func _on_YesButton_pressed() -> void:
+	emit_signal("new_game")
+	# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://scenes/game_screen.tscn")
+
+
+# Close PopupConfirm
+func _on_NoButton_pressed() -> void:
+	popup_confirm.hide()
+
+
+# Close PopupConfirm if press/click event occurs outside ConfirmScreen
+func _on_Overlay_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
+		popup_confirm.hide()
 
 
 # Change scene to option_screen
