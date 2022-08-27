@@ -6,3 +6,6 @@
 script = ExtResource( 1 )
 current_page = "000_prologue"
 inventory = [  ]
+character_button_visibility = false
+inventory_button_visibility = false
+journal_button_visibility = false

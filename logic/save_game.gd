@@ -6,6 +6,9 @@ const SAVE_GAME_PATH := "user://save"
 # Game data to save
 export(String) var current_page
 export(Array) var inventory
+export(bool) var character_button_visibility
+export(bool) var inventory_button_visibility
+export(bool) var journal_button_visibility
 
 
 # Save game
