@@ -5,6 +5,7 @@ signal new_game
 
 var save: SaveGame
 
+onready var popup_new_confirmation: Popup = $"%PopupNewConfirmation"
 onready var continue_btn: Button = $"%ContinueButton"
 
 
@@ -25,12 +26,11 @@ func _on_ContinueButton_pressed() -> void:
 # Emit new_save signal and change scene to game_screen
 func _on_NewButton_pressed() -> void:
 	if SaveGame.save_exists():
-		pass # pop confirmation popup to overwrite save
+		popup_new_confirmation.popup_centered()
 	else:
 		emit_signal("new_game")
-	
-	# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/game_screen.tscn")
+		# warning-ignore:return_value_discarded
+		get_tree().change_scene("res://scenes/game_screen.tscn")
 
 
 # Change scene to option_screen
