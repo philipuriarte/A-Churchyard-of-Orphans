@@ -41,7 +41,7 @@ func process_choice(choice_index: int) -> void:
 		set_content(output_key)
 
 
-# Update nodes in ContentContainer and current_page
+# Update nodes in ContentContainer, and update and save current_page
 func set_content(output_key: String) -> void:
 	set_title(output_key)
 	set_narr_text(content_dict[output_key]["narr_text"])
