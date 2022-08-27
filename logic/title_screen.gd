@@ -14,13 +14,13 @@ func _ready() -> void:
 		continue_btn.visible = false
 
 
-# Emit continue_game signal and change scene to game_screen
+# Change scene to game_screen
 func _on_ContinueButton_pressed() -> void:
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/game_screen.tscn")
 
 
-# Check if save exists, true: open PopupConfirm, false: emit new_save signal and change scene to game_screen
+# Check if save exists, true: open PopupConfirm, false: write new save game and change scene to game_screen
 func _on_NewButton_pressed() -> void:
 	if SaveGame.save_exists():
 		popup_confirm.popup_centered()
@@ -30,7 +30,7 @@ func _on_NewButton_pressed() -> void:
 		get_tree().change_scene("res://scenes/game_screen.tscn")
 
 
-# Emit new_save signal and change scene to game_screen
+# Write new save and change scene to game_screen
 func _on_YesButton_pressed() -> void:
 	NEW_SAVE.write_savegame()
 	# warning-ignore:return_value_discarded
