@@ -12,7 +12,7 @@ onready var journal_button: Button = $"%JournalButton"
 
 # Set BottomContainer buttons visibility to false
 func _ready() -> void:
-	load_save()
+	load_game()
 
 
 # Open the PopupMenu node
@@ -26,7 +26,7 @@ func set_top_text(new_text: String) -> void:
 
 
 # Load data of current save file
-func load_save() -> void:
+func load_game() -> void:
 	save = SaveGame.load_savegame()
 	
 	character_button.visible = save.character_button_visibility

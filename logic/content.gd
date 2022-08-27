@@ -18,7 +18,7 @@ onready var choice_4: PanelContainer = $"%Choice4"
 
 # Set starting content to "prologue" and connect signals to Choice buttons
 func _ready() -> void:
-	load_save()
+	load_game()
 	# Should be updated with saved current_page once save system is up
 	set_content(current_page)
 	
@@ -100,7 +100,7 @@ func save_game() -> void:
 
 
 # Load current_page on save file
-func load_save() -> void:
+func load_game() -> void:
 	save = SaveGame.load_savegame()
 	
 	current_page = save.current_page
