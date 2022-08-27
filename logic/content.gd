@@ -2,6 +2,7 @@ extends VBoxContainer
 
 const ContentData = preload("res://logic/content_data.gd")
 
+var save: SaveGame
 var content_dict: Dictionary = ContentData.new().get_content_dict()
 var current_page: String
 
@@ -17,8 +18,9 @@ onready var choice_4: PanelContainer = $"%Choice4"
 
 # Set starting content to "prologue" and connect signals to Choice buttons
 func _ready() -> void:
+	load_save()
 	# Should be updated with saved current_page once save system is up
-	set_content("000_prologue")
+	set_content(current_page)
 	
 	# warning-ignore:return_value_discarded
 	choice_1.connect("choice_btn_pressed", self, "process_choice")
@@ -46,6 +48,7 @@ func set_content(output_key: String) -> void:
 	set_choice_btn(output_key)
 	
 	current_page = output_key
+	save_game()
 
 
 # Set visibiliy and text of TitleLabel
@@ -85,3 +88,19 @@ func set_choice_btn(output_key: String) -> void:
 			4:
 				choice_4.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_4.visible = true
+
+
+# Save current_page to save file
+func save_game() -> void:
+	save = SaveGame.new()
+	
+	save.current_page = current_page
+	
+	save.write_savegame()
+
+
+# Load current_page on save file
+func load_save() -> void:
+	save = SaveGame.load_savegame()
+	
+	current_page = save.current_page
