@@ -1,7 +1,7 @@
 class_name SaveGame
 extends Resource
 
-const SAVE_GAME_PATH := "user://save"
+const SAVE_GAME_PATH := "user://save_game"
 
 # Game data to save
 export(String) var current_page

@@ -157,6 +157,7 @@ margin_bottom = 20.0
 rect_min_size = Vector2( 100, 0 )
 focus_mode = 0
 enabled_focus_mode = 0
+text = "English"
 items = [ "English", null, false, 0, null ]
 selected = 0
 
@@ -228,6 +229,7 @@ margin_bottom = 20.0
 rect_min_size = Vector2( 50, 0 )
 focus_mode = 0
 enabled_focus_mode = 0
+text = "10"
 items = [ "10", null, false, 0, null, "11", null, false, 1, null, "12", null, false, 2, null, "13", null, false, 3, null, "14", null, false, 4, null ]
 selected = 0
 
@@ -250,6 +252,7 @@ margin_bottom = 20.0
 rect_min_size = Vector2( 50, 0 )
 focus_mode = 0
 enabled_focus_mode = 0
+text = "10"
 items = [ "10", null, false, 0, null, "12", null, false, 2, null, "14", null, false, 4, null, "16", null, false, 3, null, "18", null, false, 4, null ]
 selected = 0
 
