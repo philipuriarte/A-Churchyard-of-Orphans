@@ -7,7 +7,7 @@ const SAVE_GAME_PATH := "user://save_options"
 export(int, "English") var language
 export(bool) var music
 export(bool) var sfx
-export(int, 10, 14) var font_size
+export(int, "10", "11", "12", "13" ,"14") var font_size
 export(int, "10", "12", "14", "16", "18") var line_spacing
 
 
