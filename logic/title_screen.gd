@@ -1,15 +1,20 @@
 extends PanelContainer
 
 const NEW_SAVEGAME = preload("res://resources/new_savegame.tres")
+const NEW_SAVEOPTIONS = preload("res://resources/new_saveoptions.tres")
 
 onready var popup_confirm: Popup = $"%PopupConfirm"
 onready var continue_btn: Button = $"%ContinueButton"
 
 
-# Set visiblity of Continue button if there is a save file or not
 func _ready() -> void:
+	# Set visiblity of ContinueButton to false if there is no save_game file
 	if not SaveGame.save_exists():
 		continue_btn.visible = false
+	
+	# Write new save_options file if there is no save_options file
+	if not SaveOptions.save_exists():
+		NEW_SAVEOPTIONS.write_saveoptions()
 
 
 # Change scene to game_screen
@@ -18,7 +23,7 @@ func _on_ContinueButton_pressed() -> void:
 	get_tree().change_scene("res://scenes/game_screen.tscn")
 
 
-# Check if save exists, true: open PopupConfirm, false: write new save game and change scene to game_screen
+# Check if save_game exists, true: open PopupConfirm, false: write new save_game file and change scene to game_screen
 func _on_NewButton_pressed() -> void:
 	if SaveGame.save_exists():
 		popup_confirm.popup_centered()
@@ -28,7 +33,7 @@ func _on_NewButton_pressed() -> void:
 		get_tree().change_scene("res://scenes/game_screen.tscn")
 
 
-# Write new save and change scene to game_screen
+# Write new save_game file and change scene to game_screen
 func _on_YesButton_pressed() -> void:
 	NEW_SAVEGAME.write_savegame()
 	# warning-ignore:return_value_discarded
