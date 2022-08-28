@@ -151,6 +151,7 @@ rect_min_size = Vector2( 84, 0 )
 text = "Languange:"
 
 [node name="LangOptions" type="OptionButton" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/Languange"]
+unique_name_in_owner = true
 margin_left = 104.0
 margin_right = 204.0
 margin_bottom = 20.0
@@ -178,6 +179,7 @@ rect_min_size = Vector2( 90, 0 )
 text = "Music:"
 
 [node name="MusicButton" type="CheckButton" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/MusicContainer/Music"]
+unique_name_in_owner = true
 margin_left = 94.0
 margin_right = 170.0
 margin_bottom = 40.0
@@ -198,6 +200,7 @@ rect_min_size = Vector2( 90, 0 )
 text = "SFX:"
 
 [node name="SFXButton" type="CheckButton" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/MusicContainer/SFX"]
+unique_name_in_owner = true
 margin_left = 94.0
 margin_right = 170.0
 margin_bottom = 40.0
@@ -223,6 +226,7 @@ rect_min_size = Vector2( 100, 0 )
 text = "Font Size:"
 
 [node name="SizeOptions" type="OptionButton" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer/FontSize"]
+unique_name_in_owner = true
 margin_left = 104.0
 margin_right = 154.0
 margin_bottom = 20.0
@@ -246,6 +250,7 @@ rect_min_size = Vector2( 100, 0 )
 text = "Line Spacing:"
 
 [node name="LineOptions" type="OptionButton" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer/LineSpacing"]
+unique_name_in_owner = true
 margin_left = 104.0
 margin_right = 154.0
 margin_bottom = 20.0
