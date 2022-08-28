@@ -2,7 +2,7 @@ extends VBoxContainer
 
 const ContentData = preload("res://logic/content_data.gd")
 
-var save: SaveGame
+var save_game: SaveGame
 var content_dict: Dictionary = ContentData.new().get_content_dict()
 var current_page: String
 
@@ -91,15 +91,15 @@ func set_choice_btn(output_key: String) -> void:
 
 # Save current_page to save file
 func save_content() -> void:
-	save = SaveGame.load_savegame()
+	save_game = SaveGame.load_savegame()
 	
-	save.current_page = current_page
+	save_game.current_page = current_page
 	
-	save.write_savegame()
+	save_game.write_savegame()
 
 
 # Load current_page on save file
 func load_content() -> void:
-	save = SaveGame.load_savegame()
+	save_game = SaveGame.load_savegame()
 	
-	current_page = save.current_page
+	current_page = save_game.current_page
