@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "SaveGame",
 "language": "GDScript",
 "path": "res://logic/save_game.gd"
+}, {
+"base": "Resource",
+"class": "SaveOptions",
+"language": "GDScript",
+"path": "res://logic/save_options.gd"
 } ]
 _global_script_class_icons={
 "ContentData": "",
-"SaveGame": ""
+"SaveGame": "",
+"SaveOptions": ""
 }
 
 [application]
