@@ -18,7 +18,7 @@ onready var choice_4: PanelContainer = $"%Choice4"
 
 # Load save game data and connect signals to Choice buttons
 func _ready() -> void:
-	load_game()
+	load_content()
 	set_content(current_page)
 	
 	# warning-ignore:return_value_discarded
@@ -47,7 +47,7 @@ func set_content(output_key: String) -> void:
 	set_choice_btn(output_key)
 	
 	current_page = output_key
-	save_game()
+	save_content()
 
 
 # Set visibiliy and text of TitleLabel
@@ -90,8 +90,8 @@ func set_choice_btn(output_key: String) -> void:
 
 
 # Save current_page to save file
-func save_game() -> void:
-	save = SaveGame.new()
+func save_content() -> void:
+	save = SaveGame.load_savegame()
 	
 	save.current_page = current_page
 	
@@ -99,7 +99,7 @@ func save_game() -> void:
 
 
 # Load current_page on save file
-func load_game() -> void:
+func load_content() -> void:
 	save = SaveGame.load_savegame()
 	
 	current_page = save.current_page
