@@ -1,8 +1,6 @@
 extends PanelContainer
 
-const NEW_SAVE = preload("res://resources/new_savegame.tres")
-
-var save: SaveGame
+const NEW_SAVEGAME = preload("res://resources/new_savegame.tres")
 
 onready var popup_confirm: Popup = $"%PopupConfirm"
 onready var continue_btn: Button = $"%ContinueButton"
@@ -25,14 +23,14 @@ func _on_NewButton_pressed() -> void:
 	if SaveGame.save_exists():
 		popup_confirm.popup_centered()
 	else:
-		NEW_SAVE.write_savegame()
+		NEW_SAVEGAME.write_savegame()
 		# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://scenes/game_screen.tscn")
 
 
 # Write new save and change scene to game_screen
 func _on_YesButton_pressed() -> void:
-	NEW_SAVE.write_savegame()
+	NEW_SAVEGAME.write_savegame()
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/game_screen.tscn")
 
