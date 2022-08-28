@@ -2,7 +2,6 @@ extends PanelContainer
 
 var save: SaveGame
 
-# Variables that contain nodes
 onready var popup_menu: Popup = $"%PopupMenu"
 onready var top_text: Label = $"%TopText"
 onready var character_button: Button = $"%CharacterButton"

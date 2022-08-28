@@ -11,7 +11,7 @@ onready var size_options: OptionButton = $"%SizeOptions"
 onready var line_options: OptionButton = $"%LineOptions"
 
 
-# Should set options to saved options
+# Set options to saved options
 func _ready() -> void:
 	load_options()
 

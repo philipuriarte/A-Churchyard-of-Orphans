@@ -6,7 +6,6 @@ var save_game: SaveGame
 var content_dict: Dictionary = ContentData.new().get_content_dict()
 var current_page: String
 
-# Variables that contain nodes
 onready var title_label: Label = $"%TitleLabel"
 onready var narr_text: RichTextLabel = $"%NarrativeText"
 onready var choices_con: VBoxContainer = $"%ChoicesContainer"
@@ -89,7 +88,7 @@ func set_choice_btn(output_key: String) -> void:
 				choice_4.visible = true
 
 
-# Save current_page to save file
+# Save game data to save_game
 func save_content() -> void:
 	save_game = SaveGame.load_savegame()
 	
@@ -98,7 +97,7 @@ func save_content() -> void:
 	save_game.write_savegame()
 
 
-# Load current_page on save file
+# Load save_game data
 func load_content() -> void:
 	save_game = SaveGame.load_savegame()
 	
