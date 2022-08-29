@@ -20,9 +20,11 @@ func _on_MenuButton_pressed() -> void:
 
 
 # Set text to TopText node
-func set_top_text(new_text: String) -> void:
+func set_save_top_text(new_text: String) -> void:
+	save_game = SaveGame.load_savegame()	
 	top_text.text = new_text
-
+	save_game.top_text = new_text
+	save_game.write_savegame()
 
 # Set and save visibility of BottomContainer buttons
 func set_save_bottom_btns(button: String, visibility: bool) -> void:
@@ -46,6 +48,7 @@ func set_save_bottom_btns(button: String, visibility: bool) -> void:
 func load_game() -> void:
 	save_game = SaveGame.load_savegame()
 	
+	top_text.text = save_game.top_text
 	character_button.visible = save_game.character_button_visibility
 	inventory_button.visible = save_game.inventory_button_visibility
 	journal_button.visible = save_game.journal_button_visibility
