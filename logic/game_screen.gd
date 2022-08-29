@@ -1,6 +1,6 @@
 extends PanelContainer
 
-var save: SaveGame
+var save_game: SaveGame
 
 onready var popup_menu: Popup = $"%PopupMenu"
 onready var top_text: Label = $"%TopText"
@@ -24,10 +24,28 @@ func set_top_text(new_text: String) -> void:
 	top_text.text = new_text
 
 
+# Set and save visibility of BottomContainer buttons
+func set_save_bottom_btns(button: String, visibility: bool) -> void:
+	save_game = SaveGame.load_savegame()
+	
+	match button:
+		"character":
+			character_button.visible = visibility
+			save_game.character_button_visibility = visibility
+		"inventory":
+			inventory_button.visible = visibility
+			save_game.inventory_button_visibility = visibility
+		"journal":
+			journal_button.visible = visibility
+			save_game.journal_button_visibility = visibility
+	
+	save_game.write_savegame()
+
+
 # Load data of current save file
 func load_game() -> void:
-	save = SaveGame.load_savegame()
+	save_game = SaveGame.load_savegame()
 	
-	character_button.visible = save.character_button_visibility
-	inventory_button.visible = save.inventory_button_visibility
-	journal_button.visible = save.journal_button_visibility
+	character_button.visible = save_game.character_button_visibility
+	inventory_button.visible = save_game.inventory_button_visibility
+	journal_button.visible = save_game.journal_button_visibility
