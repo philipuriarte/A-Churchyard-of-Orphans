@@ -35,5 +35,5 @@ A short story-driven text-based mobile game using the Godot 3.5 engine. Still a 
 * User Interface: [Grim Quest](https://play.google.com/store/apps/details?id=com.grimdev.grimquest&hl=en_US&gl=US)
 
 ## Links
-* Project management: [https://github.com/PhilipU21/A-Churchyard-of-Children-Tasks](https://github.com/users/PhilipU21/projects/1/views/1)
+* Project management: [https://github.com/PhilipU21/A-Churchyard-of-Orphans-Tasks](https://github.com/users/PhilipU21/projects/1/views/1)
 * Godot engine: https://godotengine.org/
