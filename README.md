@@ -18,7 +18,7 @@ A short story-driven text-based mobile game using the Godot 3.5 engine. Still a 
 </p>
 <br />
 
-## Inspired from text-based games like:
+## Inspired from text-based games like
 
 **Game Design & Mechanics**
 * [Magium](https://play.google.com/store/apps/details?id=com.magiumgames.magium&hl=en_US&gl=US)
@@ -32,6 +32,7 @@ A short story-driven text-based mobile game using the Godot 3.5 engine. Still a 
 
 **Others**
 * User Interface: [Eldrum: Untold](https://play.google.com/store/apps/details?id=com.gotterdammerung.untold&hl=en_US&gl=US)
+* User Interface: [Grim Quest](https://play.google.com/store/apps/details?id=com.grimdev.grimquest&hl=en_US&gl=US)
 
 ## Links
 * Project management: [https://github.com/PhilipU21/A-Churchyard-of-Children-Tasks](https://github.com/users/PhilipU21/projects/1/views/1)
