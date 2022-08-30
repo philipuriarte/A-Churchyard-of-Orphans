@@ -1,14 +1,2 @@
-# Godot Text Game Prototype
-
-<p align="center">
-  <a href="https://godotengine.org/">
-    <img src="assets/logo_outlined.png" width="400" alt="Godot Engine logo">
-  </a>
-</p>
-
-## About
-A prototype for a text based game I'm developing using the Godot 3.5 engine. Still a work in progress.
-
-## Links
-* To-do list: [https://github.com/PhilipU21/Text-Game-Prototype/To-do-list](https://github.com/users/PhilipU21/projects/1/views/1)
-* Godot engine: https://godotengine.org/
+# Branch Discontinued
+This branch is discontinued to lower the scope of the project. I decided to stick with a mostly story-driven design with not much RPG elements. I decided to keep it however since I've already designed how the UI would look for a text-based character creation screen.
