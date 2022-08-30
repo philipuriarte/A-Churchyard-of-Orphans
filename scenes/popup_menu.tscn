@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://logic/popup_menu.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[node name="PopupMenu" type="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 360, 640 )
+mouse_filter = 1
+script = ExtResource( 1 )
+
+[node name="Overlay" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="MenuScreenContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="MenuScreen" type="PanelContainer" parent="MenuScreenContainer"]
+margin_left = 80.0
+margin_top = 211.0
+margin_right = 280.0
+margin_bottom = 429.0
+rect_min_size = Vector2( 200, 218 )
+
+[node name="MenuMargin" type="MarginContainer" parent="MenuScreenContainer/MenuScreen"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 193.0
+margin_bottom = 252.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 30
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 30
+
+[node name="MenuContainer" type="VBoxContainer" parent="MenuScreenContainer/MenuScreen/MenuMargin"]
+margin_left = 10.0
+margin_top = 30.0
+margin_right = 176.0
+margin_bottom = 215.0
+custom_constants/separation = 10
+
+[node name="MenuLabel" type="Label" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
+margin_right = 166.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+text = "Menu"
+align = 1
+
+[node name="MenuSeparator" type="HSeparator" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
+margin_right = 40.0
+margin_bottom = 4.0
+
+[node name="TitleButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
+margin_top = 35.0
+margin_right = 166.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Go to title"
+
+[node name="HelpButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
+margin_top = 75.0
+margin_right = 166.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Help"
+
+[node name="ContinueButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
+margin_top = 155.0
+margin_right = 166.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Continue"
+
+[connection signal="gui_input" from="." to="." method="_on_PopupMenu_gui_input"]
+[connection signal="pressed" from="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer/TitleButton" to="." method="_on_TitleButton_pressed"]
+[connection signal="pressed" from="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]

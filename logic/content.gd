@@ -2,30 +2,36 @@ extends VBoxContainer
 
 const ContentData = preload("res://logic/content_data.gd")
 
-var content_dict = ContentData.new().get_content_dict()
-var current_page : String
+var save_game: SaveGame
+var content_dict: Dictionary = ContentData.new().get_content_dict()
+var current_page: String
 
-# Variables that contain nodes
-onready var narr_text = $"%NarrativeText"
-onready var choices_con = $"%ChoicesContainer"
-onready var choice_1 = $"%Choice1"
-onready var choice_2 = $"%Choice2"
-onready var choice_3 = $"%Choice3"
-onready var choice_4 = $"%Choice4"
+onready var title_label: Label = $"%TitleLabel"
+onready var narr_text: RichTextLabel = $"%NarrativeText"
+onready var choices_con: VBoxContainer = $"%ChoicesContainer"
+onready var choice_1: PanelContainer = $"%Choice1"
+onready var choice_2: PanelContainer = $"%Choice2"
+onready var choice_3: PanelContainer = $"%Choice3"
+onready var choice_4: PanelContainer = $"%Choice4"
 
 
-# Sets starting content "prologue" and connects signals to Choice buttons
+# Load save game data and connect signals to Choice buttons
 func _ready() -> void:
-	set_content("000_prologue")
+	load_content()
+	set_content(current_page)
 	
-	choice_1.connect("pressed", self,"_on_Choice_btn_pressed", [1])
-	choice_2.connect("pressed", self,"_on_Choice_btn_pressed", [2])
-	choice_3.connect("pressed", self,"_on_Choice_btn_pressed", [3])
-	choice_4.connect("pressed", self,"_on_Choice_btn_pressed", [4])
+	# warning-ignore:return_value_discarded
+	choice_1.connect("choice_btn_pressed", self, "process_choice")
+	# warning-ignore:return_value_discarded
+	choice_2.connect("choice_btn_pressed", self, "process_choice")
+	# warning-ignore:return_value_discarded
+	choice_3.connect("choice_btn_pressed", self, "process_choice")
+	# warning-ignore:return_value_discarded
+	choice_4.connect("choice_btn_pressed", self, "process_choice")
 
 
-# Functions for checking if any of the Choice buttons were released
-func _on_Choice_btn_pressed(choice_index: int):
+# Process input (Choice button press)
+func process_choice(choice_index: int) -> void:
 	var output_key: String
 	
 	if content_dict[current_page]["choices"][choice_index].has("output"):
@@ -33,38 +39,66 @@ func _on_Choice_btn_pressed(choice_index: int):
 		set_content(output_key)
 
 
-# Updates the nodes in ContentContainer and value of current_page
+# Update nodes in ContentContainer, and update and save current_page
 func set_content(output_key: String) -> void:
-	current_page = output_key
-	
+	set_title(output_key)
 	set_narr_text(content_dict[output_key]["narr_text"])
 	set_choice_btn(output_key)
+	
+	current_page = output_key
+	save_content()
 
 
-# Sets text of NarrativeText
-# Alternatively narr_text.bbcode_text += new_text + "\n\n" to only append text
-func set_narr_text(new_text: String):
+# Set visibiliy and text of TitleLabel
+func set_title(output_key: String) -> void:
+	if title_label.visible:
+		title_label.text = ""
+		title_label.visible = false
+	
+	if content_dict[output_key].has("title"):
+		title_label.text = content_dict[output_key]["title"]
+		title_label.visible = true
+
+
+# Set text of NarrativeText
+func set_narr_text(new_text: String) -> void:
 	narr_text.bbcode_text = new_text
 
 
-# Sets visibility and text of Choice buttons
-func set_choice_btn(output_key: String):
+# Set visibility and text of Choice buttons
+func set_choice_btn(output_key: String) -> void:
 	for choice_i in choices_con.get_children():
-		choice_i.text = ""
-		choice_i.visible = false
+		if choice_i.visible:
+			choice_i.set_text("")
+			choice_i.visible = false
 	
 	for choice in content_dict[output_key]["choices"]:
 		match choice:
 			1:
-				choice_1.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_1.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_1.visible = true
 			2:
-				choice_2.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_2.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_2.visible = true
 			3:
-				choice_3.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_3.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_3.visible = true
 			4:
-				choice_4.text = content_dict[output_key]["choices"][choice]["text"]
+				choice_4.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_4.visible = true
 
+
+# Save game data to save_game
+func save_content() -> void:
+	save_game = SaveGame.load_savegame()
+	
+	save_game.current_page = current_page
+	
+	save_game.write_savegame()
+
+
+# Load save_game data
+func load_content() -> void:
+	save_game = SaveGame.load_savegame()
+	
+	current_page = save_game.current_page
