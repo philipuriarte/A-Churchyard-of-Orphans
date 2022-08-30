@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource( 1 )
 language = 0
-music = true
-sfx = true
+music_on = true
+sfx_on = true
 font_size = 0
 line_spacing = 0

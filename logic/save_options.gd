@@ -5,8 +5,8 @@ const SAVE_GAME_PATH := "user://save_options"
 
 # Options data to save
 export(int, "English") var language
-export(bool) var music
-export(bool) var sfx
+export(bool) var music_on
+export(bool) var sfx_on
 export(int, "10", "11", "12", "13" ,"14") var font_size
 export(int, "10", "12", "14", "16", "18") var line_spacing
 

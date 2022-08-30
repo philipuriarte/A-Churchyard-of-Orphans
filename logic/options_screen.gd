@@ -30,14 +30,14 @@ func _on_LangOptions_item_selected(index: int) -> void:
 # Set music on/off
 func _on_MusicButton_toggled(button_pressed: bool) -> void:
 	save_options = SaveOptions.load_saveoptions()
-	save_options.music = button_pressed
+	save_options.music_on = button_pressed
 	save_options.write_saveoptions()
 
 
 # Set sfx on/off
 func _on_SFXButton_toggled(button_pressed: bool) -> void:
 	save_options = SaveOptions.load_saveoptions()
-	save_options.sfx = button_pressed
+	save_options.sfx_on = button_pressed
 	save_options.write_saveoptions()
 
 
@@ -111,7 +111,7 @@ func load_options():
 	save_options = SaveOptions.load_saveoptions()
 	
 	lang_options.selected = save_options.language
-	music_button.pressed = save_options.music
-	sfx_button.pressed = save_options.sfx
+	music_button.pressed = save_options.music_on
+	sfx_button.pressed = save_options.sfx_on
 	size_options.selected = save_options.font_size
 	line_options.selected = save_options.line_spacing
