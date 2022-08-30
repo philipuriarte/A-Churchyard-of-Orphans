@@ -35,7 +35,7 @@ _global_script_class_icons={
 config/name="Godot-Text-Game-Prototype"
 config/description="A prototype for a short story-driven text-based game using the Godot 3.5 engine."
 run/main_scene="res://scenes/main.tscn"
-config/icon="res://assets/graveyard.png"
+config/icon="res://assets/churchyard.png"
 
 [display]
 
