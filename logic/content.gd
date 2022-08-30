@@ -2,10 +2,10 @@ extends VBoxContainer
 
 const ContentData = preload("res://logic/content_data.gd")
 
+var save_game: SaveGame
 var content_dict: Dictionary = ContentData.new().get_content_dict()
 var current_page: String
 
-# Variables that contain nodes
 onready var title_label: Label = $"%TitleLabel"
 onready var narr_text: RichTextLabel = $"%NarrativeText"
 onready var choices_con: VBoxContainer = $"%ChoicesContainer"
@@ -15,10 +15,10 @@ onready var choice_3: PanelContainer = $"%Choice3"
 onready var choice_4: PanelContainer = $"%Choice4"
 
 
-# Set starting content to "prologue" and connect signals to Choice buttons
+# Load save game data and connect signals to Choice buttons
 func _ready() -> void:
-	# Should be updated with saved current_page once save system is up
-	set_content("000_prologue")
+	load_content()
+	set_content(current_page)
 	
 	# warning-ignore:return_value_discarded
 	choice_1.connect("choice_btn_pressed", self, "process_choice")
@@ -39,13 +39,14 @@ func process_choice(choice_index: int) -> void:
 		set_content(output_key)
 
 
-# Update nodes in ContentContainer and current_page
+# Update nodes in ContentContainer, and update and save current_page
 func set_content(output_key: String) -> void:
 	set_title(output_key)
 	set_narr_text(content_dict[output_key]["narr_text"])
 	set_choice_btn(output_key)
 	
 	current_page = output_key
+	save_content()
 
 
 # Set visibiliy and text of TitleLabel
@@ -85,3 +86,19 @@ func set_choice_btn(output_key: String) -> void:
 			4:
 				choice_4.set_text(content_dict[output_key]["choices"][choice]["text"])
 				choice_4.visible = true
+
+
+# Save game data to save_game
+func save_content() -> void:
+	save_game = SaveGame.load_savegame()
+	
+	save_game.current_page = current_page
+	
+	save_game.write_savegame()
+
+
+# Load save_game data
+func load_content() -> void:
+	save_game = SaveGame.load_savegame()
+	
+	current_page = save_game.current_page

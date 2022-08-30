@@ -13,9 +13,21 @@ _global_script_classes=[ {
 "class": "ContentData",
 "language": "GDScript",
 "path": "res://logic/content_data.gd"
+}, {
+"base": "Resource",
+"class": "SaveGame",
+"language": "GDScript",
+"path": "res://logic/save_game.gd"
+}, {
+"base": "Resource",
+"class": "SaveOptions",
+"language": "GDScript",
+"path": "res://logic/save_options.gd"
 } ]
 _global_script_class_icons={
-"ContentData": ""
+"ContentData": "",
+"SaveGame": "",
+"SaveOptions": ""
 }
 
 [application]
@@ -62,4 +74,3 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/driver_name="GLES2"
-environment/default_environment="res://default_env.tres"
