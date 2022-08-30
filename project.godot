@@ -32,7 +32,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Godot-Text-Game-Prototype"
+config/name="A-Churchyard-of-Orphans"
 config/description="A prototype for a short story-driven text-based game using the Godot 3.5 engine."
 run/main_scene="res://scenes/main.tscn"
 config/icon="res://assets/churchyard.png"
