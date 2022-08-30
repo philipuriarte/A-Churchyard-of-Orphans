@@ -26,6 +26,7 @@ func set_save_top_text(new_text: String) -> void:
 	save_game.top_text = new_text
 	save_game.write_savegame()
 
+
 # Set and save visibility of BottomContainer buttons
 func set_save_bottom_btns(button: String, visibility: bool) -> void:
 	save_game = SaveGame.load_savegame()
