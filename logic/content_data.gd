@@ -1,5 +1,25 @@
 class_name ContentData
 
+# New dictionary format, will update old one soon
+"""
+var content_data: Dictionary = {
+	"key": {
+		"title": "title_text",
+		"narrative": {
+			"conditions": "insert_conditional_text",
+			"default_text": "insert_narr_text"
+		},
+		"choices": {
+			1: {
+				"conditions": "insert_conditions",
+				"text": "insert_choice_text",
+				"next_scene": "next_scene_key",
+				"output": "insert_output"
+			}
+		}
+	}
+}
+"""
 # Dictionary that contains all the text content of the game
 # Current text is only for the sole purpose of prototyping and is not indicative of the content in the final game
 var content_dict: Dictionary = {
