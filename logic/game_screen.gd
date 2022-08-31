@@ -21,7 +21,7 @@ func _on_MenuButton_pressed() -> void:
 
 # Set text to TopText node
 func set_save_top_text(new_text: String) -> void:
-	save_game = SaveGame.load_savegame()	
+	save_game = SaveGame.load_savegame()
 	top_text.text = new_text
 	save_game.top_text = new_text
 	save_game.write_savegame()

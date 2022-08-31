@@ -91,14 +91,11 @@ func set_choice_btn(output_key: String) -> void:
 # Save game data to save_game
 func save_content() -> void:
 	save_game = SaveGame.load_savegame()
-	
 	save_game.current_page = current_page
-	
 	save_game.write_savegame()
 
 
 # Load save_game data
 func load_content() -> void:
 	save_game = SaveGame.load_savegame()
-	
 	current_page = save_game.current_page
