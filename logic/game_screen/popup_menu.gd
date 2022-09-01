@@ -13,6 +13,6 @@ func _on_ContinueButton_pressed() -> void:
 
 
 # Close PopupMenu if press/click event occurs outside MenuScreen
-func _on_PopupMenu_gui_input(event: InputEvent) -> void:
+func _on_Overlay_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
-			hide()
+		hide()
