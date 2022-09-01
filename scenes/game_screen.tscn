@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://logic/game_screen.gd" type="Script" id=1]
+[ext_resource path="res://logic/game_screen/game_screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/content.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/popup_menu.tscn" type="PackedScene" id=3]
 
