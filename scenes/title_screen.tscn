@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://logic/title_screen.gd" type="Script" id=1]
+[ext_resource path="res://logic/popup_confirm.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.27451 )
@@ -17,6 +18,7 @@ margin_top = 7.0
 margin_right = 367.0
 margin_bottom = 647.0
 rect_min_size = Vector2( 360, 640 )
+script = ExtResource( 2 )
 
 [node name="Overlay" type="PanelContainer" parent="PopupConfirm"]
 margin_right = 360.0
@@ -180,9 +182,9 @@ margin_bottom = 606.0
 text = "ver 0.1"
 align = 1
 
-[connection signal="gui_input" from="PopupConfirm/Overlay" to="." method="_on_Overlay_gui_input"]
-[connection signal="pressed" from="PopupConfirm/ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer/ButtonContainer/YesButton" to="." method="_on_YesButton_pressed"]
-[connection signal="pressed" from="PopupConfirm/ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer/ButtonContainer/NoButton" to="." method="_on_NoButton_pressed"]
+[connection signal="gui_input" from="PopupConfirm/Overlay" to="PopupConfirm" method="_on_Overlay_gui_input"]
+[connection signal="pressed" from="PopupConfirm/ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer/ButtonContainer/YesButton" to="PopupConfirm" method="_on_YesButton_pressed"]
+[connection signal="pressed" from="PopupConfirm/ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer/ButtonContainer/NoButton" to="PopupConfirm" method="_on_NoButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/NewButton" to="." method="_on_NewButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonsMargin/ButtonsContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
