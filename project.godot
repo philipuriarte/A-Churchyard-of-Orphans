@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
-"class": "ContentData",
-"language": "GDScript",
-"path": "res://logic/content_data.gd"
-}, {
 "base": "Resource",
 "class": "SaveGame",
 "language": "GDScript",
@@ -23,11 +18,16 @@ _global_script_classes=[ {
 "class": "SaveOptions",
 "language": "GDScript",
 "path": "res://logic/save_options.gd"
+}, {
+"base": "Reference",
+"class": "StoryData",
+"language": "GDScript",
+"path": "res://logic/story_data.gd"
 } ]
 _global_script_class_icons={
-"ContentData": "",
 "SaveGame": "",
-"SaveOptions": ""
+"SaveOptions": "",
+"StoryData": ""
 }
 
 [application]
