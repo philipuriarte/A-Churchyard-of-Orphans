@@ -58,15 +58,15 @@ func _on_SizeOptions_item_selected(index: int) -> void:
 	
 	match index:
 		0:
-			save_options.font_size = 0
+			save_options.font_size = 0 # 10 font size
 		1:
-			save_options.font_size = 1
+			save_options.font_size = 1 # 11 font size
 		2:
-			save_options.font_size = 2
+			save_options.font_size = 2 # 12 font size
 		3:
-			save_options.font_size = 3
+			save_options.font_size = 3 # 13 font size
 		4:
-			save_options.font_size = 4
+			save_options.font_size = 4 # 14 font size
 	
 	save_options.write_saveoptions()
 
@@ -77,15 +77,15 @@ func _on_LineOptions_item_selected(index: int) -> void:
 	
 	match index:
 		0:
-			save_options.line_spacing = 0
+			save_options.line_spacing = 0 # 10 line spacing
 		1:
-			save_options.line_spacing = 1
+			save_options.line_spacing = 1 # 12 line spacing
 		2:
-			save_options.line_spacing = 2
+			save_options.line_spacing = 2 # 14 line spacing
 		3:
-			save_options.line_spacing = 3
+			save_options.line_spacing = 3 # 16 line spacing
 		4:
-			save_options.line_spacing = 4
+			save_options.line_spacing = 4 # 18 line spacing
 	
 	save_options.write_saveoptions()
 
