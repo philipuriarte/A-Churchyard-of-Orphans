@@ -7,7 +7,7 @@ const NEW_SAVEGAME = preload("res://resources/new_savegame.tres")
 func _on_YesButton_pressed() -> void:
 	NEW_SAVEGAME.write_savegame()
 	# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/game_screen.tscn")
+	get_tree().change_scene("res://scenes/game_screen/game_screen.tscn")
 
 
 # Close PopupConfirm

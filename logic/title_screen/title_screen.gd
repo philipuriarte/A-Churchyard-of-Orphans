@@ -20,7 +20,7 @@ func _ready() -> void:
 # Change scene to game_screen
 func _on_ContinueButton_pressed() -> void:
 	# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/game_screen.tscn")
+	get_tree().change_scene("res://scenes/game_screen/game_screen.tscn")
 
 
 # Check if save_game exists, true: open PopupConfirm, false: write new save_game file and change scene to game_screen
@@ -30,7 +30,7 @@ func _on_NewButton_pressed() -> void:
 	else:
 		NEW_SAVEGAME.write_savegame()
 		# warning-ignore:return_value_discarded
-		get_tree().change_scene("res://scenes/game_screen.tscn")
+		get_tree().change_scene("res://scenes/game_screen/game_screen.tscn")
 
 
 # Change scene to option_screen
