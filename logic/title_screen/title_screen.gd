@@ -36,7 +36,7 @@ func _on_NewButton_pressed() -> void:
 # Change scene to option_screen
 func _on_OptionsButton_pressed() -> void:
 	# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/options_screen.tscn")
+	get_tree().change_scene("res://scenes/options_screen/options_screen.tscn")
 
 
 # Should change scene to extras_scene (to be created)
