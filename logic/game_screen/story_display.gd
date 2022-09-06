@@ -1,13 +1,11 @@
 extends VBoxContainer
 
-const ContentData = preload("res://logic/content_data.gd")
-
 var save_game: SaveGame
-var content_dict: Dictionary = ContentData.new().get_content_dict()
-var current_page: String
+var story_data: Dictionary = StoryData.new().get_story_data()
+var current_scene: String
 
 onready var title_label: Label = $"%TitleLabel"
-onready var narr_text: RichTextLabel = $"%NarrativeText"
+onready var story_text: RichTextLabel = $"%StoryText"
 onready var choices_con: VBoxContainer = $"%ChoicesContainer"
 onready var choice_1: PanelContainer = $"%Choice1"
 onready var choice_2: PanelContainer = $"%Choice2"
@@ -17,8 +15,8 @@ onready var choice_4: PanelContainer = $"%Choice4"
 
 # Load save game data and connect signals to Choice buttons
 func _ready() -> void:
-	load_content()
-	set_content(current_page)
+	load_story()
+	set_story(current_scene)
 	
 	# warning-ignore:return_value_discarded
 	choice_1.connect("choice_btn_pressed", self, "process_choice")
@@ -32,70 +30,75 @@ func _ready() -> void:
 
 # Process input (Choice button press)
 func process_choice(choice_index: int) -> void:
-	var output_key: String
+	var next_scene: String
 	
-	if content_dict[current_page]["choices"][choice_index].has("output"):
-		output_key = content_dict[current_page]["choices"][choice_index]["output"]
-		set_content(output_key)
+	if story_data[current_scene]["choices"][choice_index].has("next_scene"):
+		next_scene = story_data[current_scene]["choices"][choice_index]["next_scene"]
+		set_story(next_scene)
 
 
-# Update nodes in ContentContainer, and update and save current_page
-func set_content(output_key: String) -> void:
-	set_title(output_key)
-	set_narr_text(content_dict[output_key]["narr_text"])
-	set_choice_btn(output_key)
+# Update nodes in ContentContainer, and update and save current_scene
+func set_story(next_scene: String) -> void:
+	var s_text: String = story_data[next_scene]["story_text"]
 	
-	current_page = output_key
-	save_content()
+	set_title(next_scene)
+	set_story_text(s_text)
+	set_choice_btn(next_scene)
+	
+	current_scene = next_scene
+	save_story()
 
 
 # Set visibiliy and text of TitleLabel
-func set_title(output_key: String) -> void:
+func set_title(next_scene: String) -> void:
 	if title_label.visible:
 		title_label.text = ""
 		title_label.visible = false
 	
-	if content_dict[output_key].has("title"):
-		title_label.text = content_dict[output_key]["title"]
+	if story_data[next_scene].has("title"):
+		var title_text = story_data[next_scene]["title"]
+		title_label.text = title_text
 		title_label.visible = true
 
 
 # Set text of NarrativeText
-func set_narr_text(new_text: String) -> void:
-	narr_text.bbcode_text = new_text
+func set_story_text(new_text: String) -> void:
+	story_text.bbcode_text = new_text
 
 
 # Set visibility and text of Choice buttons
-func set_choice_btn(output_key: String) -> void:
+func set_choice_btn(next_scene: String) -> void:
 	for choice_i in choices_con.get_children():
 		if choice_i.visible:
 			choice_i.set_text("")
 			choice_i.visible = false
 	
-	for choice in content_dict[output_key]["choices"]:
+	for choice in story_data[next_scene]["choices"]:
+		var choice_text: String = story_data[next_scene]["choices"][choice]["text"]
+		
 		match choice:
 			1:
-				choice_1.set_text(content_dict[output_key]["choices"][choice]["text"])
+				choice_1.set_text(choice_text)
 				choice_1.visible = true
 			2:
-				choice_2.set_text(content_dict[output_key]["choices"][choice]["text"])
+				choice_2.set_text(choice_text)
 				choice_2.visible = true
 			3:
-				choice_3.set_text(content_dict[output_key]["choices"][choice]["text"])
+				choice_3.set_text(choice_text)
 				choice_3.visible = true
 			4:
-				choice_4.set_text(content_dict[output_key]["choices"][choice]["text"])
+				choice_4.set_text(choice_text)
 				choice_4.visible = true
 
 
-# Save game data to save_game
-func save_content() -> void:
+# Save story data to save_game
+func save_story() -> void:
 	save_game = SaveGame.load_savegame()
-	save_game.current_page = current_page
+	save_game.current_scene = current_scene
 	save_game.write_savegame()
 
 
 # Load save_game data
-func load_content() -> void:
+func load_story() -> void:
 	save_game = SaveGame.load_savegame()
-	current_page = save_game.current_page
+	current_scene = save_game.current_scene

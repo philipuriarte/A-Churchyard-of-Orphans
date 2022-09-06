@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-current_page = "000_prologue"
+current_scene = "000_prologue"
 inventory = [  ]
 top_text = ""
 character_button_visibility = false

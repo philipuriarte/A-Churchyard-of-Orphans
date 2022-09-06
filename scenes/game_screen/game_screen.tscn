@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://logic/game_screen.gd" type="Script" id=1]
-[ext_resource path="res://scenes/content.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/popup_menu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://logic/game_screen/game_screen.gd" type="Script" id=1]
+[ext_resource path="res://scenes/game_screen/story_display.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/game_screen/popup_menu.tscn" type="PackedScene" id=3]
 
 [node name="GameScreen" type="PanelContainer"]
 anchor_right = 1.0
@@ -13,8 +13,10 @@ script = ExtResource( 1 )
 unique_name_in_owner = true
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 360.0
-margin_bottom = 640.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 367.0
+margin_bottom = 647.0
 
 [node name="MainMargin" type="MarginContainer" parent="."]
 margin_left = 7.0
@@ -60,14 +62,14 @@ margin_top = 50.0
 margin_right = 326.0
 margin_bottom = 54.0
 
-[node name="ContentScroll" type="ScrollContainer" parent="MainMargin/MainCointainer"]
+[node name="StoryScroll" type="ScrollContainer" parent="MainMargin/MainCointainer"]
 margin_top = 74.0
 margin_right = 326.0
 margin_bottom = 527.0
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
-[node name="ContentContainer" parent="MainMargin/MainCointainer/ContentScroll" instance=ExtResource( 2 )]
+[node name="StoryContainer" parent="MainMargin/MainCointainer/StoryScroll" instance=ExtResource( 2 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
