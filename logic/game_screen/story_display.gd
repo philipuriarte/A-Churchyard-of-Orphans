@@ -39,8 +39,10 @@ func process_choice(choice_index: int) -> void:
 
 # Update nodes in ContentContainer, and update and save current_page
 func set_story(output_key: String) -> void:
+	var story_text: String = story_data[output_key]["narr_text"]
+	
 	set_title(output_key)
-	set_narr_text(story_data[output_key]["narr_text"])
+	set_narr_text(story_text)
 	set_choice_btn(output_key)
 	
 	current_page = output_key
@@ -54,7 +56,8 @@ func set_title(output_key: String) -> void:
 		title_label.visible = false
 	
 	if story_data[output_key].has("title"):
-		title_label.text = story_data[output_key]["title"]
+		var title_text = story_data[output_key]["title"]
+		title_label.text = title_text
 		title_label.visible = true
 
 
@@ -71,18 +74,20 @@ func set_choice_btn(output_key: String) -> void:
 			choice_i.visible = false
 	
 	for choice in story_data[output_key]["choices"]:
+		var choice_text: String = story_data[output_key]["choices"][choice]["text"]
+		
 		match choice:
 			1:
-				choice_1.set_text(story_data[output_key]["choices"][choice]["text"])
+				choice_1.set_text(choice_text)
 				choice_1.visible = true
 			2:
-				choice_2.set_text(story_data[output_key]["choices"][choice]["text"])
+				choice_2.set_text(choice_text)
 				choice_2.visible = true
 			3:
-				choice_3.set_text(story_data[output_key]["choices"][choice]["text"])
+				choice_3.set_text(choice_text)
 				choice_3.visible = true
 			4:
-				choice_4.set_text(story_data[output_key]["choices"][choice]["text"])
+				choice_4.set_text(choice_text)
 				choice_4.visible = true
 
 
