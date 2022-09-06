@@ -2,7 +2,7 @@ extends VBoxContainer
 
 var save_game: SaveGame
 var story_data: Dictionary = StoryData.new().get_story_data()
-var current_page: String
+var current_scene: String
 
 onready var title_label: Label = $"%TitleLabel"
 onready var story_text: RichTextLabel = $"%StoryText"
@@ -16,7 +16,7 @@ onready var choice_4: PanelContainer = $"%Choice4"
 # Load save game data and connect signals to Choice buttons
 func _ready() -> void:
 	load_story()
-	set_story(current_page)
+	set_story(current_scene)
 	
 	# warning-ignore:return_value_discarded
 	choice_1.connect("choice_btn_pressed", self, "process_choice")
@@ -32,12 +32,12 @@ func _ready() -> void:
 func process_choice(choice_index: int) -> void:
 	var next_scene: String
 	
-	if story_data[current_page]["choices"][choice_index].has("next_scene"):
-		next_scene = story_data[current_page]["choices"][choice_index]["next_scene"]
+	if story_data[current_scene]["choices"][choice_index].has("next_scene"):
+		next_scene = story_data[current_scene]["choices"][choice_index]["next_scene"]
 		set_story(next_scene)
 
 
-# Update nodes in ContentContainer, and update and save current_page
+# Update nodes in ContentContainer, and update and save current_scene
 func set_story(next_scene: String) -> void:
 	var s_text: String = story_data[next_scene]["story_text"]
 	
@@ -45,7 +45,7 @@ func set_story(next_scene: String) -> void:
 	set_story_text(s_text)
 	set_choice_btn(next_scene)
 	
-	current_page = next_scene
+	current_scene = next_scene
 	save_story()
 
 
@@ -94,11 +94,11 @@ func set_choice_btn(next_scene: String) -> void:
 # Save story data to save_game
 func save_story() -> void:
 	save_game = SaveGame.load_savegame()
-	save_game.current_page = current_page
+	save_game.current_scene = current_scene
 	save_game.write_savegame()
 
 
 # Load save_game data
 func load_story() -> void:
 	save_game = SaveGame.load_savegame()
-	current_page = save_game.current_page
+	current_scene = save_game.current_scene
