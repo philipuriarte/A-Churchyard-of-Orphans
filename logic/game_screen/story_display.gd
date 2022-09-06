@@ -5,7 +5,7 @@ var story_data: Dictionary = StoryData.new().get_story_data()
 var current_page: String
 
 onready var title_label: Label = $"%TitleLabel"
-onready var narr_text: RichTextLabel = $"%NarrativeText"
+onready var story_text: RichTextLabel = $"%StoryText"
 onready var choices_con: VBoxContainer = $"%ChoicesContainer"
 onready var choice_1: PanelContainer = $"%Choice1"
 onready var choice_2: PanelContainer = $"%Choice2"
@@ -30,51 +30,51 @@ func _ready() -> void:
 
 # Process input (Choice button press)
 func process_choice(choice_index: int) -> void:
-	var output_key: String
+	var next_scene: String
 	
-	if story_data[current_page]["choices"][choice_index].has("output"):
-		output_key = story_data[current_page]["choices"][choice_index]["output"]
-		set_story(output_key)
+	if story_data[current_page]["choices"][choice_index].has("next_scene"):
+		next_scene = story_data[current_page]["choices"][choice_index]["next_scene"]
+		set_story(next_scene)
 
 
 # Update nodes in ContentContainer, and update and save current_page
-func set_story(output_key: String) -> void:
-	var story_text: String = story_data[output_key]["narr_text"]
+func set_story(next_scene: String) -> void:
+	var s_text: String = story_data[next_scene]["story_text"]
 	
-	set_title(output_key)
-	set_narr_text(story_text)
-	set_choice_btn(output_key)
+	set_title(next_scene)
+	set_story_text(s_text)
+	set_choice_btn(next_scene)
 	
-	current_page = output_key
+	current_page = next_scene
 	save_story()
 
 
 # Set visibiliy and text of TitleLabel
-func set_title(output_key: String) -> void:
+func set_title(next_scene: String) -> void:
 	if title_label.visible:
 		title_label.text = ""
 		title_label.visible = false
 	
-	if story_data[output_key].has("title"):
-		var title_text = story_data[output_key]["title"]
+	if story_data[next_scene].has("title"):
+		var title_text = story_data[next_scene]["title"]
 		title_label.text = title_text
 		title_label.visible = true
 
 
 # Set text of NarrativeText
-func set_narr_text(new_text: String) -> void:
-	narr_text.bbcode_text = new_text
+func set_story_text(new_text: String) -> void:
+	story_text.bbcode_text = new_text
 
 
 # Set visibility and text of Choice buttons
-func set_choice_btn(output_key: String) -> void:
+func set_choice_btn(next_scene: String) -> void:
 	for choice_i in choices_con.get_children():
 		if choice_i.visible:
 			choice_i.set_text("")
 			choice_i.visible = false
 	
-	for choice in story_data[output_key]["choices"]:
-		var choice_text: String = story_data[output_key]["choices"][choice]["text"]
+	for choice in story_data[next_scene]["choices"]:
+		var choice_text: String = story_data[next_scene]["choices"][choice]["text"]
 		
 		match choice:
 			1:
