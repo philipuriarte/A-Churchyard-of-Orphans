@@ -2,7 +2,7 @@
 
 <p align="center">
   <a>
-    <img src="/.githubassets/churchyard_of_orphans_icon.png" width="400" alt="A Churchyard of Orphans icon">
+    <img src="/.githubassets/churchyard_of_orphans_icon.png" width="300" alt="A Churchyard of Orphans icon">
   </a>
 </p>
 
