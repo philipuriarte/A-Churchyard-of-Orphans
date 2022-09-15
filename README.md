@@ -30,9 +30,9 @@ A short story-driven text-based mobile game using the Godot 3.5 engine. Still a 
   * [The Great Tournament](https://play.google.com/store/apps/details?id=org.hostedgames.greattournament&hl=en&gl=US)
   * [Sabres of Infinity](https://play.google.com/store/apps/details?id=org.hostedgames.sabresofinfinity)
 
-**Others**
-* User Interface: [Eldrum: Untold](https://play.google.com/store/apps/details?id=com.gotterdammerung.untold&hl=en_US&gl=US)
-* User Interface: [Grim Quest](https://play.google.com/store/apps/details?id=com.grimdev.grimquest&hl=en_US&gl=US)
+**User Interface**
+* [Eldrum: Untold](https://play.google.com/store/apps/details?id=com.gotterdammerung.untold&hl=en_US&gl=US)
+* [Grim Quest](https://play.google.com/store/apps/details?id=com.grimdev.grimquest&hl=en_US&gl=US)
 
 ## Links
 * Project management: https://open.codecks.io/a-churchyard-of-orphans
