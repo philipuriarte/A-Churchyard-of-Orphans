@@ -14,6 +14,11 @@ func _on_ChoiceButton_pressed():
 	emit_signal("choice_btn_pressed", choice_index)
 
 
+# Set choice_index
+func set_choice_index(index: int) -> void:
+	choice_index = index
+
+
 # Set text to ChoiceText
 func set_text(new_text: String) -> void:
 	choice_text.text = new_text
