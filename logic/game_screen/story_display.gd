@@ -1,5 +1,7 @@
 extends VBoxContainer
 
+const CHOICE_BUTTON = preload("res://scenes/game_screen/choice_button.tscn")
+
 var save_game: SaveGame
 var story_data: Dictionary = StoryData.new().get_story_data()
 var current_scene: String
@@ -7,25 +9,12 @@ var current_scene: String
 onready var title_label: Label = $"%TitleLabel"
 onready var story_text: RichTextLabel = $"%StoryText"
 onready var choices_con: VBoxContainer = $"%ChoicesContainer"
-onready var choice_1: PanelContainer = $"%Choice1"
-onready var choice_2: PanelContainer = $"%Choice2"
-onready var choice_3: PanelContainer = $"%Choice3"
-onready var choice_4: PanelContainer = $"%Choice4"
 
 
 # Load save game data and connect signals to Choice buttons
 func _ready() -> void:
 	load_story()
 	set_story(current_scene)
-	
-	# warning-ignore:return_value_discarded
-	choice_1.connect("choice_btn_pressed", self, "process_choice")
-	# warning-ignore:return_value_discarded
-	choice_2.connect("choice_btn_pressed", self, "process_choice")
-	# warning-ignore:return_value_discarded
-	choice_3.connect("choice_btn_pressed", self, "process_choice")
-	# warning-ignore:return_value_discarded
-	choice_4.connect("choice_btn_pressed", self, "process_choice")
 
 
 # Process input (Choice button press)
@@ -37,7 +26,7 @@ func process_choice(choice_index: int) -> void:
 		set_story(next_scene)
 
 
-# Update nodes in ContentContainer, and update and save current_scene
+# Update nodes in StoryContainer, and update and save current_scene
 func set_story(next_scene: String) -> void:
 	var s_text: String = story_data[next_scene]["story_text"]
 	
@@ -61,34 +50,29 @@ func set_title(next_scene: String) -> void:
 		title_label.visible = true
 
 
-# Set text of NarrativeText
+# Set text of StoryText
 func set_story_text(new_text: String) -> void:
 	story_text.bbcode_text = new_text
 
 
-# Set visibility and text of Choice buttons
+# Instance and set text of choice_button.tscn
 func set_choice_btn(next_scene: String) -> void:
+	var choice_index: int = 1
+	
 	for choice_i in choices_con.get_children():
-		if choice_i.visible:
-			choice_i.set_text("")
-			choice_i.visible = false
+		choice_i.queue_free()
 	
 	for choice in story_data[next_scene]["choices"]:
 		var choice_text: String = story_data[next_scene]["choices"][choice]["text"]
+		var choice_button: Node = CHOICE_BUTTON.instance()
 		
-		match choice:
-			1:
-				choice_1.set_text(choice_text)
-				choice_1.visible = true
-			2:
-				choice_2.set_text(choice_text)
-				choice_2.visible = true
-			3:
-				choice_3.set_text(choice_text)
-				choice_3.visible = true
-			4:
-				choice_4.set_text(choice_text)
-				choice_4.visible = true
+		choices_con.add_child(choice_button)
+		choice_button.set_choice_index(choice_index)
+		choice_button.set_choice_text(choice_text)
+		# warning-ignore:return_value_discarded
+		choice_button.connect("choice_btn_pressed", self, "process_choice")
+		
+		choice_index += 1
 
 
 # Save story data to save_game
