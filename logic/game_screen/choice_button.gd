@@ -20,5 +20,5 @@ func set_choice_index(index: int) -> void:
 
 
 # Set text to ChoiceText
-func set_text(new_text: String) -> void:
+func set_choice_text(new_text: String) -> void:
 	choice_text.text = new_text
