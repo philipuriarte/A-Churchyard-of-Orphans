@@ -40,10 +40,10 @@ func process_choice(choice_index: int) -> void:
 		match output_type:
 			"add_item":
 				save_game.inventory.append(output_value)
-				print(output_value + " is added to player inventory")
+				story_text.text += "\n\n> " + output_value + " is added to inventory"
 			"remove_item":
 				save_game.inventory.erase(output_value)
-				print(output_value + " is removed from player inventory")
+				story_text.text += "\n\n> " + output_value + " is removed from inventory"
 		
 		save_game.write_savegame()
 
