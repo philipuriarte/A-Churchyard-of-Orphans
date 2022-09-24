@@ -17,6 +17,12 @@ func _ready() -> void:
 	set_save_story(current_scene)
 
 
+# Load save_game data
+func load_story() -> void:
+	save_game = SaveGame.load_savegame()
+	current_scene = save_game.current_scene
+
+
 # Process input (Choice button press)
 func process_choice(choice_index: int) -> void:
 	var next_scene: String
@@ -84,9 +90,3 @@ func set_choice_btn(next_scene: String) -> void:
 		choice_button.connect("choice_btn_pressed", self, "process_choice")
 		
 		choice_index += 1
-
-
-# Load save_game data
-func load_story() -> void:
-	save_game = SaveGame.load_savegame()
-	current_scene = save_game.current_scene
