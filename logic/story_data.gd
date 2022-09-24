@@ -26,11 +26,12 @@ var story_data: Dictionary = {
 				"text": "Take the longsword",
 				"next_scene": "sample_grab_longsword",
 				"outputs": {
-					"type": "add_item",
-					"value": "longsword"
+					1: {
+						"type": "add_item",
+						"value": "longsword"
+					}
 				}
 			},
-			
 			2: {
 				"conditions": {
 					"type": "have_item",
@@ -39,8 +40,10 @@ var story_data: Dictionary = {
 				"text": "Take the family greatsword",
 				"next_scene": "sample_grab_family_greatsword",
 				"outputs": {
-					"type": "add_item",
-					"value": "family_greatsword"
+					1: {
+						"type": "add_item",
+						"value": "family_greatsword"
+					}
 				}
 			}
 		}
@@ -81,18 +84,34 @@ var story_data: Dictionary = {
 		"choices": {
 			1: {
 				"text": "Follow the servant quietly",
-				"next_scene": "001_follow_servant"
+				"next_scene": "001_follow_servant",
+				"outputs": {
+					1: {
+						"type": "add_item",
+						"value": "Longsword"
+					},
+					2: {
+						"type": "add_item",
+						"value": "Shield"
+					}
+				}
 			},
 			2: {
 				"text": "Ask how are the defences holding up",
 				"next_scene": "001_ask_defences"
 			},
 			3: {
-				"text": "Bring a longsword with you",
+				"text": "Bring your longsword and shield with you",
 				"next_scene": "001_follow_servant",
 				"outputs": {
-					"type": "add_item",
-					"value": "Longsword"
+					1: {
+						"type": "add_item",
+						"value": "Longsword"
+					},
+					2: {
+						"type": "add_item",
+						"value": "Shield"
+					}
 				}
 			}
 		}
@@ -105,23 +124,31 @@ var story_data: Dictionary = {
 				"text": "Open the door carefully",
 				"next_scene": "001_follow_servant",
 				"outputs": {
-					"type": "add_item",
-					"value": "Longsword"
+					1: {
+						"type": "add_item",
+						"value": "Longsword"
+					},
+					2: {
+						"type": "add_item",
+						"value": "Shield"
+					}
 				}
 			},
 			2: {
 				"text": "Grab your longsword and ask one more time",
 				"next_scene": "001_grab_longsword",
 				"outputs": {
-					"type": "add_item",
-					"value": "Longsword"
+					1: {
+						"type": "add_item",
+						"value": "Longsword"
+					}
 				}
 			},
 		}
 	},
 	
 	"001_follow_servant": {
-		"story_text": "You take your longsword in your room and follow the servant quietly through the hallway.",
+		"story_text": "You take your longsword and shield in your room and follow the servant quietly through the hallway.",
 		"choices": {
 			1: {
 				"text": "End of prototype"

@@ -32,20 +32,23 @@ func process_choice(choice_index: int) -> void:
 		next_scene = story_data[current_scene]["choices"][choice_index]["next_scene"]
 		set_save_story(next_scene)
 	
-	if story_data[previous_scene]["choices"][choice_index].has("output"):
-		var output_type: String = story_data[previous_scene]["choices"][choice_index]["output"]["type"]
-		var output_value: String = story_data[previous_scene]["choices"][choice_index]["output"]["value"]
-		save_game = SaveGame.load_savegame()
+	if story_data[previous_scene]["choices"][choice_index].has("outputs"):
+		story_text.text += "\n"
 		
-		match output_type:
-			"add_item":
-				save_game.inventory.append(output_value)
-				story_text.text += "\n\n> " + output_value + " is added to inventory"
-			"remove_item":
-				save_game.inventory.erase(output_value)
-				story_text.text += "\n\n> " + output_value + " is removed from inventory"
-		
-		save_game.write_savegame()
+		for output in story_data[previous_scene]["choices"][choice_index]["outputs"]:
+			var output_type: String = story_data[previous_scene]["choices"][choice_index]["outputs"][output]["type"]
+			var output_value: String = story_data[previous_scene]["choices"][choice_index]["outputs"][output]["value"]
+			save_game = SaveGame.load_savegame()
+			
+			match output_type:
+				"add_item":
+					save_game.inventory.append(output_value)
+					story_text.text += "\n> " + output_value + " is added to inventory"
+				"remove_item":
+					save_game.inventory.erase(output_value)
+					story_text.text += "\n> " + output_value + " is removed from inventory"
+			
+			save_game.write_savegame()
 
 
 # Update nodes in StoryContainer, and update and save current_scene
