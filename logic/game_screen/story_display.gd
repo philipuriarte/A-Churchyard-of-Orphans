@@ -58,6 +58,7 @@ func set_save_story(next_scene: String) -> void:
 	save_game = SaveGame.load_savegame()
 	current_scene = next_scene
 	save_game.current_scene = next_scene
+	save_game.previous_choices.append(next_scene)
 	save_game.write_savegame()
 
 
