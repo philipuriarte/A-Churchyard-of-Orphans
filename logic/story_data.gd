@@ -14,7 +14,7 @@ var story_data: Dictionary = {
 				"conditions": "insert_conditions",
 				"text": "insert_choice_text",
 				"next_scene": "next_scene_key",
-				"output": "insert_output"
+				"outputs": "insert_output"
 			}
 		}
 	},
@@ -25,11 +25,12 @@ var story_data: Dictionary = {
 			1: {
 				"text": "Take the longsword",
 				"next_scene": "sample_grab_longsword",
-				"output": {
+				"outputs": {
 					"type": "add_item",
 					"value": "longsword"
 				}
 			},
+			
 			2: {
 				"conditions": {
 					"type": "have_item",
@@ -37,7 +38,7 @@ var story_data: Dictionary = {
 				},
 				"text": "Take the family greatsword",
 				"next_scene": "sample_grab_family_greatsword",
-				"output": {
+				"outputs": {
 					"type": "add_item",
 					"value": "family_greatsword"
 				}
@@ -89,7 +90,7 @@ var story_data: Dictionary = {
 			3: {
 				"text": "Bring a longsword with you",
 				"next_scene": "001_follow_servant",
-				"output": {
+				"outputs": {
 					"type": "add_item",
 					"value": "Longsword"
 				}
@@ -103,7 +104,7 @@ var story_data: Dictionary = {
 			1: {
 				"text": "Open the door carefully",
 				"next_scene": "001_follow_servant",
-				"output": {
+				"outputs": {
 					"type": "add_item",
 					"value": "Longsword"
 				}
@@ -111,7 +112,7 @@ var story_data: Dictionary = {
 			2: {
 				"text": "Grab your longsword and ask one more time",
 				"next_scene": "001_grab_longsword",
-				"output": {
+				"outputs": {
 					"type": "add_item",
 					"value": "Longsword"
 				}
