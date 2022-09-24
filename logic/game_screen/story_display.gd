@@ -39,7 +39,7 @@ func set_story(next_scene: String) -> void:
 
 
 # Set visibiliy and text of TitleLabel
-func set_title(next_scene: String) -> void:	
+func set_title(next_scene: String) -> void:
 	if story_data[next_scene].has("title"):
 		var title_text = story_data[next_scene]["title"]
 		title_label.text = title_text

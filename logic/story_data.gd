@@ -13,8 +13,34 @@ var story_data: Dictionary = {
 			1: {
 				"conditions": "insert_conditions",
 				"text": "insert_choice_text",
-				"next_scene": "next_scene_key",
-				"output": "insert_output"
+				"output": "insert_output",
+				"next_scene": "next_scene_key"
+			}
+		}
+	},
+	
+	"sample_scene": {
+		"story_text": "The player decides what weapon to take in the house armory.",
+		"choices": {
+			1: {
+				"text": "Take the longsword",
+				"output": {
+					"type": "add_item",
+					"value": "longsword"
+				},
+				"next_scene": "sample_grab_longsword"
+			},
+			2: {
+				"conditions": {
+					"type": "have_item",
+					"value": "family_key"
+				},
+				"text": "Take the family greatsword",
+				"output": {
+					"type": "add_item",
+					"value": "family_greatsword"
+				},
+				"next_scene": "sample_grab_family_greatsword"
 			}
 		}
 	}
