@@ -88,6 +88,10 @@ var story_data: Dictionary = {
 			},
 			3: {
 				"text": "Bring a longsword with you",
+				"output": {
+					"type": "add_item",
+					"value": "Longsword"
+				},
 				"next_scene": "001_follow_servant"
 			}
 		}
@@ -98,10 +102,18 @@ var story_data: Dictionary = {
 		"choices": {
 			1: {
 				"text": "Open the door carefully",
+				"output": {
+					"type": "add_item",
+					"value": "Longsword"
+				},
 				"next_scene": "001_follow_servant"
 			},
 			2: {
 				"text": "Grab your longsword and ask one more time",
+				"output": {
+					"type": "add_item",
+					"value": "Longsword"
+				},
 				"next_scene": "001_grab_longsword"
 			},
 		}
