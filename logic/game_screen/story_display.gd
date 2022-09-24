@@ -30,12 +30,17 @@ func process_choice(choice_index: int) -> void:
 	if story_data[current_scene]["choices"][choice_index].has("output"):
 		var output_type: String = story_data[current_scene]["choices"][choice_index]["output"]["type"]
 		var output_value: String = story_data[current_scene]["choices"][choice_index]["output"]["value"]
+		save_game = SaveGame.load_savegame()
 		
 		match output_type:
 			"add_item":
-				pass
+				save_game.inventory.append(output_value)
+				print(output_value + " is added to player inventory")
 			"remove_item":
-				pass
+				save_game.inventory.erase(output_value)
+				print(output_value + " is removed from player inventory")
+		
+		save_game.write_savegame()
 	
 	if story_data[current_scene]["choices"][choice_index].has("next_scene"):
 		next_scene = story_data[current_scene]["choices"][choice_index]["next_scene"]
