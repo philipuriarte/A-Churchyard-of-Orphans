@@ -14,6 +14,16 @@ func _ready() -> void:
 	load_game()
 
 
+# Load data of current save file
+func load_game() -> void:
+	save_game = SaveGame.load_savegame()
+	
+	top_text.text = save_game.top_text
+	character_button.visible = save_game.character_button_visibility
+	inventory_button.visible = save_game.inventory_button_visibility
+	journal_button.visible = save_game.journal_button_visibility
+
+
 # Open the PopupMenu node
 func _on_MenuButton_pressed() -> void:
 	popup_menu.popup_centered()
@@ -43,13 +53,3 @@ func set_save_bottom_btns(button: String, visibility: bool) -> void:
 			save_game.journal_button_visibility = visibility
 	
 	save_game.write_savegame()
-
-
-# Load data of current save file
-func load_game() -> void:
-	save_game = SaveGame.load_savegame()
-	
-	top_text.text = save_game.top_text
-	character_button.visible = save_game.character_button_visibility
-	inventory_button.visible = save_game.inventory_button_visibility
-	journal_button.visible = save_game.journal_button_visibility
