@@ -14,7 +14,7 @@ onready var choices_con: VBoxContainer = $"%ChoicesContainer"
 # Load save game data and connect signals to Choice buttons
 func _ready() -> void:
 	load_story()
-	set_story(current_scene)
+	set_save_story(current_scene)
 
 
 # Process input (Choice button press)
@@ -33,11 +33,11 @@ func process_choice(choice_index: int) -> void:
 	
 	if story_data[current_scene]["choices"][choice_index].has("next_scene"):
 		next_scene = story_data[current_scene]["choices"][choice_index]["next_scene"]
-		set_story(next_scene)
+		set_save_story(next_scene)
 
 
 # Update nodes in StoryContainer, and update and save current_scene
-func set_story(next_scene: String) -> void:
+func set_save_story(next_scene: String) -> void:
 	var s_text: String = story_data[next_scene]["story_text"]
 	
 	set_title(next_scene)
@@ -45,7 +45,9 @@ func set_story(next_scene: String) -> void:
 	set_choice_btn(next_scene)
 	
 	current_scene = next_scene
-	save_story()
+	save_game = SaveGame.load_savegame()
+	save_game.current_scene = current_scene
+	save_game.write_savegame()
 
 
 # Set visibiliy and text of TitleLabel
@@ -82,13 +84,6 @@ func set_choice_btn(next_scene: String) -> void:
 		choice_button.connect("choice_btn_pressed", self, "process_choice")
 		
 		choice_index += 1
-
-
-# Save story data to save_game
-func save_story() -> void:
-	save_game = SaveGame.load_savegame()
-	save_game.current_scene = current_scene
-	save_game.write_savegame()
 
 
 # Load save_game data
