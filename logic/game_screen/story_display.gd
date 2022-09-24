@@ -5,6 +5,7 @@ const CHOICE_BUTTON = preload("res://scenes/game_screen/choice_button.tscn")
 var save_game: SaveGame
 var story_data: Dictionary = StoryData.new().get_story_data()
 var current_scene: String
+var previous_scene: String
 
 onready var title_label: Label = $"%TitleLabel"
 onready var story_text: RichTextLabel = $"%StoryText"
@@ -27,9 +28,13 @@ func load_story() -> void:
 func process_choice(choice_index: int) -> void:
 	var next_scene: String
 	
-	if story_data[current_scene]["choices"][choice_index].has("output"):
-		var output_type: String = story_data[current_scene]["choices"][choice_index]["output"]["type"]
-		var output_value: String = story_data[current_scene]["choices"][choice_index]["output"]["value"]
+	if story_data[current_scene]["choices"][choice_index].has("next_scene"):
+		next_scene = story_data[current_scene]["choices"][choice_index]["next_scene"]
+		set_save_story(next_scene)
+	
+	if story_data[previous_scene]["choices"][choice_index].has("output"):
+		var output_type: String = story_data[previous_scene]["choices"][choice_index]["output"]["type"]
+		var output_value: String = story_data[previous_scene]["choices"][choice_index]["output"]["value"]
 		save_game = SaveGame.load_savegame()
 		
 		match output_type:
@@ -41,10 +46,6 @@ func process_choice(choice_index: int) -> void:
 				print(output_value + " is removed from player inventory")
 		
 		save_game.write_savegame()
-	
-	if story_data[current_scene]["choices"][choice_index].has("next_scene"):
-		next_scene = story_data[current_scene]["choices"][choice_index]["next_scene"]
-		set_save_story(next_scene)
 
 
 # Update nodes in StoryContainer, and update and save current_scene
@@ -56,6 +57,7 @@ func set_save_story(next_scene: String) -> void:
 	set_choice_btn(next_scene)
 	
 	save_game = SaveGame.load_savegame()
+	previous_scene = current_scene
 	current_scene = next_scene
 	save_game.current_scene = next_scene
 	save_game.previous_choices.append(next_scene)
