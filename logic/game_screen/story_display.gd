@@ -21,6 +21,16 @@ func _ready() -> void:
 func process_choice(choice_index: int) -> void:
 	var next_scene: String
 	
+	if story_data[current_scene]["choices"][choice_index].has("output"):
+		var output_type: String = story_data[current_scene]["choices"][choice_index]["output"]["type"]
+		var output_value: String = story_data[current_scene]["choices"][choice_index]["output"]["value"]
+		
+		match output_type:
+			"add_item":
+				pass
+			"remove_item":
+				pass
+	
 	if story_data[current_scene]["choices"][choice_index].has("next_scene"):
 		next_scene = story_data[current_scene]["choices"][choice_index]["next_scene"]
 		set_story(next_scene)
