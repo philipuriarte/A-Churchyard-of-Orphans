@@ -50,9 +50,9 @@ func set_save_story(next_scene: String) -> void:
 	set_story_text(s_text)
 	set_choice_btn(next_scene)
 	
-	current_scene = next_scene
 	save_game = SaveGame.load_savegame()
-	save_game.current_scene = current_scene
+	current_scene = next_scene
+	save_game.current_scene = next_scene
 	save_game.write_savegame()
 
 
