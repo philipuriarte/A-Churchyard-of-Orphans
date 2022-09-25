@@ -24,7 +24,7 @@ func load_story() -> void:
 	current_scene = save_game.current_scene
 
 
-# Process input (Choice button press)
+# Process player input/Choice button press
 func process_choice(choice_index: int) -> void:
 	var next_scene: String
 	
@@ -32,6 +32,11 @@ func process_choice(choice_index: int) -> void:
 		next_scene = story_data[current_scene]["choices"][choice_index]["next_scene"]
 		set_save_story(next_scene)
 	
+	process_output(choice_index)
+
+
+# Process output of player input
+func process_output(choice_index: int) -> void:
 	if story_data[previous_scene]["choices"][choice_index].has("outputs"):
 		story_text.text += "\n"
 		
