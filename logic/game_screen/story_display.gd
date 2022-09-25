@@ -12,7 +12,7 @@ onready var story_text: RichTextLabel = $"%StoryText"
 onready var choices_con: VBoxContainer = $"%ChoicesContainer"
 
 
-# Load save game data and connect signals to Choice buttons
+# Load and set save_game data
 func _ready() -> void:
 	load_story()
 	set_save_story(current_scene)
@@ -35,7 +35,7 @@ func process_choice(choice_index: int) -> void:
 	process_output(choice)
 
 
-# Process output of player input
+# Process choice output/s
 func process_output(choice: Dictionary) -> void:
 	if choice.has("outputs"):
 		story_text.text += "\n"
@@ -56,7 +56,7 @@ func process_output(choice: Dictionary) -> void:
 			save_game.write_savegame()
 
 
-# Update nodes in StoryContainer, and update and save story
+# Update nodes in StoryContainer
 func set_save_story(next_scene: String) -> void:
 	var scene: Dictionary = story_data[next_scene]
 	var story_bbcode_text: String = scene["story_text"]
@@ -71,9 +71,10 @@ func set_save_story(next_scene: String) -> void:
 func set_title(scene: Dictionary) -> void:
 	if scene.has("title"):
 		var title_text = scene["title"]
+		
 		title_label.text = title_text
 		title_label.visible = true
-	else:
+	elif title_label.visible:
 		title_label.text = ""
 		title_label.visible = false
 
@@ -104,7 +105,7 @@ func set_choice_btn(scene: Dictionary) -> void:
 			choice_index += 1
 
 
-# Process conditions of avalaiable choices in next scene
+# Process choice condition/s
 func process_condition(scene: Dictionary, choice_index: int) -> bool:
 	var choice: Dictionary = scene["choices"][choice_index]
 	
