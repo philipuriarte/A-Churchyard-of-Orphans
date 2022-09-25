@@ -26,23 +26,23 @@ func load_story() -> void:
 
 # Process player input/Choice button press
 func process_choice(choice_index: int) -> void:
-	var next_scene: String
+	var choice: Dictionary = story_data[current_scene]["choices"][choice_index]
 	
-	if story_data[current_scene]["choices"][choice_index].has("next_scene"):
-		next_scene = story_data[current_scene]["choices"][choice_index]["next_scene"]
+	if choice.has("next_scene"):
+		var next_scene: String = choice["next_scene"]
 		set_save_story(next_scene)
 	
-	process_output(choice_index)
+	process_output(choice)
 
 
 # Process output of player input
-func process_output(choice_index: int) -> void:
-	if story_data[previous_scene]["choices"][choice_index].has("outputs"):
+func process_output(choice: Dictionary) -> void:
+	if choice.has("outputs"):
 		story_text.text += "\n"
 		
-		for output in story_data[previous_scene]["choices"][choice_index]["outputs"]:
-			var output_type: String = story_data[previous_scene]["choices"][choice_index]["outputs"][output]["type"]
-			var output_value: String = story_data[previous_scene]["choices"][choice_index]["outputs"][output]["value"]
+		for output in choice["outputs"]:
+			var output_type: String = choice["outputs"][output]["type"]
+			var output_value: String = choice["outputs"][output]["value"]
 			save_game = SaveGame.load_savegame()
 			
 			match output_type:
