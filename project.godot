@@ -53,6 +53,10 @@ window/stretch/aspect="keep"
 
 scene_naming=2
 
+[editor_plugins]
+
+enabled=PoolStringArray(  )
+
 [input]
 
 ui_select={

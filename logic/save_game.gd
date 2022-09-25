@@ -6,6 +6,7 @@ const SAVE_GAME_PATH := "user://save_game"
 # Game data to save
 export(String) var current_scene
 export(Array) var inventory
+export(Array) var previous_choices
 export(String) var top_text
 export(bool) var character_button_visibility
 export(bool) var inventory_button_visibility

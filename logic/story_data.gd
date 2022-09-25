@@ -14,7 +14,39 @@ var story_data: Dictionary = {
 				"conditions": "insert_conditions",
 				"text": "insert_choice_text",
 				"next_scene": "next_scene_key",
-				"output": "insert_output"
+				"outputs": "insert_output"
+			}
+		}
+	},
+	
+	"sample_scene": {
+		"story_text": "The player decides what weapon to take in the house armory.",
+		"choices": {
+			1: {
+				"text": "Take the longsword",
+				"next_scene": "sample_grab_longsword",
+				"outputs": {
+					1: {
+						"type": "add_item",
+						"value": "longsword"
+					}
+				}
+			},
+			2: {
+				"conditions": {
+					1: {
+						"type": "have_item",
+						"value": "family_key"
+					}
+				},
+				"text": "Take the family greatsword",
+				"next_scene": "sample_grab_family_greatsword",
+				"outputs": {
+					1: {
+						"type": "add_item",
+						"value": "family_greatsword"
+					}
+				}
 			}
 		}
 	}
@@ -29,7 +61,14 @@ var story_data: Dictionary = {
 		"choices": {
 			1: {
 				"text": "Continue",
-				"next_scene": "001_intro"
+				"next_scene": "001_intro",
+				"outputs": {
+					1: {
+						"type": "add_item",
+						"value": "Family Key"
+					}
+				}
+				
 			}
 		}
 	},
@@ -54,15 +93,51 @@ var story_data: Dictionary = {
 		"choices": {
 			1: {
 				"text": "Follow the servant quietly",
-				"next_scene": "001_follow_servant"
+				"next_scene": "001_follow_servant",
+				"outputs": {
+					1: {
+						"type": "add_item",
+						"value": "Longsword"
+					},
+					2: {
+						"type": "add_item",
+						"value": "Shield"
+					}
+				}
 			},
 			2: {
 				"text": "Ask how are the defences holding up",
 				"next_scene": "001_ask_defences"
 			},
 			3: {
-				"text": "Bring a longsword with you",
-				"next_scene": "001_follow_servant"
+				"text": "Bring your longsword and shield with you",
+				"next_scene": "001_follow_servant",
+				"outputs": {
+					1: {
+						"type": "add_item",
+						"value": "Longsword"
+					},
+					2: {
+						"type": "add_item",
+						"value": "Shield"
+					}
+				}
+			},
+			4: {
+				"conditions": {
+					1: {
+						"type": "have_item",
+						"value": "Family Key"
+					}
+				},
+				"text": "Go to the armory and take the family greatsword",
+				"next_scene": "001_take_family_greatsword",
+				"outputs": {
+					1: {
+						"type": "add_item",
+						"value": "Family Greatsword"
+					}
+				}
 			}
 		}
 	},
@@ -72,17 +147,33 @@ var story_data: Dictionary = {
 		"choices": {
 			1: {
 				"text": "Open the door carefully",
-				"next_scene": "001_follow_servant"
+				"next_scene": "001_follow_servant",
+				"outputs": {
+					1: {
+						"type": "add_item",
+						"value": "Longsword"
+					},
+					2: {
+						"type": "add_item",
+						"value": "Shield"
+					}
+				}
 			},
 			2: {
 				"text": "Grab your longsword and ask one more time",
-				"next_scene": "001_grab_longsword"
+				"next_scene": "001_grab_longsword",
+				"outputs": {
+					1: {
+						"type": "add_item",
+						"value": "Longsword"
+					}
+				}
 			},
 		}
 	},
 	
 	"001_follow_servant": {
-		"story_text": "You take your longsword in your room and follow the servant quietly through the hallway.",
+		"story_text": "You take your longsword and shield in your room and follow the servant quietly through the hallway.",
 		"choices": {
 			1: {
 				"text": "End of prototype"
@@ -95,6 +186,18 @@ var story_data: Dictionary = {
 	
 	"001_ask_defences": {
 		"story_text": "You ask \"How is the castle defences holding? Where's father and Master *insert name*?\"",
+		"choices": {
+			1: {
+				"text": "End of prototype"
+			},
+			2: {
+				"text": "End of prototype"
+			},
+		}
+	},
+	
+	"001_take_family_greatsword": {
+		"story_text": "You rush to the family armory with the family key you have attached to your necklace. Thankfully the fighting hasn't reached this part of the castle, so you're able to open the chest containing your family's sacred greatsword and bring it with you.",
 		"choices": {
 			1: {
 				"text": "End of prototype"
