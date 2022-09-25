@@ -98,16 +98,17 @@ func set_choice_btn(scene: Dictionary) -> void:
 		choice_i.queue_free()
 	
 	for choice in scene["choices"]:
-		var choice_text: String = scene["choices"][choice]["text"]
-		var choice_button: Node = CHOICE_BUTTON.instance()
-		
-		choices_con.add_child(choice_button)
-		choice_button.set_choice_index(choice_index)
-		choice_button.set_choice_text(choice_text)
-		# warning-ignore:return_value_discarded
-		choice_button.connect("choice_btn_pressed", self, "process_choice")
-		
-		choice_index += 1
+		if process_condition(scene, choice_index):
+			var choice_text: String = scene["choices"][choice]["text"]
+			var choice_button: Node = CHOICE_BUTTON.instance()
+			
+			choices_con.add_child(choice_button)
+			choice_button.set_choice_index(choice_index)
+			choice_button.set_choice_text(choice_text)
+			# warning-ignore:return_value_discarded
+			choice_button.connect("choice_btn_pressed", self, "process_choice")
+			
+			choice_index += 1
 
 
 # Process conditions of avalaiable choices in next scene
