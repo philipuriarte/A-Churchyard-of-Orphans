@@ -107,3 +107,20 @@ func set_choice_btn(next_scene: String) -> void:
 		choice_button.connect("choice_btn_pressed", self, "process_choice")
 		
 		choice_index += 1
+
+
+func process_condition(choice_index: int) -> bool:
+	if story_data[previous_scene]["choices"][choice_index].has("conditions"):
+		for condition in story_data[previous_scene]["choices"][choice_index]["conditions"]:
+			var condition_type: String = story_data[previous_scene]["choices"][choice_index]["conditions"][condition]["type"]
+			var condition_value: String = story_data[previous_scene]["choices"][choice_index]["conditions"][condition]["value"]
+			
+			match condition_type:
+				"have_item":
+					pass
+				"previous_choice":
+					pass
+			
+		return false
+	else:
+		return true

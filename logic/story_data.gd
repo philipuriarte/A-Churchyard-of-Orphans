@@ -34,8 +34,10 @@ var story_data: Dictionary = {
 			},
 			2: {
 				"conditions": {
-					"type": "have_item",
-					"value": "family_key"
+					1: {
+						"type": "have_item",
+						"value": "family_key"
+					}
 				},
 				"text": "Take the family greatsword",
 				"next_scene": "sample_grab_family_greatsword",
