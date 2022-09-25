@@ -111,12 +111,12 @@ func set_choice_btn(next_scene: String) -> void:
 
 # Process conditions of avalaiable choices in next scene
 func process_condition(next_scene: String, choice_index: int) -> bool:
-	if story_data[next_scene]["choices"][choice_index].has("conditions"):
-		var conditions: Dictionary = story_data[next_scene]["choices"][choice_index]["conditions"]
-		
-		for condition in conditions:
-			var condition_type: String = conditions[condition]["type"]
-			var condition_value: String = conditions[condition]["value"]
+	var choice: Dictionary = story_data[next_scene]["choices"][choice_index]
+	
+	if choice.has("conditions"):
+		for condition in choice["conditions"]:
+			var condition_type: String = choice["conditions"][condition]["type"]
+			var condition_value: String = choice["conditions"][condition]["value"]
 			save_game = SaveGame.load_savegame()
 			
 			match condition_type:
@@ -126,7 +126,7 @@ func process_condition(next_scene: String, choice_index: int) -> bool:
 					if condition_value in save_game.previous_choices: return true
 				_:
 					return false
-			
+		
 		return false
 	else:
 		return true
