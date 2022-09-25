@@ -56,7 +56,7 @@ func process_output(choice: Dictionary) -> void:
 			save_game.write_savegame()
 
 
-# Update nodes in StoryContainer, and update and save current_scene
+# Update nodes in StoryContainer, and update and save story
 func set_save_story(next_scene: String) -> void:
 	var scene: Dictionary = story_data[next_scene]
 	var story_bbcode_text: String = scene["story_text"]
@@ -64,14 +64,7 @@ func set_save_story(next_scene: String) -> void:
 	set_title(scene)
 	set_story_text(story_bbcode_text)
 	set_choice_btn(scene)
-	
-	previous_scene = current_scene
-	current_scene = next_scene
-	
-	save_game = SaveGame.load_savegame()
-	save_game.current_scene = next_scene
-	save_game.previous_choices.append(next_scene)
-	save_game.write_savegame()
+	save_story(next_scene)
 
 
 # Set visibiliy and text of TitleLabel
@@ -132,3 +125,14 @@ func process_condition(scene: Dictionary, choice_index: int) -> bool:
 		return true
 	else:
 		return true
+
+
+# Update and save previous_scene, current_scene & previous_choices
+func save_story(next_scene: String):
+	previous_scene = current_scene
+	current_scene = next_scene
+	
+	save_game = SaveGame.load_savegame()
+	save_game.current_scene = next_scene
+	save_game.previous_choices.append(next_scene)
+	save_game.write_savegame()
