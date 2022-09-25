@@ -48,21 +48,22 @@ func process_output(choice: Dictionary) -> void:
 			match output_type:
 				"add_item":
 					save_game.inventory.append(output_value)
-					story_text.text += "\n> " + output_value + " is added to inventory"
+					story_text.text += "\n> " + output_value + " added to inventory"
 				"remove_item":
 					save_game.inventory.erase(output_value)
-					story_text.text += "\n> " + output_value + " is removed from inventory"
+					story_text.text += "\n> " + output_value + " removed from inventory"
 			
 			save_game.write_savegame()
 
 
 # Update nodes in StoryContainer, and update and save current_scene
 func set_save_story(next_scene: String) -> void:
-	var s_text: String = story_data[next_scene]["story_text"]
+	var scene: Dictionary = story_data[next_scene]
+	var story_bbcode_text: String = scene["story_text"]
 	
-	set_title(next_scene)
-	set_story_text(s_text)
-	set_choice_btn(next_scene)
+	set_title(scene)
+	set_story_text(story_bbcode_text)
+	set_choice_btn(scene)
 	
 	previous_scene = current_scene
 	current_scene = next_scene
@@ -74,9 +75,9 @@ func set_save_story(next_scene: String) -> void:
 
 
 # Set visibiliy and text of TitleLabel
-func set_title(next_scene: String) -> void:
-	if story_data[next_scene].has("title"):
-		var title_text = story_data[next_scene]["title"]
+func set_title(scene: Dictionary) -> void:
+	if scene.has("title"):
+		var title_text = scene["title"]
 		title_label.text = title_text
 		title_label.visible = true
 	else:
@@ -90,14 +91,14 @@ func set_story_text(new_text: String) -> void:
 
 
 # Instance and set text of choice_button.tscn
-func set_choice_btn(next_scene: String) -> void:
+func set_choice_btn(scene: Dictionary) -> void:
 	var choice_index: int = 1
 	
 	for choice_i in choices_con.get_children():
 		choice_i.queue_free()
 	
-	for choice in story_data[next_scene]["choices"]:
-		var choice_text: String = story_data[next_scene]["choices"][choice]["text"]
+	for choice in scene["choices"]:
+		var choice_text: String = scene["choices"][choice]["text"]
 		var choice_button: Node = CHOICE_BUTTON.instance()
 		
 		choices_con.add_child(choice_button)
@@ -110,8 +111,8 @@ func set_choice_btn(next_scene: String) -> void:
 
 
 # Process conditions of avalaiable choices in next scene
-func process_condition(next_scene: String, choice_index: int) -> bool:
-	var choice: Dictionary = story_data[next_scene]["choices"][choice_index]
+func process_condition(scene: Dictionary, choice_index: int) -> bool:
+	var choice: Dictionary = scene["choices"][choice_index]
 	
 	if choice.has("conditions"):
 		for condition in choice["conditions"]:
@@ -122,11 +123,11 @@ func process_condition(next_scene: String, choice_index: int) -> bool:
 			match condition_type:
 				"have_item":
 					if condition_value in save_game.inventory: return true
+					else: return false
 				"previous_choice":
 					if condition_value in save_game.previous_choices: return true
-				_:
-					return false
+					else: return false
 		
-		return false
+		return true
 	else:
 		return true
