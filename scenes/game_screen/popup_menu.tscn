@@ -84,4 +84,5 @@ text = "Continue"
 
 [connection signal="gui_input" from="Overlay" to="." method="_on_Overlay_gui_input"]
 [connection signal="pressed" from="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer/TitleButton" to="." method="_on_TitleButton_pressed"]
+[connection signal="pressed" from="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]

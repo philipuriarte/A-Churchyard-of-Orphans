@@ -1,6 +1,7 @@
 extends PanelContainer
 
 var save_options: SaveOptions
+var previous_screen: String
 
 onready var popup_credits: Popup = $"%PopupCredits"
 onready var lang_options: OptionButton = $"%LangOptions"
@@ -25,6 +26,7 @@ func load_options():
 	sfx_button.pressed = save_options.sfx_on
 	size_options.selected = save_options.font_size
 	line_options.selected = save_options.line_spacing
+	previous_screen = save_options.previous_screen
 
 
 # Set and save language
@@ -100,7 +102,7 @@ func _on_ContactButton_pressed() -> void:
 	print("User pressed Contact us")
 
 
-# Change scene to title_screen
+# Change scene to previous_screen
 func _on_BackButton_pressed() -> void:
 	# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/title_screen/title_screen.tscn")
+	get_tree().change_scene(previous_screen)

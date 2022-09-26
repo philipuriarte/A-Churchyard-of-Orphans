@@ -3,6 +3,8 @@ extends PanelContainer
 const NEW_SAVEGAME = preload("res://resources/new_savegame.tres")
 const NEW_SAVEOPTIONS = preload("res://resources/new_saveoptions.tres")
 
+var save_options: SaveOptions
+
 onready var popup_confirm: Popup = $"%PopupConfirm"
 onready var continue_btn: Button = $"%ContinueButton"
 
@@ -35,6 +37,10 @@ func _on_NewButton_pressed() -> void:
 
 # Change scene to option_screen
 func _on_OptionsButton_pressed() -> void:
+	save_options = SaveOptions.load_saveoptions()
+	save_options.previous_screen = "res://scenes/title_screen/title_screen.tscn"
+	save_options.write_saveoptions()
+	
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/options_screen/options_screen.tscn")
 
