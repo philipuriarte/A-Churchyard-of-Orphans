@@ -71,21 +71,29 @@ custom_fonts/bold_font = ExtResource( 4 )
 bbcode_enabled = true
 bbcode_text = "[center]
 [b]Developer & Writer[/b]
+Philip Uriarte
 
 [b]Music & Sounds[/b] 
+None
 
-[b]Art[/b] 
+[b]Art[/b]
+None
 
-Created using the Godot 3.5 engine
+[b]Game Engine[/b]
+Developed using the Godot 3.5 engine
 [/center]"
 text = "
 Developer & Writer
+Philip Uriarte
 
 Music & Sounds 
+None
 
-Art 
+Art
+None
 
-Created using the Godot 3.5 engine
+Game Engine
+Developed using the Godot 3.5 engine
 "
 
 [node name="CloseButton" type="Button" parent="CreditsScreenContainer/CreditsScreen/CreditsMargin/CreditsContainer"]
