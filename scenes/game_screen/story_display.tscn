@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://resources/fonts/ebgaramond_bold_20.tres" type="DynamicFont" id=1]
+[ext_resource path="res://resources/fonts/ebgaramond_italic.tres" type="DynamicFont" id=2]
 [ext_resource path="res://logic/game_screen/story_display.gd" type="Script" id=3]
+[ext_resource path="res://resources/fonts/ebgaramond_bold_16.tres" type="DynamicFont" id=4]
 
 [node name="StoryContainer" type="VBoxContainer"]
 anchor_left = 0.5
@@ -20,6 +23,7 @@ unique_name_in_owner = true
 margin_right = 346.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = ExtResource( 1 )
 text = "Title"
 align = 1
 
@@ -30,6 +34,8 @@ margin_right = 346.0
 margin_bottom = 342.0
 size_flags_vertical = 3
 custom_constants/line_separation = 10
+custom_fonts/italics_font = ExtResource( 2 )
+custom_fonts/bold_font = ExtResource( 4 )
 bbcode_enabled = true
 bbcode_text = "Insert text here"
 text = "Insert text here"
