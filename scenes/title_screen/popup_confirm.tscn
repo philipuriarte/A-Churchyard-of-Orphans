@@ -1,13 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://logic/title_screen/popup_confirm.gd" type="Script" id=1]
+[ext_resource path="res://resources/fonts/ebgaramond_bold_16.tres" type="DynamicFont" id=2]
 
 [node name="PopupConfirm" type="Popup"]
 unique_name_in_owner = true
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 367.0
-margin_bottom = 647.0
+margin_right = 360.0
+margin_bottom = 640.0
 rect_min_size = Vector2( 360, 640 )
 script = ExtResource( 1 )
 
@@ -23,17 +22,17 @@ margin_bottom = 640.0
 mouse_filter = 2
 
 [node name="ConfirmScreen" type="PanelContainer" parent="ConfirmScreenContainer"]
-margin_left = 62.0
+margin_left = 60.0
 margin_top = 270.0
-margin_right = 297.0
+margin_right = 300.0
 margin_bottom = 370.0
-rect_min_size = Vector2( 235, 100 )
+rect_min_size = Vector2( 240, 100 )
 
 [node name="ConfirmMargin" type="MarginContainer" parent="ConfirmScreenContainer/ConfirmScreen"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 228.0
-margin_bottom = 125.0
+margin_right = 233.0
+margin_bottom = 133.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 20
 custom_constants/margin_left = 10
@@ -42,32 +41,33 @@ custom_constants/margin_bottom = 20
 [node name="ConfirmContainer" type="VBoxContainer" parent="ConfirmScreenContainer/ConfirmScreen/ConfirmMargin"]
 margin_left = 10.0
 margin_top = 20.0
-margin_right = 211.0
-margin_bottom = 98.0
+margin_right = 216.0
+margin_bottom = 106.0
 custom_constants/separation = 15
 
 [node name="ConfirmLabel" type="Label" parent="ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer"]
-margin_right = 201.0
-margin_bottom = 14.0
+margin_right = 206.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 2 )
 text = "Overwrite previous save data?"
 align = 1
 autowrap = true
 
 [node name="HSeparator" type="HSeparator" parent="ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer"]
-margin_top = 29.0
-margin_right = 201.0
-margin_bottom = 33.0
+margin_top = 37.0
+margin_right = 206.0
+margin_bottom = 41.0
 
 [node name="ButtonContainer" type="HBoxContainer" parent="ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer"]
-margin_top = 48.0
-margin_right = 201.0
-margin_bottom = 78.0
+margin_top = 56.0
+margin_right = 206.0
+margin_bottom = 86.0
 custom_constants/separation = 20
 alignment = 1
 
 [node name="YesButton" type="Button" parent="ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer/ButtonContainer"]
-margin_left = 10.0
-margin_right = 90.0
+margin_left = 13.0
+margin_right = 93.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 80, 30 )
 focus_mode = 0
@@ -75,8 +75,8 @@ enabled_focus_mode = 0
 text = "Yes"
 
 [node name="NoButton" type="Button" parent="ConfirmScreenContainer/ConfirmScreen/ConfirmMargin/ConfirmContainer/ButtonContainer"]
-margin_left = 110.0
-margin_right = 190.0
+margin_left = 113.0
+margin_right = 193.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 80, 30 )
 focus_mode = 0
