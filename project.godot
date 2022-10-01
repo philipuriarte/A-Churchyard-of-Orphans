@@ -37,6 +37,10 @@ config/description="A short story-driven text-based mobile game using the Godot 
 run/main_scene="res://scenes/main.tscn"
 config/icon="res://assets/churchyard.png"
 
+[autoload]
+
+SoundPlayer="*res://scenes/sound_player.tscn"
+
 [display]
 
 window/size/width=360
