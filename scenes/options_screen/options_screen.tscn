@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://logic/options_screen/options_screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/options_screen/popup_credits.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/game_theme.tres" type="Theme" id=3]
 [ext_resource path="res://resources/fonts/ebgaramond_bold_24.tres" type="DynamicFont" id=4]
+[ext_resource path="res://scenes/options_screen/options_container.tscn" type="PackedScene" id=5]
 
 [node name="OptionsScreen" type="PanelContainer"]
 anchor_right = 1.0
@@ -39,7 +40,7 @@ text = "Options"
 align = 1
 valign = 2
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/MainCointainer"]
+[node name="OptionsSeparator" type="HSeparator" parent="MarginContainer/MainCointainer"]
 margin_top = 60.0
 margin_right = 326.0
 margin_bottom = 64.0
@@ -49,144 +50,15 @@ margin_top = 84.0
 margin_right = 326.0
 margin_bottom = 429.0
 
-[node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/CenterContainer"]
+[node name="OptionsContainer" parent="MarginContainer/MainCointainer/CenterContainer" instance=ExtResource( 5 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 61.0
+margin_top = 0.0
 margin_right = 265.0
 margin_bottom = 345.0
-custom_constants/separation = 10
-
-[node name="Languange" type="HBoxContainer" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer"]
-margin_right = 204.0
-margin_bottom = 28.0
-custom_constants/separation = 20
-
-[node name="LangLabel" type="Label" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/Languange"]
-margin_top = 3.0
-margin_right = 84.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 84, 0 )
-text = "Languange:"
-
-[node name="LangOptions" type="OptionButton" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/Languange"]
-unique_name_in_owner = true
-margin_left = 104.0
-margin_right = 204.0
-margin_bottom = 28.0
-rect_min_size = Vector2( 100, 0 )
-focus_mode = 0
-enabled_focus_mode = 0
-text = "English"
-items = [ "English", null, false, 0, null ]
-selected = 0
-
-[node name="MusicContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer"]
-margin_top = 38.0
-margin_right = 204.0
-margin_bottom = 122.0
-
-[node name="Music" type="HBoxContainer" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/MusicContainer"]
-margin_right = 204.0
-margin_bottom = 40.0
-
-[node name="MusicLabel" type="Label" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/MusicContainer/Music"]
-margin_top = 9.0
-margin_right = 90.0
-margin_bottom = 31.0
-rect_min_size = Vector2( 90, 0 )
-text = "Music:"
-
-[node name="MusicButton" type="CheckButton" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/MusicContainer/Music"]
-unique_name_in_owner = true
-margin_left = 94.0
-margin_right = 170.0
-margin_bottom = 40.0
-focus_mode = 0
-pressed = true
-enabled_focus_mode = 0
-
-[node name="SFX" type="HBoxContainer" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/MusicContainer"]
-margin_top = 44.0
-margin_right = 204.0
-margin_bottom = 84.0
-
-[node name="SFXLabel" type="Label" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/MusicContainer/SFX"]
-margin_top = 9.0
-margin_right = 90.0
-margin_bottom = 31.0
-rect_min_size = Vector2( 90, 0 )
-text = "SFX:"
-
-[node name="SFXButton" type="CheckButton" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/MusicContainer/SFX"]
-unique_name_in_owner = true
-margin_left = 94.0
-margin_right = 170.0
-margin_bottom = 40.0
-focus_mode = 0
-pressed = true
-enabled_focus_mode = 0
-
-[node name="TextContainer" type="VBoxContainer" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer"]
-margin_top = 132.0
-margin_right = 204.0
-margin_bottom = 345.0
-custom_constants/separation = 20
-
-[node name="FontSize" type="HBoxContainer" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer"]
-margin_right = 204.0
-margin_bottom = 28.0
-
-[node name="SizeLabel" type="Label" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer/FontSize"]
-margin_top = 3.0
-margin_right = 100.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 100, 0 )
-text = "Font Size:"
-
-[node name="SizeOptions" type="OptionButton" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer/FontSize"]
-unique_name_in_owner = true
-margin_left = 104.0
-margin_right = 154.0
-margin_bottom = 28.0
-rect_min_size = Vector2( 50, 0 )
-focus_mode = 0
-enabled_focus_mode = 0
-text = "10"
-items = [ "10", null, false, 0, null, "11", null, false, 1, null, "12", null, false, 2, null, "13", null, false, 3, null, "14", null, false, 4, null ]
-selected = 0
-
-[node name="LineSpacing" type="HBoxContainer" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer"]
-margin_top = 48.0
-margin_right = 204.0
-margin_bottom = 76.0
-
-[node name="LineLabel" type="Label" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer/LineSpacing"]
-margin_top = 3.0
-margin_right = 100.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 100, 0 )
-text = "Line Spacing:"
-
-[node name="LineOptions" type="OptionButton" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer/LineSpacing"]
-unique_name_in_owner = true
-margin_left = 104.0
-margin_right = 154.0
-margin_bottom = 28.0
-rect_min_size = Vector2( 50, 0 )
-focus_mode = 0
-enabled_focus_mode = 0
-text = "10"
-items = [ "10", null, false, 0, null, "12", null, false, 2, null, "14", null, false, 4, null, "16", null, false, 3, null, "18", null, false, 4, null ]
-selected = 0
-
-[node name="TestText" type="Label" parent="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer"]
-unique_name_in_owner = true
-margin_top = 96.0
-margin_right = 204.0
-margin_bottom = 213.0
-rect_min_size = Vector2( 0, 117 )
-custom_constants/line_spacing = 10
-text = "Once upon a time there was a kingdom of peace and prosperity."
-autowrap = true
 
 [node name="ExtrasMargin" type="MarginContainer" parent="MarginContainer/MainCointainer"]
 margin_top = 449.0
@@ -236,11 +108,6 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "Back"
 
-[connection signal="item_selected" from="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/Languange/LangOptions" to="." method="_on_LangOptions_item_selected"]
-[connection signal="toggled" from="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/MusicContainer/Music/MusicButton" to="." method="_on_MusicButton_toggled"]
-[connection signal="toggled" from="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/MusicContainer/SFX/SFXButton" to="." method="_on_SFXButton_toggled"]
-[connection signal="item_selected" from="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer/FontSize/SizeOptions" to="." method="_on_SizeOptions_item_selected"]
-[connection signal="item_selected" from="MarginContainer/MainCointainer/CenterContainer/OptionsContainer/TextContainer/LineSpacing/LineOptions" to="." method="_on_LineOptions_item_selected"]
 [connection signal="pressed" from="MarginContainer/MainCointainer/ExtrasMargin/ExtrasContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainCointainer/ExtrasMargin/ExtrasContainer/ContactButton" to="." method="_on_ContactButton_pressed"]
 [connection signal="pressed" from="MarginContainer/MainCointainer/ButtonMargin/BackButton" to="." method="_on_BackButton_pressed"]
