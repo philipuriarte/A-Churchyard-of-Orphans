@@ -65,7 +65,7 @@ margin_bottom = 81.0
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Go to title"
+text = "Go to Title"
 
 [node name="OptionsButton" type="Button" parent="MenuScreenContainer/MenuScreen/MenuMargin/MenuContainer"]
 margin_top = 91.0
