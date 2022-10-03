@@ -4,6 +4,7 @@ var save_options: SaveOptions
 var previous_screen: String
 
 onready var popup_credits: Popup = $"%PopupCredits"
+onready var popup_contact: Popup = $"%PopupContact"
 
 
 # Set options to saved options
@@ -19,7 +20,7 @@ func _on_CreditsButton_pressed() -> void:
 
 # Trigger when user presses ContactButton
 func _on_ContactButton_pressed() -> void:
-	print("User pressed Contact us")
+	popup_contact.popup_centered()
 
 
 # Change scene to previous_screen
