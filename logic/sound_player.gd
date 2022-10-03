@@ -1,5 +1,7 @@
 extends Node
 
+var save_options: SaveOptions
+
 onready var button_normal: AudioStreamPlayer = $ButtonNormal
 
 
@@ -18,11 +20,16 @@ func connect_buttons(root):
 
 func connect_to_button(button):
 	button.connect("pressed", self, "_on_Button_pressed")
+	
 	if button is OptionButton:
 		button.connect("item_selected", self, "_on_Button_pressed")
 
+
 func _on_Button_pressed(_x=0):
-	button_normal.play()
+	save_options = SaveOptions.load_saveoptions()
+	
+	if save_options.sfx_on:
+		button_normal.play()
 
 
 func _on_SceneTree_node_added(node):
