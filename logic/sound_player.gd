@@ -18,9 +18,10 @@ func connect_buttons(root):
 
 func connect_to_button(button):
 	button.connect("pressed", self, "_on_Button_pressed")
+	if button is OptionButton:
+		button.connect("item_selected", self, "_on_Button_pressed")
 
-
-func _on_Button_pressed():
+func _on_Button_pressed(_x=0):
 	button_normal.play()
 
 
