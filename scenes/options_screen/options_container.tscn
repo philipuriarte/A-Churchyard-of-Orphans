@@ -146,3 +146,9 @@ rect_min_size = Vector2( 0, 117 )
 custom_constants/line_spacing = 10
 text = "Once upon a time there was a kingdom of peace and prosperity."
 autowrap = true
+
+[connection signal="item_selected" from="Languange/LangOptions" to="." method="_on_LangOptions_item_selected"]
+[connection signal="toggled" from="MusicContainer/Music/MusicButton" to="." method="_on_MusicButton_toggled"]
+[connection signal="toggled" from="MusicContainer/SFX/SFXButton" to="." method="_on_SFXButton_toggled"]
+[connection signal="item_selected" from="TextContainer/FontSize/SizeOptions" to="." method="_on_SizeOptions_item_selected"]
+[connection signal="item_selected" from="TextContainer/LineSpacing/LineOptions" to="." method="_on_LineOptions_item_selected"]
