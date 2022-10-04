@@ -4,7 +4,6 @@
 
 [resource]
 script = ExtResource( 1 )
-previous_screen = ""
 language = 0
 music_on = true
 sfx_on = true

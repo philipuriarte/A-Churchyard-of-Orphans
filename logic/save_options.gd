@@ -4,7 +4,6 @@ extends Resource
 const SAVE_GAME_PATH := "user://save_options"
 
 # Options data to save
-export(String) var previous_screen
 export(int, "English") var language
 export(bool) var music_on
 export(bool) var sfx_on
