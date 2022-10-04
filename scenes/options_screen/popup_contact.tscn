@@ -62,12 +62,12 @@ margin_bottom = 41.0
 [node name="CenterContact" type="CenterContainer" parent="ContactScreenContainer/ContactScreen/ContactMargin/ContactContainer"]
 margin_top = 51.0
 margin_right = 241.0
-margin_bottom = 133.0
+margin_bottom = 91.0
 
 [node name="ContactContainer2" type="VBoxContainer" parent="ContactScreenContainer/ContactScreen/ContactMargin/ContactContainer/CenterContact"]
 margin_left = 42.0
 margin_right = 199.0
-margin_bottom = 82.0
+margin_bottom = 40.0
 custom_constants/separation = 10
 
 [node name="DevContainer" type="VBoxContainer" parent="ContactScreenContainer/ContactScreen/ContactMargin/ContactContainer/CenterContact/ContactContainer2"]
@@ -87,28 +87,16 @@ margin_right = 157.0
 margin_bottom = 40.0
 text = "philipuriarte@gmail.com"
 
-[node name="DiscordContainer" type="VBoxContainer" parent="ContactScreenContainer/ContactScreen/ContactMargin/ContactContainer/CenterContact/ContactContainer2"]
-margin_top = 50.0
-margin_right = 157.0
-margin_bottom = 72.0
-
-[node name="DiscordLabel" type="Label" parent="ContactScreenContainer/ContactScreen/ContactMargin/ContactContainer/CenterContact/ContactContainer2/DiscordContainer"]
-margin_right = 157.0
-margin_bottom = 22.0
-custom_fonts/font = ExtResource( 4 )
-text = "Discord Server"
-align = 1
-
-[node name="PushContainer" type="VBoxContainer" parent="ContactScreenContainer/ContactScreen/ContactMargin/ContactContainer/CenterContact/ContactContainer2"]
-margin_top = 82.0
-margin_right = 157.0
-margin_bottom = 82.0
+[node name="PushContainer" type="VBoxContainer" parent="ContactScreenContainer/ContactScreen/ContactMargin/ContactContainer"]
+margin_top = 101.0
+margin_right = 241.0
+margin_bottom = 356.0
 size_flags_vertical = 3
 
 [node name="CloseButton" type="Button" parent="ContactScreenContainer/ContactScreen/ContactMargin/ContactContainer"]
-margin_top = 143.0
+margin_top = 366.0
 margin_right = 241.0
-margin_bottom = 173.0
+margin_bottom = 396.0
 rect_min_size = Vector2( 0, 30 )
 focus_mode = 0
 enabled_focus_mode = 0
