@@ -40,6 +40,7 @@ config/icon="res://assets/churchyard.png"
 [autoload]
 
 SoundPlayer="*res://scenes/sound_player.tscn"
+Global="*res://logic/global.gd"
 
 [display]
 
